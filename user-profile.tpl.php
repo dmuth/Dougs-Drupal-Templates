@@ -523,27 +523,35 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
 
 	}
 
-	$relationships = _user_relationships_ui_actions_between($user, $account);
-	if (!empty($relationships)) {
+	//
+	// Only get user relationships if the UI module is loaded.
+	//
+	if (module_exists("user_relationships_ui")) {
 
-		$html .= t("You can:") . "<br/>";
+		$relationships = _user_relationships_ui_actions_between($user, $account);
 
-		$html .= "<ul>";
-		foreach ($relationships as $key => $value) {
-			$html .= "<li>" . $value . "</li>";
+		if (!empty($relationships)) {
+
+			$html .= t("You can:") . "<br/>";
+
+			$html .= "<ul>";
+			foreach ($relationships as $key => $value) {
+				$html .= "<li>" . $value . "</li>";
+			}
+			$html .= "</ul>";
+
 		}
-		$html .= "</ul>";
 
-	}
-
-	if (!empty($html)) {
-		$row = array(
-			array("valign" => "top", "align" => "right", 
-				"class" => "name",
+		if (!empty($html)) {
+			$row = array(
+				array("valign" => "top", "align" => "right", 
+					"class" => "name",
 				"data" => t("Buddies:")),
-			array("valign" => "top", "data" => $html)
-			);
-		$rows[] = $row;
+				array("valign" => "top", "data" => $html)
+				);
+			$rows[] = $row;
+
+		}
 
 	}
 
