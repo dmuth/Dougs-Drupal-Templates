@@ -102,7 +102,7 @@ table {
 	background="/<?php print $directory; ?>/background.jpg"
 */
 	background-color: #8C32F0;
-	background-image:url('background.jpg');
+	background-image:url('backgrounds/pa-furry.jpg');
 	background-repeat: repeat-x;
 }
 #logo {
