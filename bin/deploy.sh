@@ -1,7 +1,9 @@
 #!/bin/sh
-
 #
-# style, screenshot, info
+# This script is used for deploying a site-specific template
+# It MUST be run before loading the themes page in Drupal.
+#
+# Author: Douglas Muth <http://www.dmuth.org/>
 #
 
 #
@@ -61,6 +63,20 @@ then
 	exit 1
 fi
 
+PAGE=page/${SITE}.tpl.php
+if test ! -f ${PAGE}
+then
+	echo "$0: File '${PAGE}' not found.";
+	exit 1
+fi
+
+NODE=node/${SITE}.tpl.php
+if test ! -f ${NODE}
+then
+	echo "$0: File '${NODE}' not found.";
+	exit 1
+fi
+
 
 #
 # Create our symlinks to the site-specific files
@@ -68,5 +84,15 @@ fi
 ln -sf ${STYLE} style.css
 ln -sf ${SCREENSHOT} screenshot.png
 ln -sf ${INFO} ${THEME}.info
+ln -sf ${PAGE} page.tpl.php
+ln -sf ${NODE} node.tpl.php
+
+#
+# Finally clear the cache, in case the current template has any remaining 
+# references to old template files.
+#
+drush -q cache clear
+
+echo "Site '${SITE}' deployed in theme '${THEME}'!"
 
 
