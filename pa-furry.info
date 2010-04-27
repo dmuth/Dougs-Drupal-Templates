@@ -1,0 +1,20 @@
+; $Id: pa-furry.info,v 1.2 2010/04/18 23:30:01 doug Exp $
+name = PA-Furry
+description = Custom template for the PA-Furry website.
+core = 6.x
+engine = phptemplate
+version = 6.16
+
+
+;
+; Regions
+;
+regions[left] = Left sidebar
+regions[right] = Right sidebar
+regions[content] = Content
+regions[header] = Header
+regions[footer] = Footer
+regions[footer_left] = Footer Left
+regions[footer_middle] = Footer Middle
+regions[footer_right] = Footer Right
+
