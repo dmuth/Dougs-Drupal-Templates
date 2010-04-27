@@ -16,9 +16,22 @@ set -e
 #
 if test ! "$1"
 then
-	echo "Syntax: $0 <site to deploy>";
+	echo "Syntax: $0 <site to deploy|clean>";
 	exit 1
 fi
+
+#
+# Clear out the currently deployed site.  Note that this WILL break 
+# the current template until another site is deployed.
+#
+if test "$1" = "clean"
+then
+	rm -f style.css screenshot.png *.info page.tpl.php node.tpl.php
+	drush -q cache clear
+	echo "Template cleaned."
+	exit
+fi
+
 
 #
 # The site we're deploying
