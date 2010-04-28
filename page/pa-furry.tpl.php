@@ -80,6 +80,7 @@ if (
 	. "<ul>\n"
 	. "<li>Access to all of our posts and comments</li>\n"
 	. "<li>Your own profile including an avatar, buddy lists, and other social networking features</li>\n"
+	. "<li>The ability to send private messages to other users on this site</li>\n"
 	. "<li>The ability to chat and interact with other furries in and around Pennsylvania.</li>\n"
 	. "</ul>\n"
 

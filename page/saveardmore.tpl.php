@@ -64,8 +64,54 @@ var directory = "/<?php print $directory; ?>";
     <td valign="top">
       <div id="main">
         <?php print $breadcrumb ?>
-        <h1 class="title"><?php print $title ?></h1>
-        <div class="tabs"><?php print $tabs ?></div>
+	<h1 class="title"><?php print $title ?></h1>
+<?php
+//
+// If this is a forum post and the user is not logged in, print
+// a message promting them to do so.
+//
+if (
+	!$GLOBALS["user"]->uid
+	&& (
+		strstr($_REQUEST["q"], "recent")
+		|| $node->type == "event"
+		|| $node->type == "blog"
+	)
+	) {
+	
+	$html = "<div style=\"border: 1px solid black; "
+	//. "font-size: large; "
+	. "padding: 5px; margin: 5px;\">"
+	
+	. "Welcome <b>Lower Merion residents</b>!</p>\n"
+	. "We're glad you stopped by.  Go ahead and "
+	. "<a href=\"/user\">register for a free account</a> "
+	. "to get the benefits of being a member, including:\n"
+
+	. "<ul>\n"
+	. "<li>Access to all of our posts and comments</li>\n"
+	. "<li>Your own profile including an avatar, buddy lists, and other social networking features</li>\n"
+	. "<li>The ability to send private messages to other users on this site</li>\n"
+	. "<li>The ability to chat and interact with other citizens and voters in and around Lower Merion.</li>\n"
+	. "</ul>\n"
+
+	. "<span style=\"font-size: larger; \">"
+	. "Creating an account is easy. <a href=\"/user\">Register now!</a>"
+	. "</span>\n"
+	. "<br/>\n"
+	. "<br/>\n"
+
+	. "(Don't live in Lower Merion?  That's okay.  We won't hold it aginst you.)"
+	
+	. "</div>";
+		
+	print $html;
+
+}
+
+?>
+
+	<div class="tabs"><?php print $tabs ?></div>
         <?php print $help ?>
         <?php print $messages ?>
         <?php print $content; ?>
