@@ -26,7 +26,7 @@ fi
 #
 if test "$1" = "clean"
 then
-	rm -f style.css screenshot.png *.info page.tpl.php node.tpl.php
+	rm -f style.css screenshot.png *.info page.tpl.php node.tpl.php script.js
 	drush -q cache clear
 	echo "Template cleaned."
 	exit
@@ -90,6 +90,8 @@ then
 	exit 1
 fi
 
+SCRIPT=scripts/${SITE}.js
+
 
 #
 # Create our symlinks to the site-specific files
@@ -99,6 +101,7 @@ ln -sf ${SCREENSHOT} screenshot.png
 ln -sf ${INFO} ${THEME}.info
 ln -sf ${PAGE} page.tpl.php
 ln -sf ${NODE} node.tpl.php
+ln -sf ${SCRIPT} script.js
 
 #
 # Finally clear the cache, in case the current template has any remaining 
