@@ -20,6 +20,12 @@ then
 	exit 1
 fi
 
+if test ! `which drush`
+then
+	echo "$0: Please install Drush (available at http://drupal.org/project/drush) before continuing.";
+	exit 1
+fi
+
 #
 # Our symlinks
 #
