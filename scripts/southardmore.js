@@ -98,10 +98,10 @@ Southardmore.prototype.toggle_menu = function(ac, e) {
 */
 Southardmore.prototype.title_collapse = function(title) {
 	//var image = directory + "/images/menu_arrow_collapsed.gif";
-	var image = directory + "/images/menu_arrow_collapsed_black.gif";
-	title.css("background-image", "url(" + image + ")");
-	title.css("background-position", "5px 50%");
-	title.css("background-repeat", "no-repeat");
+	//var image = directory + "/images/menu_arrow_collapsed_black.gif";
+	//title.css("background-image", "url(" + image + ")");
+	//title.css("background-position", "5px 50%");
+	//title.css("background-repeat", "no-repeat");
 } // End of title_collapse()
 
 
@@ -112,10 +112,10 @@ Southardmore.prototype.title_collapse = function(title) {
 */
 Southardmore.prototype.title_expand = function(title) {
 	//var image = directory + "/images/menu_arrow_expanded.gif";
-	var image = directory + "/images/menu_arrow_expanded_black.gif";
-	title.css("background-image", "url(" + image + ")");
-	title.css("background-position", "5px 50%");
-	title.css("background-repeat", "no-repeat");
+	//var image = directory + "/images/menu_arrow_expanded_black.gif";
+	//title.css("background-image", "url(" + image + ")");
+	//title.css("background-position", "5px 50%");
+	//title.css("background-repeat", "no-repeat");
 } // End of title_expand()
 
 
