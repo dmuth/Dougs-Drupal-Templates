@@ -3,8 +3,10 @@
 // Print a note when we are in the dev site
 //
 if (strstr($directory, "-dev")) {
-	print "DEVELOPMENT TEMPLATE - If you think you shouldn't be seeing "
-		. "this, please contact <a href=\"/user/2\">Doug</a>.";
+	$message = "DEVELOPMENT TEMPLATE - If you think you shouldn't be seeing "
+		. "this, please <a href=\"/contact\">contact us</a>.";
+	$head_title .= " - " . $message;
+	print $message;
 }
 
 ?>

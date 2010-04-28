@@ -4,7 +4,7 @@
 //
 if (strstr($directory, "-dev")) {
 	$message = "DEVELOPMENT TEMPLATE - If you think you shouldn't be seeing "
-		. "this, please <a href=\"contact\">contact us</a>.";
+		. "this, please <a href=\"/contact\">contact us</a>.";
 	$head_title .= " - " . $message;
 	print $message;
 }
