@@ -508,25 +508,26 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
 	$name = t("!name's Buddy List", array("!name" => $account->name));
 	$html = l($name, $url) . "<br/>";
 
-	$relationships = _user_relationships_ui_between($user, $account);
-	if (!empty($relationships)) {
-
-		$html .= "<br/>";
-		$name = t("You are !name's:", array("!name" => $account->name));
-		$html .= $name . "<br/>";
-
-		$html .= "<ul>";
-		foreach ($relationships as $key => $value) {
-			$html .= "<li>" . $value . "</li>";
-		}
-		$html .= "</ul>";
-
-	}
 
 	//
 	// Only get user relationships if the UI module is loaded.
 	//
 	if (module_exists("user_relationships_ui")) {
+
+		$relationships = _user_relationships_ui_between($user, $account);
+		if (!empty($relationships)) {
+
+			$html .= "<br/>";
+			$name = t("You are !name's:", array("!name" => $account->name));
+			$html .= $name . "<br/>";
+
+			$html .= "<ul>";
+			foreach ($relationships as $key => $value) {
+				$html .= "<li>" . $value . "</li>";
+			}
+			$html .= "</ul>";
+
+		}
 
 		$relationships = _user_relationships_ui_actions_between($user, $account);
 

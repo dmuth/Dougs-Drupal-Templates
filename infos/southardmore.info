@@ -1,0 +1,7 @@
+; $Id: southardmore.info,v 1.1 2009/12/05 20:14:22 doug Exp $
+name = Southardmore
+description = (based on Bluemarine)
+core = 6.x
+version = 6.14
+engine = phptemplate
+

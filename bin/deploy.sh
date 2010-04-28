@@ -73,9 +73,9 @@ function check_file() {
 
 	FILE=$1
 
-	if test ! -f ${STYLE}
+	if test ! -f ${FILE}
 	then
-		echo "$0: File '${STYLE}' not found.";
+		echo "$0: File '${FILE}' not found.";
 		exit 1
 	fi
 
