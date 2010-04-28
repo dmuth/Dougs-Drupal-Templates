@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # This script is used for deploying a site-specific template
 # It MUST be run before loading the themes page in Drupal.
@@ -21,12 +21,17 @@ then
 fi
 
 #
+# Our symlinks
+#
+SYMLINKS="style.css screenshot.png *.info page.tpl.php node.tpl.php script.js"
+
+#
 # Clear out the currently deployed site.  Note that this WILL break 
 # the current template until another site is deployed.
 #
 if test "$1" = "clean"
 then
-	rm -f style.css screenshot.png *.info page.tpl.php node.tpl.php script.js
+	rm -f $SYMLINKS
 	drush -q cache clear
 	echo "Template cleaned."
 	exit
@@ -51,47 +56,50 @@ cd ..
 #
 THEME=`basename $PWD`
 
+
+#
+# Check to see if the specified filename exists.  If not, print an error 
+# and exit with status 1.
+#
+# @param string $1 The name of the file to check for
+#
+function check_file() {
+
+	FILE=$1
+
+	if test ! -f ${STYLE}
+	then
+		echo "$0: File '${STYLE}' not found.";
+		exit 1
+	fi
+
+} # End of check_file()
+
+
 #
 # Check for each of our site-specific files, and make sure they exist.
 #
 STYLE=styles/${SITE}.css
-if test ! -f ${STYLE}
-then
-	echo "$0: File '${STYLE}' not found.";
-	exit 1
-fi
+check_file $STYLE
 
 SCREENSHOT=screenshots/${SITE}.png
-if test ! -f ${SCREENSHOT}
-then
-	echo "$0: File '${SCREENSHOT}' not found.";
-	exit 1;
-
-fi
+check_file $SCREENSHOT
 
 INFO=infos/${SITE}.info
-if test ! -f ${INFO}
-then
-	echo "$0: File '${INFO}' not found.";
-	exit 1
-fi
+check_file $INFO
 
 PAGE=page/${SITE}.tpl.php
-if test ! -f ${PAGE}
-then
-	echo "$0: File '${PAGE}' not found.";
-	exit 1
-fi
+check_file $PAGE
 
 NODE=node/${SITE}.tpl.php
-if test ! -f ${NODE}
-then
-	echo "$0: File '${NODE}' not found.";
-	exit 1
-fi
+check_file $NODE
 
 SCRIPT=scripts/${SITE}.js
 
+#
+# Remove our symlinks
+#
+rm -f $SYMLINKS
 
 #
 # Create our symlinks to the site-specific files
