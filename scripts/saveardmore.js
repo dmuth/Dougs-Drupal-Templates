@@ -117,6 +117,31 @@ SAC.prototype.title_expand = function(title) {
 } // End of title_expand()
 
 
+/**
+* Initialize a specific block, possibly setting it to already be collapsed.
+*
+* @param obj sac The SAC object.  This is passed in so that we can
+*	address the status array.
+*
+* @param obj e The HTML entity.  Equivilient to "this" in jQuery.
+*/
+SAC.prototype.init_block = function(sac, e) {
+
+	var id = $(e).parent().attr("id");
+	var title = $(e);
+
+	if (sac.status[id]) {
+		title.siblings().hide();
+		sac.title_collapse(title);
+
+	} else {
+		sac.title_expand(title);
+
+	}
+
+} // End of init_block()
+
+
 //
 // Stuff to execute when the page is done loading.
 //
@@ -129,27 +154,23 @@ $(document).ready(function(){
 	//
 	$("#sidebar-left").find("h2.title").css("cursor", "pointer");
 	$("#sidebar-left").find("h2.title").click(function() {sac.toggle_menu(sac, this)});
+	$("#footer-left").find("h2.title").css("cursor", "pointer");
+	$("#footer-left").find("h2.title").click(function() {sac.toggle_menu(sac, this)});
+	$("#footer-middle").find("h2.title").css("cursor", "pointer");
+	$("#footer-middle").find("h2.title").click(function() {sac.toggle_menu(sac, this)});
+	$("#footer-right").find("h2.title").css("cursor", "pointer");
+	$("#footer-right").find("h2.title").click(function() {sac.toggle_menu(sac, this)});
 
 	sac.status = sac.get_status();
 
 	//
 	// Loop through each of our titles, and hide the contents
 	//
-	$("#sidebar-left").find("h2.title").each(function() {
-		var id = $(this).parent().attr("id");
-		var title = $(this);
-
-		if (sac.status[id]) {
-			title.siblings().hide();
-			sac.title_collapse(title);
-		} else {
-			sac.title_expand(title);
-		}
-
-		});
-
+	$("#sidebar-left").find("h2.title").each(function() {sac.init_block(sac, this)});
+	$("#footer-left").find("h2.title").each(function() {sac.init_block(sac, this)});
+	$("#footer-middle").find("h2.title").each(function() {sac.init_block(sac, this)});
+	$("#footer-right").find("h2.title").each(function() {sac.init_block(sac, this)});
 
 });
-
 
 

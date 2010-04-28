@@ -77,7 +77,7 @@ var directory = "/<?php print $directory; ?>";
   </tr>
 </table>
 
-
+<a name="footer"></a>
 <div id="footer">
 
     <div id="footer-region" class="clearfloat">
