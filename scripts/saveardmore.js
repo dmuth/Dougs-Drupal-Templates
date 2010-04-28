@@ -97,10 +97,10 @@ SAC.prototype.toggle_menu = function(sac, e) {
 * @param object title Our title entity.
 */
 SAC.prototype.title_collapse = function(title) {
-	var image = directory + "/images/menu_arrow_collapsed.gif";
-	title.css("background-image", "url(" + image + ")");
-	title.css("background-position", "5px 50%");
-	title.css("background-repeat", "no-repeat");
+	//var image = directory + "/images/menu_arrow_collapsed.gif";
+	//title.css("background-image", "url(" + image + ")");
+	//title.css("background-position", "5px 50%");
+	//title.css("background-repeat", "no-repeat");
 } // End of title_collapse()
 
 
@@ -110,10 +110,10 @@ SAC.prototype.title_collapse = function(title) {
 * @param object title Our title entity.
 */
 SAC.prototype.title_expand = function(title) {
-	var image = directory + "/images/menu_arrow_expanded.gif";
-	title.css("background-image", "url(" + image + ")");
-	title.css("background-position", "5px 50%");
-	title.css("background-repeat", "no-repeat");
+	//var image = directory + "/images/menu_arrow_expanded.gif";
+	//title.css("background-image", "url(" + image + ")");
+	//title.css("background-position", "5px 50%");
+	//title.css("background-repeat", "no-repeat");
 } // End of title_expand()
 
 
