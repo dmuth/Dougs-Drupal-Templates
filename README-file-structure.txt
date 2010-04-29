@@ -25,6 +25,10 @@ favicons/ - A favicon for each site, where the filename is (site).ico.
 icons/ - Icons for various instant messenger services.  Used by the user 
 	profile page.
 
+images/ - Images for various websites.  These files are not symlinked
+	anywhere but instead referenced directly from HTML and CSS.
+	Filenames shouldbe in the formsite of (site)-filename.ext.
+
 infos/ - .info files for each site.  The filename is (site).info.
 
 logos/ - A logo for each site.  The filename is (site).jpg.

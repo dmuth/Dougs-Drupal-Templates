@@ -145,7 +145,7 @@ var directory = "/<?php print $directory; ?>";
 <table border="0">
 <tr>
 <td>
-<img src="/<?php print $directory; ?>/images/Buffalo-chase.png" />
+<img src="/<?php print $directory; ?>/images/anthrocon-buffalo-chase.png" />
 </td>
 <td width="100%">
   <?php print $footer_message ?>
