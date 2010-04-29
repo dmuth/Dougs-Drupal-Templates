@@ -29,7 +29,7 @@ fi
 #
 # Our symlinks
 #
-SYMLINKS="style.css screenshot.png *.info page.tpl.php node.tpl.php script.js favicon.ico logo.jpg"
+SYMLINKS="style.css screenshot.png *.info page.tpl.php node.tpl.php script.js favicon.ico logo.jpg lib.inc.php"
 
 #
 # Clear out the currently deployed site.  Note that this WILL break 
@@ -106,6 +106,7 @@ check_file $NODE
 SCRIPT=scripts/${SITE}.js
 LOGO="logos/${SITE}.jpg"
 FAVICON="favicons/${SITE}.ico"
+LIB="lib/${SITE}.inc.php"
 
 
 #
@@ -124,6 +125,7 @@ ln -sf ${NODE} node.tpl.php
 ln -sf ${SCRIPT} script.js
 ln -sf ${LOGO} logo.jpg
 ln -sf ${FAVICON} favicon.ico
+ln -sf ${LIB} lib.inc.php
 
 #
 # Finally clear the cache, in case the current template has any remaining 

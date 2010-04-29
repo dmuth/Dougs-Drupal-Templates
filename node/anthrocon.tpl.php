@@ -1,6 +1,10 @@
 <?php
 
-include_once("functions.inc.php");
+//
+// Load our library file
+//
+$file = getcwd() . "/" . $directory . "/lib.inc.php";
+include_once($file);
 
 //
 // Load the profile for the user behind this node
