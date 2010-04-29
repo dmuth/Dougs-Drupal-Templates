@@ -1,0 +1,6 @@
+
+name = Anthrocon 2010
+description = Anthrocon 2010 theme
+core = 6.x
+engine = phptemplate
+
