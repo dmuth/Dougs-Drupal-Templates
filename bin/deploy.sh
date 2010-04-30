@@ -29,7 +29,7 @@ fi
 #
 # Our symlinks
 #
-SYMLINKS="style.css screenshot.png *.info page.tpl.php node.tpl.php script.js favicon.ico logo.jpg lib.inc.php"
+SYMLINKS="style.css screenshot.png *.info page.tpl.php node.tpl.php script.js favicon.ico logo.jpg lib.inc.php advf-author-pane.tpl.php"
 
 #
 # Clear out the currently deployed site.  Note that this WILL break 
@@ -103,10 +103,11 @@ check_file $NODE
 #
 # Some of these files are optional
 #
-SCRIPT=scripts/${SITE}.js
+SCRIPT="scripts/${SITE}.js"
 LOGO="logos/${SITE}.jpg"
 FAVICON="favicons/${SITE}.ico"
 LIB="lib/${SITE}.inc.php"
+AUTHOR_PANE="advf/author-pane/${SITE}.tpl.php"
 
 
 #
@@ -126,6 +127,7 @@ ln -sf ${SCRIPT} script.js
 ln -sf ${LOGO} logo.jpg
 ln -sf ${FAVICON} favicon.ico
 ln -sf ${LIB} lib.inc.php
+ln -sf ${AUTHOR_PANE} advf-author-pane.tpl.php
 
 #
 # Finally clear the cache, in case the current template has any remaining 
