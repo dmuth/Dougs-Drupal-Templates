@@ -1,5 +1,5 @@
 <?php
-// $Id: advf-author-pane.tpl.php,v 1.1 2010/04/20 03:09:51 doug Exp $
+// $Id: advf-author-pane.tpl.php,v 1.6 2010/04/15 04:33:40 doug Exp $
 
 /**
  * @file
@@ -282,6 +282,20 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
         </div>
       <?php endif; ?>
 
+        <div class="author-pane-icon"><?php //print $user_relationships_api; ?></div>
+	<?php
+		//
+		// Print a link to the user's buddy list
+		//
+		$uid = $account->uid;
+		$url = "user/$uid/buddies";
+		$url_text = t("Buddy List");
+		$link = l($url_text, $url);
+		print $link;
+	?>
+      <?php if (!empty($user_relationships_api)): ?>
+      <?php endif; ?>
+      
       <?php if (isset($userpoints_points)): ?>
         <div class="author-pane-line author-points">
           <span class="author-pane-label"><?php print t('!Points', userpoints_translation()); ?></span>: <?php print $userpoints_points; ?>
@@ -320,10 +334,6 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
         <div class="author-pane-icon"><?php print $buddylist; ?></div>
       <?php endif; ?>
 
-      <?php if (!empty($user_relationships_api)): ?>
-        <div class="author-pane-icon"><?php print $user_relationships_api; ?></div>
-      <?php endif; ?>
-      
       <?php if (!empty($flag_friend)): ?>
         <div class="author-pane-icon"><?php print $flag_friend; ?></div>
       <?php endif; ?>
