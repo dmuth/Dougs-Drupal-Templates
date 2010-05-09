@@ -72,11 +72,13 @@ var directory = "/<?php print $directory; ?>";
 //
 if (
 	!$GLOBALS["user"]->uid
+	//|| $GLOBALS["user"]->uid // Debugging
 	&& (
-		strstr($_REQUEST["q"], "recent")
+		strstr(request_uri(), "recent")
 		|| $node->type == "event"
 		|| $node->type == "blog"
 	)
+	&& !strstr(request_uri(), "who-is-welcome-here")
 	) {
 	
 	$html = "<div style=\"border: 1px solid black; "
@@ -101,7 +103,7 @@ if (
 	. "<br/>\n"
 	. "<br/>\n"
 
-	. "(Don't live in Lower Merion?  That's okay.  We won't hold it aginst you.)"
+	. "(Don't live in Lower Merion?  That's okay.  <a href=\"/who-is-welcome-here\">We won't hold it aginst you.</a>)"
 	
 	. "</div>";
 		
