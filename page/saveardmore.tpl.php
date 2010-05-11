@@ -38,6 +38,20 @@ var directory = "/<?php print $directory; ?>";
 
 <body>
 
+<?php
+//
+// If we have unread private messages, let the user know.
+//
+if (module_exists("privatemsg")) {
+	$num_messages = privatemsg_unread_count();
+	if ($num_messages > 0 && (request_uri() != "/messages")) {
+		$message = t("You have 1 or more !messages", 
+			array("!messages" => l("unread Private Messages", "messages")));
+		drupal_set_message($message);
+	}
+}
+
+?>
 <table border="0" cellpadding="0" cellspacing="0" id="header">
   <tr>
     <td id="logo">
