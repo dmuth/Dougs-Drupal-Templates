@@ -49,7 +49,8 @@ var directory = "/<?php print $directory; ?>";
 // See: http://drupal.org/node/203435 for details
 //
 ?>
-<script type="text/javascript" src="/<?php print $directory; ?>/cookie.js"></script>
+<script type="text/javascript" src="/<?php print $directory; ?>/lib/cookie.js"></script>
+<script type="text/javascript" src="/<?php print $directory; ?>/lib/drupalBlockToggle.js"></script>
   <script type="text/javascript"><?php /* Needed to avoid Flash of Unstyle Content in IE */ ?> </script>
 </head>
 
