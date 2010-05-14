@@ -3,7 +3,13 @@
 // Load our functions
 //
 $file = dirname(__FILE__) . "/../lib/display.inc.php";
-include($file);
+//
+// Commenting this out for now, since otherwise, every time I touch 
+// lib/display.inc.php and try to reload a user profile, I get a 
+// "function previously declared" error on the first page load. 
+// (but not subsequent ones)
+//
+//include($file);
 
 //print "<pre>"; print_r($GLOBALS); print "</pre>"; // Debugging
 

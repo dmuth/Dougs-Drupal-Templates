@@ -7,6 +7,12 @@
 * Last modified: 23 Apr 2010, DTM
 */
 
+//
+// Load our functions
+//
+$file = dirname(__FILE__) . "/lib/display.inc.php";
+include($file);
+
 $public_profile = $account->content["Public Profile"];
 $summary = $account->content["summary"];
 
@@ -16,11 +22,6 @@ $summary = $account->content["summary"];
 //print "<pre>"; print_r($user); print "</pre>"; // Debugging
 //$public_profile["profile_blog"]["#value"] = 12345; // Debugging
 //$public_profile["profile_icq"]["#value"] = 12345; // Debugging
-
-//
-// Our base URI for icons in this template.
-//
-$path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
 
 ?>
 <div class="profile">
@@ -264,150 +265,8 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
 
 	//
 	// Each of our social networks.
-	// Note that this code is also in advf-author-pane.tpl.php
-	// I'd like to put the below code into a function someday...
 	//
-	$html = "";
-
-	//
-	// Array of fields for our different social networks
-	//
-	$fields = array();
-	$fields["profile_website"] = array(
-		"img" => "home.png",
-		"alt" => t("Personal Website"),
-		"add_http" => true,
-		"target" => "_blank",
-		);
-	$fields["profile_blog"] = array(
-		"img" => "blog.png",
-		"alt" => t("Blog"),
-		"add_http" => true,
-		"target" => "_blank",
-		);
-	$fields["profile_linkedin"] = array(
-		"img" => "linkedin.png",
-		"alt" => t("LinkedIn Profile"),
-		"add_http" => true,
-		"target" => "_blank",
-		);
-	$fields["profile_aim"] = array(
-		"img" => "aim.png",
-		"alt" => t("AOL Instant Messenger"),
-		"add_http" => false,
-		"pre_link" => "aim:goim?screenname=",
-		);
-	$fields["profile_google_talk"] = array(
-		"img" => "gtalk.png",
-		"alt" => t("Google Talk"),
-		"pre_link" => "gtalk:chat?jid=",
-		);
-	$fields["profile_yahoo"] = array(
-		"img" => "yahoo.png",
-		"alt" => t("Yahoo Messenger"),
-		"pre_link" => "ymsgr:sendIM?",
-		);
-	$fields["profile_icq"] = array(
-		"img" => "icq.png",
-		"alt" => t("ICQ"),
-		"pre_link" => "aim:goim?screenname=",
-		);
-	$fields["profile_msn"] = array(
-		"img" => "msn.png",
-		"alt" => t("Microsoft Messenger"),
-		"pre_link" => "msnim:chat?contact=",
-		);
-	$fields["profile_da"] = array(
-		"img" => "da.png",
-		"alt" => t("DeviantArt"),
-		"add_http" => true,
-		"target" => "_blank",
-		);
-	$fields["profile_lj"] = array(
-		"img" => "lj.png",
-		"alt" => t("LiveJournal"),
-		"add_http" => true,
-		"target" => "_blank",
-		);
-	$fields["profile_skype"] = array(
-		"img" => "skype.png",
-		"alt" => t("Skype"),
-		"pre_link" => "skype:",
-		"post_link" => "?userinfo",
-		);
-	$fields["profile_flickr"] = array(
-		"img" => "flickr.png",
-		"alt" => t("Flickr"),
-		"add_http" => true,
-		"target" => "_blank",
-		);
-	$fields["profile_twitter"] = array(
-		"img" => "twitter.png",
-		"alt" => t("Twitter"),
-		"add_http" => true,
-		"target" => "_blank",
-		);
-	$fields["profile_facebook"] = array(
-		"img" => "facebook.png",
-		"alt" => t("Facebook"),
-		"add_http" => true,
-		"target" => "_blank",
-		);
-	$fields["profile_delicious"] = array(
-		"img" => "delicious.png",
-		"alt" => t("Delicious"),
-		"add_http" => true,
-		"target" => "_blank",
-		);
-
-	//
-	// Loop through our social networks and print up an image and 
-	// link for each
-	//
-	foreach ($fields as $key => $value) {
-
-		if (empty($public_profile[$key]["#value"])) {
-			continue;
-		}
-
-		$img = $path . "/icons/" . $value["img"];
-		$alt = $value["alt"];
-
-		$link = strip_tags($public_profile[$key]["#value"]);
-
-		//
-		// Add in the http:// protocol if it's not present.
-		//
-		if (!empty($value["add_http"])) {
-			if (!stristr($link, "http://")) {
-				$link = "http://" . $link;
-			}
-		}
-
-		//
-		// Pre and post link text.
-		//
-		if (!empty($value["pre_link"])) {
-			$link = $value["pre_link"] . $link;
-		}
-
-		if (!empty($value["post_link"])) {
-			$link = $link . $value["post_link"];
-		}
-
-		//
-		// See if we have a custom target
-		//
-		$target = "";
-		if (!empty($value["target"])) {
-			$target = "target=\"" . $value["target"] . "\"";
-		}
-
-		$html .= "<a href=\"" . $link . "\" $target ><img src=\"" 
-			. $img . "\" title=\"$alt\" height=\"16\" border=\"0\" "
-			. "/></a> ";
-
-	}
+	$html = get_social_network_links($public_profile);
 
 	if (empty($html)) {
 		$html = "(none given)";
