@@ -1,3 +1,11 @@
+<?php
+//
+// Load our functions
+//
+$file = dirname(__FILE__) . "/../lib/display.inc.php";
+include($file);
+
+?>
   <div class="node<?php if ($sticky) { print " sticky"; } ?><?php if (!$status) { print " node-unpublished"; } ?>">
     <?php if ($page == 0) { ?><h2 class="title"><a href="<?php print $node_url?>"><?php print $title?></a></h2><?php }; ?>
   <span class="submitted"><?php 
@@ -44,7 +52,7 @@ if (!empty($terms)) {
 	// Print the picture ONLY if this is a forum post and not a "teaser",
 	// which means an abbreciated post shown on the front page.
 	//
-	if (empty($node->teaser)) {
+	if (display_user_details($note)) {
 		if ($node->type == "forum" || $node->type == "blog" || $node->type == "event") {
 			//print $picture;
 			$account = user_load($node->uid);

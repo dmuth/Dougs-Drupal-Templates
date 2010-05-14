@@ -5,6 +5,8 @@
 $file = dirname(__FILE__) . "/../lib/display.inc.php";
 include($file);
 
+//print "<pre>"; print_r($GLOBALS); print "</pre>"; // Debugging
+
 //
 // Are we in the dev theme?
 //

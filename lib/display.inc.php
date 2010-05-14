@@ -52,6 +52,43 @@ function check_dev_theme($directory) {
 
 
 /**
+* Are we displaying user details?
+* 
+* @param object $node The object for the current node
+* 
+* @return boolean True if we are displaying user details.  False otherwise.
+*/
+function display_user_details($node) {
+
+	$retval = false;
+
+	if (empty($node->teaser)) {
+		//
+		// Not on the front page.
+		//
+		$retval = true;
+
+	} else {
+		//
+		// Only certain sites get user details displayed on the
+		// front page.
+		//
+		// @TODO: Come up with a better way of determining the 
+		// site we're on.
+		//
+		$site_name = $GLOBALS["conf"]["site_name"];
+		if (stristr($site_name, "ardmore")) {
+			$retval = true;
+		}
+
+	}
+	
+	return($retval);
+
+} // End of user_details_on_front_page()
+
+
+/**
 * Return the number of seconds elapsed since the last call.
 * 
 */
