@@ -14,7 +14,6 @@
 // load the file twice.
 //
 if (!function_exists("check_private_messages")) {
-	print "TEST2";
 	$file = dirname(__FILE__) . "/lib/display.inc.php";
 	include($file);
 }
