@@ -22,7 +22,7 @@ function check_private_messages() {
 
 
 /**
-*
+* Set a notification if we have any pending friend requests.
 */
 function check_pending_friend_requests() {
 
@@ -34,6 +34,21 @@ function check_pending_friend_requests() {
 	_user_relationships_ui_set_notifications($user);
 
 } // End of check_pending_friend_requests()
+
+
+/**
+* Print a note when we are in the dev site
+*/
+function check_dev_theme($directory) {
+
+	if (strstr($directory, "dev")) {
+		$message = "DEVELOPMENT TEMPLATE - If you think you shouldn't be seeing "
+			. "this, please <a href=\"/contact\">contact us</a>.";
+		$head_title .= " - " . $message;
+		print $message;
+	}
+
+} // End of check_dev_theme()
 
 
 /**

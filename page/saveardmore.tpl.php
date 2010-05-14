@@ -1,19 +1,14 @@
 <?php
 //
-// Print a note when we are in the dev site
-//
-if (strstr($directory, "-dev")) {
-	$message = "DEVELOPMENT TEMPLATE - If you think you shouldn't be seeing "
-		. "this, please <a href=\"/contact\">contact us</a>.";
-	$head_title .= " - " . $message;
-	print $message;
-}
-
-//
 // Load our functions
 //
 $file = dirname(__FILE__) . "/../lib/display.inc.php";
 include($file);
+
+//
+// Are we in the dev theme?
+//
+check_dev_theme($directory);
 
 //
 // If we have unread private messages, let the user know.
