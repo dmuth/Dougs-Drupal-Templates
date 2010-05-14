@@ -8,10 +8,17 @@
 */
 
 //
-// Load our functions
+// Load our functions conditionally.
+// The reason for this function_exists() silliness is because touching the
+// lib/display.inc.php file causes the first reload afterward to somwhoe
+// load the file twice.
 //
-$file = dirname(__FILE__) . "/lib/display.inc.php";
-include($file);
+if (!function_exists("check_private_messages")) {
+	print "TEST2";
+	$file = dirname(__FILE__) . "/lib/display.inc.php";
+	include($file);
+}
+
 
 $public_profile = $account->content["Public Profile"];
 $summary = $account->content["summary"];
