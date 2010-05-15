@@ -99,6 +99,9 @@ function get_social_network_links($public_profile) {
 	
 	$retval = "";
 
+	//$public_profile["profile_blog"]["#value"] = 12345; // Debugging
+	//$public_profile["profile_icq"]["#value"] = 12345; // Debugging
+
 	//
 	// Array of fields for our different social networks
 	//

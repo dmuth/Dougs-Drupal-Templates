@@ -543,7 +543,7 @@ tbody {
 * Put padding around each of our profile icons.
 */
 .profile_icons img {
-	margin: 3px;
+	margin: 1px;
 	margin-top: 5px;
 }
 
