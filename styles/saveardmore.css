@@ -229,7 +229,7 @@ table {
 	color: #008000;
 	font-weight: bold;
 	background-color: #FFBB00;
-	width: 960px;
+	width: 1180px;
 }
 
 /*
@@ -580,20 +580,20 @@ tbody {
 }
 
 #footer-left {
-	width:290px;
+	width:360px;
 	float:left;
 	padding:10px;
 }
 
 #footer-middle {
-	width:290px;
+	width:360px;
 	float:left;
 	padding-top:10px;
 	padding-left: 30px;
 }
 
 #footer-right {
-	width:290px;
+	width:360px;
 	float:right;
 	padding:10px;
 }
