@@ -2,7 +2,7 @@
 //
 // Print a note when we are in the dev site
 //
-if (strstr($directory, "-dev")) {
+if (strstr($directory, "dev")) {
 	$message = "DEVELOPMENT TEMPLATE - If you think you shouldn't be seeing "
 		. "this, please <a href=\"/contact\">contact us</a>.";
 	$head_title .= " - " . $message;
