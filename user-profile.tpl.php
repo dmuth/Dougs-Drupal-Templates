@@ -430,6 +430,10 @@ $summary = $account->content["summary"];
 		$html .= $summary["wii_gamertag_view"]["#value"];
 	}
 
+	if (!empty($summary["steam_gamertag_view"])) {
+		$html .= $summary["steam_gamertag_view"]["#value"];
+	}
+
 	if (!empty($summary["psn_gamertag_view"])) {
 		if (!empty($html)) {
 			$html .= "<br/>\n";
