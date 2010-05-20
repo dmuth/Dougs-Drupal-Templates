@@ -471,6 +471,53 @@ blockquote {
   	font-size: 10px;
 }
 
+/**
+* Stuff for the Advanced Forums module.
+*/
+.forum-links li {
+	list-style-type: none;
+}
+.forum-post {
+	border-top: 1px solid black;
+}
+
+.forum-post-panel-sub {
+}
+
+.user_badges img {
+	padding: 2px;
+}
+ 
+.new {
+  text-align: right;
+  font-weight: bold;
+  float: right;
+  color: red;
+}
+
+/**
+* Put padding around each of our profile icons.
+*/
+.profile_icons img {
+	margin: 1px;
+	margin-top: 5px;
+}
+
+.author-pane-label {
+	font-weight: bold;
+}
+
+.author-real-name, .author-location, .author-comment, .author-joined, .author-posts {
+	font-size: smaller;
+}
+
+.author-pane {
+}
+
+.author-pane-inner {
+	width: 150px;
+}
+
 /* TEST */
 
 

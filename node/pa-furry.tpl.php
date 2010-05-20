@@ -1,4 +1,16 @@
-  
+<?php
+//
+// Load our functions conditionally.
+// The reason for this function_exists() silliness is because touching the
+// lib/display.inc.php file causes the first reload afterward to somwhoe
+// load the file twice.
+//
+if (!function_exists("check_private_messages")) {
+	$file = dirname(__FILE__) . "/../lib/display.inc.php";
+	include($file);
+}
+
+?>
 <div class="node<?php if ($sticky) { print " sticky"; } ?><?php if (!$status) { print " node-unpublished"; } ?>">
 <?php 
 if ($page == 0) { 
@@ -58,7 +70,11 @@ if ($picture) {
 			|| $node->type == "event")
 		//&& empty($node->teaser)
 		) {
-		print $picture;
+			//print $picture;
+			$account = user_load($node->uid);
+			$template = "advf-author-pane";
+			$author_pane = theme('author_pane', $account, advanced_forum_path_to_images(), $template);
+			print $author_pane;
 	}
 }
 ?>
