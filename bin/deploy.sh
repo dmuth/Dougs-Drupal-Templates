@@ -16,7 +16,7 @@ set -e
 #
 if test ! "$1"
 then
-	echo "Syntax: $0 <site to deploy|clean>";
+	echo "Syntax: $0 <site to deploy|clean> [copy]";
 	exit 1
 fi
 
@@ -43,6 +43,11 @@ then
 	exit
 fi
 
+COPY_FILES=""
+if test "$2" = "copy"
+then
+	COPY_FILES=1
+fi
 
 #
 # The site we're deploying
@@ -115,19 +120,39 @@ AUTHOR_PANE="advf/author-pane/${SITE}.tpl.php"
 #
 rm -f $SYMLINKS
 
-#
-# Create our symlinks to the site-specific files
-#
-ln -sf ${STYLE} style.css
-ln -sf ${SCREENSHOT} screenshot.png
-ln -sf ${INFO} ${THEME}.info
-ln -sf ${PAGE} page.tpl.php
-ln -sf ${NODE} node.tpl.php
-ln -sf ${SCRIPT} script.js
-ln -sf ${LOGO} logo.jpg
-ln -sf ${FAVICON} favicon.ico
-ln -sf ${LIB} lib.inc.php
-ln -sf ${AUTHOR_PANE} advf-author-pane.tpl.php
+if test "$COPY_FILES" = ""
+then
+	#
+	# Create our symlinks to the site-specific files
+	#
+	ln -sf ${STYLE} style.css
+	ln -sf ${SCREENSHOT} screenshot.png
+	ln -sf ${INFO} ${THEME}.info
+	ln -sf ${PAGE} page.tpl.php
+	ln -sf ${NODE} node.tpl.php
+	ln -sf ${SCRIPT} script.js
+	ln -sf ${LOGO} logo.jpg
+	ln -sf ${FAVICON} favicon.ico
+	ln -sf ${LIB} lib.inc.php
+	ln -sf ${AUTHOR_PANE} advf-author-pane.tpl.php
+
+else
+	#
+	# Copy the files instead, since Windows doesn't like symlinks.
+	#
+	cp -f ${STYLE} style.css
+	cp -f ${SCREENSHOT} screenshot.png
+	cp -f ${INFO} ${THEME}.info
+	cp -f ${PAGE} page.tpl.php
+	cp -f ${NODE} node.tpl.php
+	cp -f ${SCRIPT} script.js
+	cp -f ${LOGO} logo.jpg
+	cp -f ${FAVICON} favicon.ico
+	cp -f ${LIB} lib.inc.php
+	cp -f ${AUTHOR_PANE} advf-author-pane.tpl.php
+
+fi
+
 
 #
 # Finally clear the cache, in case the current template has any remaining 
