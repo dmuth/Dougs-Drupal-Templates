@@ -20,10 +20,14 @@ then
 	exit 1
 fi
 
+#
+# If Drush isn't installed, let the user know.
+#
+NO_DRUSH=""
 if test ! `which drush`
 then
-	echo "$0: Please install Drush (available at http://drupal.org/project/drush) before continuing.";
-	exit 1
+	echo "$0: Drush was not found!  I'll still run, but in limited mode."
+	NO_DRUSH=1
 fi
 
 #
@@ -38,9 +42,16 @@ SYMLINKS="style.css screenshot.png *.info page.tpl.php node.tpl.php script.js fa
 if test "$1" = "clean"
 then
 	rm -f $SYMLINKS
-	drush -q cache clear
-	echo "Template cleaned."
+	if test ! "$NO_DRUSH"
+	then
+		drush -q cache clear
+		echo "Template cleaned."
+	else
+		echo "$0: Unable to clear the cache.  You may need to do this by hand."
+	fi
+
 	exit
+
 fi
 
 COPY_FILES=""
@@ -158,7 +169,12 @@ fi
 # Finally clear the cache, in case the current template has any remaining 
 # references to old template files.
 #
-drush -q cache clear
+if test ! "$NO_DRUSH"
+then
+	drush -q cache clear
+else
+	echo "$0: Unable to clear the cache.  You may need to do this by hand."
+fi
 
 echo "Site '${SITE}' deployed in theme '${THEME}'!"
 
