@@ -126,28 +126,33 @@ function get_social_network_links($public_profile) {
 		);
 	$fields["profile_aim"] = array(
 		"img" => "aim.png",
-		"alt" => t("AOL Instant Messenger"),
+		"alt" => t("AIM: "),
+		"alt_append_value" => true,
 		"add_http" => false,
 		"pre_link" => "aim:goim?screenname=",
 		);
 	$fields["profile_google_talk"] = array(
 		"img" => "gtalk.png",
-		"alt" => t("Google Talk"),
+		"alt" => t("Google Talk: "),
+		"alt_append_value" => true,
 		"pre_link" => "gtalk:chat?jid=",
 		);
 	$fields["profile_yahoo"] = array(
 		"img" => "yahoo.png",
-		"alt" => t("Yahoo Messenger"),
+		"alt" => t("Yahoo Messenger: "),
+		"alt_append_value" => true,
 		"pre_link" => "ymsgr:sendIM?",
 		);
 	$fields["profile_icq"] = array(
 		"img" => "icq.png",
-		"alt" => t("ICQ"),
+		"alt" => t("ICQ: "),
+		"alt_append_value" => true,
 		"pre_link" => "aim:goim?screenname=",
 		);
 	$fields["profile_msn"] = array(
 		"img" => "msn.png",
-		"alt" => t("Microsoft Messenger"),
+		"alt" => t("MSN: "),
+		"alt_append_value" => true,
 		"pre_link" => "msnim:chat?contact=",
 		);
 	$fields["profile_da"] = array(
@@ -214,6 +219,14 @@ function get_social_network_links($public_profile) {
 		$link = strip_tags($public_profile[$key]["#value"]);
 
 		//
+		// Do we want to append the value (such as a screen name) to
+		// the ALT text? 
+		//
+		if ($value["alt_append_value"]) {
+			$alt .= $link;
+		}
+
+		//
 		// Add in the http:// protocol if it's not present.
 		//
 		if (!empty($value["add_http"])) {
@@ -241,9 +254,12 @@ function get_social_network_links($public_profile) {
 			$target = "target=\"" . $value["target"] . "\"";
 		}
 
-		$retval .= "<a href=\"" . $link . "\" $target ><img src=\"" 
+		$retval .= "<a href=\"" . $link . "\" $target >"
+			. "<img src=\"" 
 			. $img . "\" title=\"$alt\" height=\"16\" border=\"0\" "
-			. "/></a> ";
+			. "/>"
+			//. "link" // Debugging
+			."</a> \n";
 
 	}
 
