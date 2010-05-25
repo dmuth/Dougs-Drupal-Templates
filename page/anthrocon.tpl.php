@@ -1,14 +1,33 @@
 <?php
 
 //
-// Print a note when we are in the dev site
+// Load our functions conditionally.
+// The reason for this function_exists() silliness is because touching the
+// lib/display.inc.php file causes the first reload afterward to somwhoe
+// load the file twice.
 //
-if (strstr($directory, "dev")) {
-	$message = "DEVELOPMENT TEMPLATE - If you think you shouldn't be seeing "
-		. "this, please <a href=\"/contact\">contact us</a>.";
-	$head_title .= " - " . $message;
-	print $message;
+if (!function_exists("check_private_messages")) {
+	$file = dirname(__FILE__) . "/../lib/display.inc.php";
+	include($file);
 }
+
+//print "<pre>"; print_r($GLOBALS); print "</pre>"; // Debugging
+
+//
+// Are we in the dev theme?
+//
+check_dev_theme($directory);
+
+//
+// If we have unread private messages, let the user know.
+//
+check_private_messages();
+
+//
+// Do we have any outstandng buddy requests?
+//
+check_pending_friend_requests();
+//print "Timer: " . get_time_offset() . "<br/>\n"; // Debugging
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -29,10 +48,12 @@ var directory = "/<?php print $directory; ?>";
 </script>
 <?php
 //
-// jQuery cookie plugin.
+// jQuery cookie plugin.  The jquery_cookie module breaks.
+// See: http://drupal.org/node/203435 for details
 //
 ?>
-<script type="text/javascript" src="/<?php print $directory; ?>/cookie.js"></script>
+<script type="text/javascript" src="/<?php print $directory; ?>/lib/cookie.js"></script>
+<script type="text/javascript" src="/<?php print $directory; ?>/lib/drupalBlockToggle.js"></script>
   <script type="text/javascript"><?php /* Needed to avoid Flash of Unstyle Content in IE */ ?> </script>
 <?php
 //
