@@ -249,6 +249,7 @@ table {
   padding: 10px;
 */
 	padding-left: 10px;
+	padding-right: 10px;
 	background-image:url("backgrounds/anthrocon-white-rock.jpg");
 }
 #mission, .node .content, .comment .content {
@@ -703,6 +704,7 @@ code, tt {
 	border: 1px solid black;
 	min-width: 700px;
 	padding: 5px;
+	width: 900px;
 }
 
 tbody th { 
