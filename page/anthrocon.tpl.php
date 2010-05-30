@@ -7,8 +7,22 @@
 // load the file twice.
 //
 if (!function_exists("check_private_messages")) {
-	$file = dirname(__FILE__) . "/../lib/display.inc.php";
-	include($file);
+
+	$slash = DIRECTORY_SEPARATOR;
+       	$file = $slash . ".." . $slash . "lib" . $slash . "display.inc.php";
+	$path = dirname(__FILE__) . $file;
+
+	//
+	// If the file was not found, then maybe we didn't create symlinks,
+	// so try removing ".." instead.
+	//
+	if (!is_file($path)) {
+       		$file = $slash . "lib" . $slash . "display.inc.php";
+		$path = dirname(__FILE__) . $file;
+	}
+
+	include($path);
+
 }
 
 //print "<pre>"; print_r($GLOBALS); print "</pre>"; // Debugging
