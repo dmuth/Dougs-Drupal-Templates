@@ -11,6 +11,7 @@ set -e
 
 MODULES=""
 MODULES="${MODULES} aggregator"
+MODULES="${MODULES} googleanalytics"
 MODULES="${MODULES} xmlsitemap xmlsitemap_engines xmlsitemap_node xmlsitemap_taxonomy xmlsitemap_user"
 MODULES="${MODULES} ping"
 MODULES="${MODULES} update"
