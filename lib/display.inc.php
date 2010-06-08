@@ -43,8 +43,16 @@ function check_dev_theme($directory) {
 
 	if (strstr($directory, "dev")) {
 		$message = "DEVELOPMENT TEMPLATE - If you think you shouldn't be seeing "
-			. "this, please <a href=\"/contact\">contact us</a>.";
-		$head_title .= " - " . $message;
+			. "this, please <a href=\"/contact\">contact us</a>.<br/>\n";
+
+		if (!empty($GLOBALS["base_url"])) {
+			$base_url = $GLOBALS["base_url"];
+		} else {
+			$base_url = "(none defined)";
+		}
+
+		$message .= "base_url: $base_url<br/>\n";
+
 		print $message;
 	}
 
