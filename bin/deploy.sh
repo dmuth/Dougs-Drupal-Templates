@@ -78,7 +78,6 @@ cd ..
 #
 THEME=`basename $PWD`
 
-
 #
 # Check to see if the specified filename exists.  If not, print an error 
 # and exit with status 1.
@@ -138,7 +137,6 @@ then
 	#
 	ln -sf ${STYLE} style.css
 	ln -sf ${SCREENSHOT} screenshot.png
-	ln -sf ${INFO} ${THEME}.info
 	ln -sf ${PAGE} page.tpl.php
 	ln -sf ${NODE} node.tpl.php
 	ln -sf ${SCRIPT} script.js
@@ -153,7 +151,6 @@ else
 	#
 	cp -f ${STYLE} style.css
 	cp -f ${SCREENSHOT} screenshot.png
-	cp -f ${INFO} ${THEME}.info
 	cp -f ${PAGE} page.tpl.php
 	cp -f ${NODE} node.tpl.php
 	cp -f ${SCRIPT} script.js
@@ -164,6 +161,12 @@ else
 
 fi
 
+#
+# Always copy the theme file, and append a description to it so we know
+# what directory this theme is in.
+#
+cp -f ${INFO} ${THEME}.info
+echo "description = (Theme directory: ${THEME})" >> ${THEME}.info
 
 #
 # Finally clear the cache, in case the current template has any remaining 
