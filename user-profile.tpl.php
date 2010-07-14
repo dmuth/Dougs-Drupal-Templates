@@ -165,7 +165,11 @@ $summary = $account->content["summary"];
 		$key = "profile_species";
 		
 		if (!empty($public_profile[$key])) {
-			$html = $public_profile[$key]["#value"];
+			$html = check_markup($public_profile[$key]["#value"]);
+			$regexp = "|^ <p></p><p>|";
+			$html = preg_replace($regexp, "", $html);
+			$regexp = "|</p>\n $|";
+			$html = preg_replace($regexp, "", $html);
 		}
 		
 		//
