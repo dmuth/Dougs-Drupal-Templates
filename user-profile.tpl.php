@@ -304,7 +304,7 @@ $summary = $account->content["summary"];
 		//
 		// Remove leading and trailing tags added by check_markup()
 		//
-		$regexp = "|^ <p></p><p>|";
+		$regexp = "|<p></p><p></p>|";
 		$html = preg_replace($regexp, "", $html);
 		$regexp = "|</p>\n $|";
 		$html = preg_replace($regexp, "", $html);
