@@ -507,7 +507,7 @@ blockquote {
 	font-weight: bold;
 }
 
-.author-real-name, .author-location, .author-comment, .author-joined, .author-posts {
+.author-real-name, .author-species, .author-location, .author-comment, .author-joined, .author-posts {
 	font-size: smaller;
 }
 
@@ -518,6 +518,5 @@ blockquote {
 	width: 150px;
 }
 
-/* TEST */
 
 

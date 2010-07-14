@@ -26,6 +26,8 @@ if (!function_exists("check_private_messages")) {
 //
 $public_profile = $profile["Public Profile"];
 
+//print_r($public_profile); // Debugging
+
 //
 // Our base URI for icons in this template.
 //
@@ -70,6 +72,20 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
       
       <?php if (!empty($user_badges)): ?>
         <div class="author-pane-line author-badges"> <?php print $user_badges;  ?> </div>
+      <?php endif; ?>
+
+	<?php
+	//
+	// Print up the poster's species.
+	//
+	if (!empty($public_profile["profile_species"]["#value"])) {
+		$species = $public_profile["profile_species"]["#value"];
+	}
+	?>
+      <?php if (!empty($species)): ?>
+        <div class="author-pane-line author-species">
+	Species: <?php print $species;  ?>
+	</div>
       <?php endif; ?>
 
 	<?php 

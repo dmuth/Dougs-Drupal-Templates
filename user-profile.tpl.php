@@ -165,7 +165,7 @@ $summary = $account->content["summary"];
 		$key = "profile_species";
 		
 		if (!empty($public_profile[$key])) {
-			$html = check_plain($public_profile[$key]["#value"]);
+			$html = $public_profile[$key]["#value"];
 		}
 		
 		//
