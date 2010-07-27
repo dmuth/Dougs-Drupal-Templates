@@ -25,7 +25,6 @@ if (!function_exists("check_private_messages")) {
 // Reference to our public profile array
 //
 $public_profile = $profile["Public Profile"];
-
 //print_r($public_profile); // Debugging
 
 //
@@ -102,6 +101,13 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
 	</div>
       <?php endif; ?>
 
+	<?php
+	//
+	// Only display additional info if we're not on the the front page.
+	//
+	if (request_uri() != "/") {
+	?>
+
         <div class="author-pane-line author-comment">
 	<?php
 
@@ -132,7 +138,7 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
 		$html = "<span class=\"profile_icons\">" . $html . "</span>";
 		print $html;
 	}
-
+	
 	?>
 
     </div>
@@ -209,5 +215,11 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
         <div class="author-pane-icon"><?php print $flag_friend; ?></div>
       <?php endif; ?>
     </div>
+
+	<?php
+	} // if (request_uri()...
+	?>
+
+
   </div>
 </div>
