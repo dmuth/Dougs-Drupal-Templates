@@ -160,6 +160,35 @@ var directory = "/<?php print $directory; ?>";
 			. "</div>";
 	
 		print $html;
+	} else {
+
+	//
+	// If this is a forum post and it was created before/on the last day of the
+	// 2007 convention, put a blurb at the top about it being from a past con.
+	// In future years, I can make the message be convention year specific.
+	//
+	$date = date("Ymd", $node->created);
+	if (
+		//$date <= 20070708
+		//$date <= 20080629
+		//$date <= 20090706
+		$date <= 20100616
+		&& $node->type == "forum" 
+		&& empty($node->teaser)
+		&& !$sticky
+		) {
+		$html = "<div style=\"border: 1px solid black; font-size: large; "
+			. "text-align: center; padding: 5px; margin: 5px;\">"
+			. "This page is from a past convention.  It is kept here for archival "
+			. "and informational purposes only.<br>\n"
+			. "Please visit <a href=\"/forums\">our forums</a> for the latest "
+			. "announcements and discussion."
+			. "</div>";
+	
+		print $html;
+	}
+
+
 	}
 ?>
         <div class="tabs"><?php print $tabs ?></div>
