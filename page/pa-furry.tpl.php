@@ -131,13 +131,32 @@ if (
 </table>
 
 
+<a name="footer"></a>
 <div id="footer">
-  <?php print $footer_message ?><p>
+
+    <div id="footer-region" class="clearfloat">
+      <div id="footer-left" class="clearfloat">
+        <?php print $footer_left; ?>
+      </div> 		
+
+      <div id="footer-middle" class="clearfloat">
+        <?php print $footer_middle; ?>
+      </div>
+
+      <div id="footer-right" class="clearfloat">
+        <?php print $footer_right; ?>
+      </div>
+    </div>
+
+    <div id="footer-message">
+	<?php print $footer; ?>
+  	<?php print $footer_message ?><p>
 
 All posts and comments on this site are Copyright (C) their authors.  All other content is licensed under the Gnu Free Documentation License.<br/><br/>
 
 Website design by <a href="/user/8">Omnibahumut</a>.  We think he rocks.<br/><br/>
 
+    </div>
 
 </div>
 <?php print $closure ?>

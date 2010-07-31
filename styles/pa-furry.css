@@ -208,7 +208,6 @@ table {
   border-color: red;
 }
 #sidebar-left, #sidebar-right {
-  background-color: #ddd;
   width: 16em;
   /* padding in px not ex because IE messes up 100% width tables otherwise */
   padding: 10px;
@@ -220,7 +219,6 @@ table {
 	background-color: #8C32F0;
 }
 #footer {
-  background-color: #eee;
   padding: 1em;
   font-size: 0.8em;
 	/* DTM */
@@ -518,5 +516,111 @@ blockquote {
 	width: 150px;
 }
 
+/* Footer (borrowed from Arthemia) */
 
+#footer-region {
+	color: #000000;
+	font-weight: bold;
+}
+
+#footer-left {
+	/*
+	width:360px;
+	*/
+	width:380px;
+	float:left;
+	padding:10px;
+}
+
+#footer-middle {
+	/*
+	width:360px;
+	*/
+	width:380px;
+	float:left;
+	padding-top:10px;
+	padding-left: 30px;
+}
+
+#footer-right {
+	/*
+	width:360px;
+	float:right;
+	padding:10px;
+	*/
+	width:380px;
+	float:left;
+	padding-top:10px;
+	padding-left: 30px;
+}
+
+#footer-region a {
+}
+
+#footer-region ul {
+	margin:5px 0 0 0;
+	padding:0px;
+}
+
+#footer-region .item-list ul li {
+	margin: 0;
+	list-style-type: none;
+	list-style-position: inside;
+	border-top-width: 1px;
+	border-top-style: dotted;
+	/*
+	border-top-color: #aaaaaa;
+	*/
+	border-top-color: black;
+}
+
+#footer-region li{
+	/*
+	* When this is enabled, we don't see the discs...
+	*/
+	display:block;
+}
+
+#footer-region h3{
+	text-transform:lowercase;
+	margin:0;
+	font-weight:bold;
+	font-size:1.5em;
+	letter-spacing:-0.05em;
+}
+
+#footer-message {
+  padding: 1em;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+/* Float Properties (borrowed from Arthemia) */
+
+.clearfloat:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+
+.clearfloat {
+	display: inline-block;
+}
+
+
+/* Hides from IE-mac \*/
+* html .clearfloat {
+	height:1%;
+}
+
+*+html .clearfloat {
+	height:1%;
+}
+
+.clearfloat {
+	display:block;
+}
+  
 
