@@ -18,7 +18,7 @@
 	//
 	// Glue in their name
 	//
-	$submitted = "Subbmited by " . l($node->name, "user/" . $node->uid)
+	$submitted = "Submitted by " . l($node->name, "user/" . $node->uid)
 		. $name
 		. " on "
 		. format_date($node->created)
