@@ -160,6 +160,24 @@ var directory = "/<?php print $directory; ?>";
 			. "</div>";
 	
 		print $html;
+
+	} else if (
+		$node->type == "product"
+		|| $node->type == "dvd"
+		) {
+			$html = "<div style=\"border: 1px solid black; font-size: large; "
+				. "text-align: center; padding: 5px; margin: 5px;\">"
+				. "Welcome to the Anthrocon Store!<br/>"
+				. "We're not quite finished setting up the store yet, so "
+				. "free to browse around and add things to your cart, "
+				. "but you won't be able to get very far into the checkout "
+				. "process. </br>"
+				. "Watch this space for more updates.<br/>"
+				. "</div>";
+	
+			print $html;
+
+
 	} else {
 		//
 		// If this is a forum post and it was created before/on the last day of the
@@ -189,7 +207,6 @@ var directory = "/<?php print $directory; ?>";
 		}
 
 	}
-
 
 ?>
         <div class="tabs"><?php print $tabs ?></div>
