@@ -150,7 +150,7 @@ var directory = "/<?php print $directory; ?>";
 			. "<ul>\n"
 			. "<li>Access to all of our posts and comments</li>\n"
 			. "<li>Your own profile including an avatar, buddy lists, and other social networking features</li>\n"
-			. "<li>The ability to participate in a community of over 5,000 furry fans!</li>\n"
+			. "<li>The ability to participate in a community of over 6,000 furry fans!</li>\n"
 			. "</ul>\n"
 
 			. "<span style=\"font-size: larger; \">"
@@ -171,7 +171,7 @@ var directory = "/<?php print $directory; ?>";
 				. "text-align: center; padding: 5px; margin: 5px;\">"
 				. "Welcome to the Anthrocon Store!<br/>"
 				. "We're not quite finished setting up the store yet, so "
-				. "free to browse around and add things to your cart, "
+				. "feel free to browse around and add things to your cart, "
 				. "but you won't be able to get very far into the checkout "
 				. "process. </br>"
 				. "Watch this space for more updates.<br/>"
