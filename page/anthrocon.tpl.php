@@ -166,9 +166,12 @@ var directory = "/<?php print $directory; ?>";
 		|| $node->type == "dvd"
 		|| $node->type == "misc"
 		|| $node->type == "tshirt"
+		|| (!empty($_GET["q"]) && strstr($_GET["q"], "cart"))
 		) {
 			$html = "<div style=\"border: 1px solid black; font-size: large; "
-				. "text-align: center; padding: 5px; margin: 5px;\">"
+				. "text-align: center; padding: 5px; margin: 5px; \" "
+				. "class=\"messages\" "
+				. ">"
 				. "Welcome to the Anthrocon Store!<br/>"
 				. "We're not quite finished setting up the store yet, so "
 				. "feel free to browse around and add things to your cart, "
