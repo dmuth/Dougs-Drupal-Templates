@@ -88,33 +88,7 @@ if (
 	)
 	) {
 	
-	$html = "<div style=\"border: 1px solid black; "
-	//. "font-size: large; "
-	. "padding: 5px; margin: 5px;\">"
-	
-	. "Welcome <b>furry fans</b>!</p>\n"
-	. "We're glad you stopped by.  Go ahead and "
-	. "<a href=\"/user\">register for a free account</a> "
-	. "to get the benefits of being a member, including:\n"
-
-	. "<ul>\n"
-	. "<li>Access to all of our posts and comments</li>\n"
-	. "<li>Your own profile including an avatar, buddy lists, and other social networking features</li>\n"
-	. "<li>The ability to send private messages to other users on this site</li>\n"
-	. "<li>The ability to chat and interact with other furries in and around Pennsylvania.</li>\n"
-	. "</ul>\n"
-
-	. "<span style=\"font-size: larger; \">"
-	. "Creating an account is easy. <a href=\"/user\">Register now!</a>"
-	. "</span>\n"
-	. "<br/>\n"
-	. "<br/>\n"
-
-	. "(Not a furry fan?  That's cool.  <a href=\"/who-is-welcome-here\">You're still welcome here.</a>)"
-	
-	. "</div>";
-		
-	print $html;
+	//print $html;
 
 }
 
