@@ -58,7 +58,7 @@ if (!empty($terms)) {
 <tr>
 <td valign="top">
 <?php 
-	
+
 if ($picture) {
 	//
 	// Print the picture ONLY if this is a forum post and not a "teaser",
@@ -70,6 +70,7 @@ if ($picture) {
 			|| $node->type == "blog"
 			|| $node->type == "event")
 		//&& empty($node->teaser)
+		&& empty($node->sticky)
 		) {
 			//print $picture;
 			$account = user_load($node->uid);
