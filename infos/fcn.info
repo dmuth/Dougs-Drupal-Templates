@@ -1,0 +1,20 @@
+; $Id: saveardmore.info,v 1.2 2010/04/11 23:42:39 doug Exp $
+name = Furry Connection North
+description = (based on Bluemarine)
+core = 6.x
+;version = 6.16
+engine = phptemplate
+
+;
+; Regions
+;
+regions[left] = Left sidebar
+regions[right] = Right sidebar
+regions[content] = Content
+regions[header] = Header
+regions[footer] = Footer
+regions[footer_left] = Footer Left
+regions[footer_middle] = Footer Middle
+regions[footer_right] = Footer Right
+
+
