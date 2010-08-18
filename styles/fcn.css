@@ -275,8 +275,10 @@ ul.links li.first {
   padding-left: 1.5em; /* LTR */
 }
 .node .picture {
+/*
   border: 1px solid #ddd;
-  float: right; /* LTR */
+  float: right;
+  */
   margin: 0.5em;
 }
 .comment {
@@ -432,7 +434,9 @@ th {
 }
 
 .node {
+	/*
 	font-size: 14px;
+	*/
 }
 
 .service-links {
@@ -455,3 +459,174 @@ blockquote {
 	background-color: #006;
 	border: 1px solid #FF3FD2;
 }
+
+.profile td.name {
+	font-weight: bold;
+}
+
+/**
+* Downsize the titles in forum posts
+*/
+#forum .title, #forum .title a {
+	/*
+  	font-size: smaller;
+  	*/
+  	font-size: 10px;
+}
+
+/**
+* Stuff for the Advanced Forums module.
+*/
+.forum-links li {
+	list-style-type: none;
+}
+.forum-post {
+	border-top: 1px solid black;
+}
+
+.forum-post-panel-sub {
+}
+
+.user_badges img {
+	padding: 2px;
+}
+ 
+.new {
+  text-align: right;
+  font-weight: bold;
+  float: right;
+  color: red;
+}
+
+/**
+* Put padding around each of our profile icons.
+*/
+.profile_icons img {
+	margin: 1px;
+	margin-top: 5px;
+}
+
+.author-pane-label {
+	font-weight: bold;
+}
+
+.author-real-name, .author-species, .author-location, .author-comment, .author-joined, .author-posts {
+	font-size: smaller;
+}
+
+.author-pane {
+}
+
+.author-pane-inner {
+	width: 150px;
+}
+
+/* Footer (borrowed from Arthemia) */
+
+#footer-region {
+	color: #000000;
+	font-weight: bold;
+}
+
+#footer-left {
+	/*
+	width:360px;
+	*/
+	width:380px;
+	float:left;
+	padding:10px;
+}
+
+#footer-middle {
+	/*
+	width:360px;
+	*/
+	width:380px;
+	float:left;
+	padding-top:10px;
+	padding-left: 30px;
+}
+
+#footer-right {
+	/*
+	width:360px;
+	float:right;
+	padding:10px;
+	*/
+	width:380px;
+	float:left;
+	padding-top:10px;
+	padding-left: 30px;
+}
+
+#footer-region a {
+}
+
+#footer-region ul {
+	margin:5px 0 0 0;
+	padding:0px;
+}
+
+#footer-region .item-list ul li {
+	margin: 0;
+	list-style-type: none;
+	list-style-position: inside;
+	border-top-width: 1px;
+	border-top-style: dotted;
+	/*
+	border-top-color: #aaaaaa;
+	*/
+	border-top-color: black;
+}
+
+#footer-region li{
+	/*
+	* When this is enabled, we don't see the discs...
+	*/
+	display:block;
+}
+
+#footer-region h3{
+	text-transform:lowercase;
+	margin:0;
+	font-weight:bold;
+	font-size:1.5em;
+	letter-spacing:-0.05em;
+}
+
+#footer-message {
+  padding: 1em;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+/* Float Properties (borrowed from Arthemia) */
+
+.clearfloat:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+
+.clearfloat {
+	display: inline-block;
+}
+
+
+/* Hides from IE-mac \*/
+* html .clearfloat {
+	height:1%;
+}
+
+*+html .clearfloat {
+	height:1%;
+}
+
+.clearfloat {
+	display:block;
+}
+  
+
+
