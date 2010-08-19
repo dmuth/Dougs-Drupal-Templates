@@ -200,7 +200,9 @@ var directory = "/<?php print $directory; ?>";
 			&& !$sticky
 			) {
 			$html = "<div style=\"border: 1px solid black; font-size: large; "
-				. "text-align: center; padding: 5px; margin: 5px;\">"
+				. "text-align: center; padding: 5px; margin: 5px;\" "
+				. "class=\"messages\"; "
+				. ">"
 				. "This page is from a past convention.  It is kept here for archival "
 				. "and informational purposes only.<br>\n"
 				. "Please visit <a href=\"/forums\">our forums</a> for the latest "
