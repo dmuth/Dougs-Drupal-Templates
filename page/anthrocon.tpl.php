@@ -141,7 +141,9 @@ var directory = "/<?php print $directory; ?>";
 		) {
 		$html = "<div style=\"border: 1px solid black; "
 			//. "font-size: large; "
-			. "padding: 5px; margin: 5px;\">"
+			. "padding: 5px; margin: 5px;\" "
+			. "class=\"messages\"; "
+			. ">"
 
 			. "Welcome <b>furry fans</b>!</p>\n"
 			. "We're glad you stopped by.  Go ahead and "
