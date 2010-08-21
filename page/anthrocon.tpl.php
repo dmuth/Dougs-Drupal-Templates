@@ -169,6 +169,7 @@ var directory = "/<?php print $directory; ?>";
 		|| $node->type == "misc"
 		|| $node->type == "tshirt"
 		|| (!empty($_GET["q"]) && strstr($_GET["q"], "cart"))
+		|| (!empty($_GET["q"]) && strstr($_GET["q"], "catalog"))
 		) {
 			$html = "<div style=\"border: 1px solid black; font-size: large; "
 				. "text-align: center; padding: 5px; margin: 5px; \" "
