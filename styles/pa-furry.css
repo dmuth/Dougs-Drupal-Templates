@@ -623,4 +623,21 @@ blockquote {
 	display:block;
 }
   
+/* TEST */
+/*
+#chatroom-board-container {
+*/
+.block #chatroom-board-container {
+}
+
+.block #chatroom-board-container a:link {
+	color: #8C32F0;
+}
+.block #chatroom-board-container a:visited {
+	color: #8C32F0;
+}
+.block #chatroom-board-container a:hover {
+	text-decoration: underline;
+	color: #8C32F0;
+}
 
