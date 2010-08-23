@@ -622,12 +622,12 @@ blockquote {
 .clearfloat {
 	display:block;
 }
-  
-/* TEST */
-/*
-#chatroom-board-container {
+ 
+/**
+* CSS for our chat room embedded in a block.
 */
 .block #chatroom-board-container {
+	color: black;
 }
 
 .block #chatroom-board-container a:link {
