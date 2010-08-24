@@ -656,13 +656,17 @@ blockquote {
 	text-decoration: underline;
 	color: #8C32F0;
 }
-#chatroom-user-list a:link {
+
+/**
+* Userlist on the popout out.
+*/
+.chatroom-popout #chatroom-user-list a:link {
 	color: #FFFFFF;
 }
-#chatroom-user-list a:visited {
+.chatroom-popout #chatroom-user-list a:visited {
 	color: #FFFFFF;
 }
-#chatroom-user-list a:hover {
+.chatroom-popout #chatroom-user-list a:hover {
 	text-decoration: underline;
 	color: #FFFFFF;
 }
