@@ -218,6 +218,11 @@ table {
 	color: #FFFFFF;
 	background-color: #8C32F0;
 }
+
+#sidebar-right {
+	width: 250px;
+}
+
 #footer {
   padding: 1em;
   font-size: 0.8em;
