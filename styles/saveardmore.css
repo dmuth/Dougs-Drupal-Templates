@@ -665,4 +665,9 @@ tbody {
 	display:block;
 }
   
-
+/**
+* Hide our RSS feed icon, since it pushes the other panes down a bit.
+*/
+.pane-content .feed-icon {
+	display: none;
+}
