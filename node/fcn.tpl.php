@@ -66,10 +66,11 @@ if ($picture) {
 	//
 	if (
 		($node->type == "forum" 
-			|| $node->type == "page"
-			|| $node->type == "blog"
-			|| $node->type == "event")
-		//&& empty($node->teaser)
+			//|| $node->type == "page"
+			//|| $node->type == "blog"
+			//|| $node->type == "event"
+			)
+		&& empty($node->teaser)
 		&& empty($node->sticky)
 		) {
 			//print $picture;
