@@ -163,6 +163,8 @@ var directory = "/<?php print $directory; ?>";
 	
 		print $html;
 
+/*
+// Store is live, let's comment this out for now.
 	} else if (
 		$node->type == "product"
 		|| $node->type == "dvd"
@@ -185,7 +187,7 @@ var directory = "/<?php print $directory; ?>";
 				. "</div>";
 	
 			print $html;
-
+*/
 
 	} else {
 		//
