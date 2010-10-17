@@ -1,0 +1,636 @@
+/*$Id: style.css,v 2.0 2010/09/20 05:31:31 Raeth Exp Raeth $
+
+** HTML elements
+*/
+BODY
+{
+	margin: 0;
+	padding: 0;
+	color: #413F40;
+	font: 76% Verdana, Arial, Helvetica, sans-serif;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background: #D798AC url(gradient.gif) repeat-x fixed top left;
+}
+TR.odd TD, TR.even TD
+{
+	padding: 0.3em;
+}
+H1, H2, H3, H4, H5, H6
+{
+	margin-bottom: 0.5em;
+}
+H1
+{
+	font-size: 1.3em;
+}
+H2
+{
+	font-size: 1.2em;
+}
+H3, H4, H5, H6
+{
+	font-size: 1.1em;
+}
+P
+{
+	margin-top: 0.5em;
+	margin-bottom: 0.9em;
+}
+A
+{
+	text-decoration: none;
+	font-weight: bold;
+}
+A:link
+{
+	color: #CF4975;
+}
+A:visited
+{
+	color: #B58E8E;
+}
+A:hover
+{
+	color: #68AE27;
+	text-decoration: underline;
+}
+FIELDSET
+{
+	border: 1px solid #CCC;
+	border: 1px solid #000066;
+}
+PRE
+{
+	background-color: #EEE;
+	padding: 0.75em 1.5em;
+	font-size: 12px;
+	border: 1px solid #DDD;
+}
+TABLE
+{
+	font-size: 1em;
+}
+.form-item LABEL
+{
+	font-size: 1em;
+	color: #222;
+	color: #FFFFFF;
+}
+.item-list .title
+{
+	font-size: 1em;
+	color: #413F40;
+}
+.links
+{
+	margin-bottom: 0;
+}
+.comment .links
+{
+	margin-bottom: 0;
+}
+#content
+{
+	width: 773px;
+}
+#header
+{
+	width: 101%;
+}
+#header TD
+{
+	vertical-align: top;
+}
+#logo
+{
+	border: 0;
+}
+#logo IMG
+{
+	padding: 0 0em;
+	padding: 0;
+	border: 0;
+}
+#logo_right IMG
+{
+	float: right;
+}
+#menu
+{
+	padding: 0.5em 0.5em 0;
+	text-align: right;
+	vertical-align: middle;
+}
+#navlist
+{
+	font-size: 1em;
+	padding: 0 0.8em 1.2em 0;
+	color: #9CF;
+}
+#navlist A
+{
+	font-weight: bold;
+	color: #FFF;
+}
+#subnavlist
+{
+	padding: 0.5em 1.2em 0.4em 0;
+	font-size: 0.8em;
+	color: #9CF;
+}
+#subnavlist A
+{
+	font-weight: bold;
+	color: #9CF;
+}
+UL.links LI
+{
+	border-left: 1px solid #9CF;
+	border: none;
+}
+UL.links LI.first
+{
+	border: none;
+}
+#search .form-text, #search .form-submit
+{
+	border: 1px solid #369;
+	font-size: 1.1em;
+	height: 1.5em;
+	vertical-align: middle;
+}
+#search .form-text
+{
+	width: 8em;
+	padding: 0 0.5em;
+}
+#mission
+{
+	background-color: #369;
+	padding: 1.5em 2em;
+	color: #FFF;
+}
+#mission A, #mission A:visited
+{
+	color: #9CF;
+	font-weight: bold;
+}
+.site-name
+{
+	margin: 0.6em 0 0;
+	padding: 0;
+	font-size: 2em;
+}
+.site-name A:link, .site-name A:visited
+{
+	color: #FFF;
+}
+.site-name A:hover
+{
+	color: #369;
+	text-decoration: none;
+}
+.site-slogan
+{
+	font-size: 1em;
+	color: #EEE;
+	display: block;
+	margin: 0;
+	font-style: italic;
+	font-weight: bold;
+}
+#main
+{
+	padding: 10px;
+	width: 773px;
+}
+#mission, .node .content, .comment .content
+{
+	line-height: 1.4em;
+}
+#logo_left
+{
+	padding-right: 2.3em;
+}
+#help
+{
+	font-size: 0.9em;
+	margin-bottom: 1em;
+}
+.breadcrumb
+{
+	margin-bottom: 0.5em;
+}
+.messages
+{
+	background-color: #EEE;
+	border: 1px solid #CCC;
+	padding: 0.3em;
+	margin-bottom: 1em;
+	color: #000000;
+}
+.error
+{
+	border-color: #FF0000;
+	color: #000000;
+}
+#sidebar-left, #sidebar-right
+{
+	width: 18em;
+	padding: 16px;
+	vertical-align: top;
+	float: left;
+}
+#footer
+{
+	padding: 1em;
+	font-size: 0.8em;
+}
+.title, .title A
+{
+	font-weight: bold;
+	font-size: 1.3em;
+	color: #413F40;
+	margin: 0 auto;
+}
+.submitted
+{
+	color: #999;
+	font-size: 0.8em;
+}
+.links
+{
+	color: #999;
+}
+.links A
+{
+	font-weight: bold;
+}
+.block, .box
+{
+	padding: 0 0 1.5em;
+}
+.block
+{
+	border-bottom: 1px solid #FFFFFF;
+	border: 0;
+	padding-bottom: 0.75em;
+	padding: 0.5em;
+	margin-bottom: 1.5em;
+	background-color: #FFFFFF;
+}
+.block .title
+{
+	margin-bottom: 0.25em;
+}
+.box .title
+{
+	font-size: 1.1em;
+}
+.node
+{
+	margin: 0.5em 0 2em;
+	background-color: #FFFFFF;
+	padding: 0.5em;
+	border: 1px solid #FFFFFF;
+}
+.sticky
+{
+	padding: 0.5em;
+	border: 1px solid #FFFFFF;
+	background-color: #FFFFFF;
+}
+.node .content, .comment .content
+{
+	margin: 0.5em 0;
+}
+.node .taxonomy
+{
+	color: #413F40;
+	font-size: 0.8em;
+	padding-left: 1.5em;
+}
+.node .picture
+{
+	margin: 0.5em;
+}
+.comment
+{
+	border: 1px solid #ABC;
+	padding: 0.5em;
+	margin-bottom: 1em;
+}
+.comment .title A
+{
+	font-size: 1.1em;
+	font-weight: normal;
+}
+.comment .new
+{
+	text-align: right;
+	font-weight: bold;
+	font-size: 0.8em;
+	float: right;
+	color: #FF0000;
+}
+.comment .picture
+{
+	border: 1px solid #ABC;
+	float: right;
+	margin: 0.5em;
+}
+#aggregator .feed-source
+{
+	background-color: #EEE;
+	border: 1px solid #CCC;
+	padding: 1em;
+	margin: 1em 0;
+}
+#aggregator .news-item .categories, #aggregator .source, #aggregator .age
+{
+	color: #999;
+	font-style: italic;
+	font-size: 0.9em;
+}
+#aggregator .title
+{
+	margin-bottom: 0.5em;
+	font-size: 1em;
+}
+#aggregator H3
+{
+	margin-top: 1em;
+}
+#forum TABLE
+{
+	width: 100%;
+}
+#forum TD
+{
+	padding: 0.5em;
+}
+#forum TD.forum, #forum TD.posts
+{
+	background-color: #EEE;
+}
+#forum TD.topics, #forum TD.last-reply
+{
+	background-color: #DDD;
+}
+#forum TD.container
+{
+	background-color: #CCC;
+}
+#forum TD.container A
+{
+	color: #555;
+}
+#forum TD.statistics, #forum TD.settings, #forum TD.pager
+{
+	height: 1.5em;
+	border: 1px solid #BBB;
+}
+#forum TD .name
+{
+	color: #96C;
+}
+#forum TD .links
+{
+	padding-top: 0.7em;
+	font-size: 0.9em;
+}
+#profile .profile
+{
+	clear: both;
+	border: 1px solid #ABC;
+	padding: 0.5em;
+	margin: 1em 0em;
+}
+#profile .profile .name
+{
+	padding-bottom: 0.5em;
+}
+.block-forum H3
+{
+	margin-bottom: 0.5em;
+}
+DIV.admin-panel .description
+{
+	color: #999;
+}
+DIV.admin-panel .body
+{
+	background: #FFFFFF;
+}
+DIV.admin-panel H3
+{
+	background-color: #69C;
+	color: #FFF;
+	padding: 5px 8px;
+	margin: 0;
+}
+TBODY
+{
+	border: none;
+}
+UL.primary LI A
+{
+	background-color: #003399;
+	color: #FFFFFF;
+}
+UL.primary LI.active A
+{
+	color: #FFFFFF;
+}
+UL.primary LI A:hover
+{
+	background-color: #000066;
+	color: #FFFFFF;
+}
+.block-region
+{
+	color: #413F40;
+}
+.profile H3
+{
+	border-bottom-color: #000066;
+}
+TD.active
+{
+	background-color: #FFFFFF;
+}
+TH
+{
+	background-color: #003399;
+}
+.preview .node
+{
+	background-color: #FFFFFF;
+}
+.node TD
+{
+	background: #FFFFFF;
+	padding-bottom: 0;
+}
+.node
+{
+	background: #FFFFFF;
+	color: #413F40;
+}
+.service-links
+{
+	padding-top: 10px;
+}
+.service-label
+{
+	font-size: 12px;
+}
+.content TD
+{
+	padding: 5px;
+	border: 0px solid #FFFFFF;
+}
+BLOCKQUOTE
+{
+	padding: 5px;
+	margin: 10px;
+	background-color: #FFFFFF;
+	color: #000000;
+	border: 1px solid #C1C1C1;
+}
+.profile TD.name
+{
+	font-weight: bold;
+}
+#forum .title, #forum .title A
+{
+	font-size: 10px;
+}
+.forum-links LI
+{
+	list-style-type: none;
+}
+.forum-post
+{
+	border-top: 1px solid #000000;
+}
+.forum-post-panel-sub
+{
+}
+.user_badges IMG
+{
+	padding: 2px;
+}
+.new
+{
+	text-align: right;
+	font-weight: bold;
+	float: right;
+	color: #FF0000;
+}
+.profile_icons IMG
+{
+	margin: 1px;
+	margin-top: 5px;
+}
+.author-pane-label
+{
+	font-weight: bold;
+}
+.author-real-name, .author-species, .author-location, .author-comment, .author-joined, .author-posts
+{
+	font-size: smaller;
+}
+.author-pane
+{
+}
+.author-pane-inner
+{
+	width: 150px;
+}
+#footer-region
+{
+	color: #FFFFFF;
+	font-weight: bold;
+}
+#footer-left
+{
+	width: 380px;
+	float: left;
+	padding: 10px;
+}
+#footer-middle
+{
+	width: 380px;
+	float: left;
+	padding-top: 10px;
+	padding-left: 30px;
+}
+#footer-right
+{
+	width: 380px;
+	float: left;
+	padding-top: 10px;
+	padding-left: 30px;
+}
+#footer-region A
+{
+}
+#footer-region UL
+{
+	margin: 5px 0 0;
+	padding: 0px;
+}
+#footer-region .item-list UL LI
+{
+	margin: 0;
+	list-style-type: none;
+	list-style-position: inside;
+	border-top-width: 1px;
+	border-top-style: dotted;
+	border-top-color: #000000;
+}
+#footer-region LI
+{
+	display: block;
+}
+#footer-region H3
+{
+	text-transform: lowercase;
+	margin: 0;
+	font-weight: bold;
+	font-size: 1.5em;
+	letter-spacing: -0.05em;
+}
+#footer-message
+{
+	padding: 1em;
+	font-size: 0.8em;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.clearfloat:after
+{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfloat
+{
+	display: inline-block;
+}
+/*Hides from IE-mac \*/
+* HTML .clearfloat
+{
+	height: 1%;
+}
+*+HTML .clearfloat
+{
+	height: 1%;
+}
+.clearfloat
+{
+	display: block;
+}
