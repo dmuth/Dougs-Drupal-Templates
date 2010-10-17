@@ -10,6 +10,10 @@ screenshot.png
 script.js
 style.css
 
-# The info file is created automatically
+#
+# Ignore the (automatically-created) .info file in the current directory,
+# but we do want to include everything in infos/*.
+#
 *.info
+!infos/*
 
