@@ -1,0 +1,15 @@
+
+# Ignore symlinks created by deployment script
+advf-author-pane.tpl.php
+favicon.ico
+lib.inc.php
+logo.jpg
+node.tpl.php
+page.tpl.php
+screenshot.png
+script.js
+style.css
+
+# The info file is created automatically
+*.info
+

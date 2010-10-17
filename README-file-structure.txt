@@ -27,7 +27,7 @@ icons/ - Icons for various instant messenger services.  Used by the user
 
 images/ - Images for various websites.  These files are not symlinked
 	anywhere but instead referenced directly from HTML and CSS.
-	Filenames shouldbe in the formsite of (site)-filename.ext.
+	Each site should have its own directory under here.
 
 infos/ - .info files for each site.  The filename is (site).info.
 
