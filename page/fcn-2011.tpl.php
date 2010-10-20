@@ -39,7 +39,7 @@ check_pending_friend_requests();
   <?php print $scripts ?>
 </head>
 
-<body>
+<body style="background: #d798ac url(/<?php print $directory; ?>/images/fcn-2011/gradient.gif/); background-repeat: repeat-x; background-position: top">
 
 <table border="0" cellpadding="0" cellspacing="0" id="header"
 	>
