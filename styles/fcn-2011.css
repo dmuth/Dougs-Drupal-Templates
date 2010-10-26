@@ -192,6 +192,7 @@ ul.links li.first {
   width: 16em;
   /* padding in px not ex because IE messes up 100% width tables otherwise */
   padding: 10px;
+  padding-top: 0;
   vertical-align: top;
 }
 #footer {
