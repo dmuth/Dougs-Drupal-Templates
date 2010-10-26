@@ -44,18 +44,14 @@ check_pending_friend_requests();
 <table border="0" cellpadding="0" cellspacing="0" id="header"
 	>
   <tr>
-    <td id="logo_left">
-		</td>
     <td id="logo">
-		<img src="/<?php print $directory; ?>/images/fcn-2011/header_left.gif" />
-    <img src="/<?php print $directory; ?>/images/fcn-2011/header.gif" />
-		<img src="/<?php print $directory; ?>/images/fcn-2011/header_right.gif" />
+	<img src="/<?php print $directory; ?>/images/fcn-2011/header_left.gif" />
+    	<a href="/"><img src="/<?php print $directory; ?>/images/fcn-2011/header.gif" /></a>
+	<img src="/<?php print $directory; ?>/images/fcn-2011/header_right.gif" />
       <?php if ($logo) { ?><a href="<?php print $base_path ?>" title="<?php print t('Home') ?>"><img src="<?php print $logo ?>" alt="<?php print t('Home') ?>" /></a><?php } ?>
       <?php if ($site_name) { ?><h1 class='site-name'><a href="<?php print $base_path ?>" title="<?php print t('Home') ?>"><?php print $site_name ?></a></h1><?php } ?>
       <?php if ($site_slogan) { ?><div class='site-slogan'><?php print $site_slogan ?></div><?php } ?>
     </td>
-	<td id="logo_right">
-		</td>
     <td id="menu">
       <?php if (isset($secondary_links)) { ?><div id="secondary"><?php print theme('links', $secondary_links) ?></div><?php } ?>
 <!--

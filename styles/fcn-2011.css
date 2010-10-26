@@ -7,7 +7,6 @@ body {
   margin: 0;
   padding: 0;
   color: #000;
-  color: white;
   font: 76% Verdana, Arial, Helvetica, sans-serif;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
@@ -44,8 +43,8 @@ a:visited {
 }
 a:hover {
   color: #39c;
+  color: black;
   text-decoration: underline;
-  color: #18f6ff;
 }
 fieldset {
   border: 1px solid #ccc;
@@ -64,7 +63,6 @@ table {
 .form-item label {
   font-size: 1em;
   color: #222;
-  color: white;
 }
 .item-list .title {
   font-size: 1em;
@@ -212,7 +210,6 @@ ul.links li.first {
   font-size: 1.3em;
   color: #777;
   margin: 0 auto;  /* decrease default margins for h<x>.title */
-  color: white;
 }
 .submitted {
   color: #999;
@@ -382,17 +379,12 @@ tbody {
 }
 
 ul.primary li a {
-  color: white;
 }
 
 ul.primary li.active a {
-  background-color: #000066;
-  color: white;
 }
 
 ul.primary li a:hover {
-  background-color: #000066;
-  color: white;
 }
 
 
@@ -438,7 +430,6 @@ th {
 blockquote {
 	padding: 5px;
 	margin: 10px;
-	background-color: #006;
 	border: 1px solid #FF3FD2;
 }
 
