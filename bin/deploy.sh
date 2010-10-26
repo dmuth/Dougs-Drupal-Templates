@@ -106,7 +106,7 @@ check_file $STYLE
 SCREENSHOT=screenshots/${SITE}.png
 check_file $SCREENSHOT
 
-INFO=infos/${SITE}.info
+INFO=infos/${SITE}.info.txt
 check_file $INFO
 
 PAGE=page/${SITE}.tpl.php
