@@ -45,9 +45,9 @@ check_pending_friend_requests();
 	>
   <tr>
     <td id="logo">
-	<img src="/<?php print $directory; ?>/images/fcn-2011/header_left.gif" />
-    	<a href="/"><img src="/<?php print $directory; ?>/images/fcn-2011/header.gif" /></a>
-	<img src="/<?php print $directory; ?>/images/fcn-2011/header_right.gif" />
+    <span class="fcn_header_left"><img src="/<?php print $directory; ?>/images/fcn-2011/header_left.gif" /></span>
+    	<span class="fcn_header"><a href="/"><img src="/<?php print $directory; ?>/images/fcn-2011/header.gif" /></a></span>
+	<span class="fcn_header_right"><img src="/<?php print $directory; ?>/images/fcn-2011/header_right.gif" /></span>
       <?php if ($logo) { ?><a href="<?php print $base_path ?>" title="<?php print t('Home') ?>"><img src="<?php print $logo ?>" alt="<?php print t('Home') ?>" /></a><?php } ?>
       <?php if ($site_name) { ?><h1 class='site-name'><a href="<?php print $base_path ?>" title="<?php print t('Home') ?>"><?php print $site_name ?></a></h1><?php } ?>
       <?php if ($site_slogan) { ?><div class='site-slogan'><?php print $site_slogan ?></div><?php } ?>
