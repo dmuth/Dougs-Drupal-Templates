@@ -90,7 +90,28 @@ if (
 	)
 	) {
 	
-	//print $html;
+		$html = "<div style=\"border: 1px solid black; "
+			//. "font-size: large; "
+			. "padding: 5px; margin: 5px;\" "
+			. "class=\"messages\"; "
+			. ">"
+
+			. "Welcome <b>furry fans</b>!</p>\n"
+			. "We're glad you stopped by.  Go ahead and "
+				. "<a href=\"/user\">register for a free account</a> "
+				. "to get the benefits of being a member, including:\n"
+			. "<ul>\n"
+			. "<li>Access to all of our posts and comments</li>\n"
+			. "<li>Your own profile including an avatar, buddy lists, and other social networking features</li>\n"
+			. "</ul>\n"
+
+			. "<span style=\"font-size: larger; \">"
+			. "Creating an account is easy. <a href=\"/user\">Register now!</a>\n"
+			. "</span>"
+
+			. "</div>";
+	
+	print $html;
 
 }
 
