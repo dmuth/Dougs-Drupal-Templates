@@ -70,7 +70,7 @@ if ($picture) {
 			//|| $node->type == "blog"
 			//|| $node->type == "event"
 			)
-		&& empty($node->teaser)
+		//&& empty($node->teaser)
 		&& empty($node->sticky)
 		) {
 			//print $picture;
