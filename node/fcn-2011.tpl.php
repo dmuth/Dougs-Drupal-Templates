@@ -61,15 +61,17 @@ if (!empty($terms)) {
 
 if ($picture) {
 	//
-	// Print the picture ONLY if this is a forum post and not a "teaser",
-	// which means an abbreciated post shown on the front page.
+	// Print the picture only if this is not sticky and if the node is
+	// a forum post or is a teaser.
 	//
 	if (
-		($node->type == "forum" 
-			//|| $node->type == "page"
-			//|| $node->type == "blog"
-			//|| $node->type == "event"
+		(
+			$node->type == "forum" 
+			|| (
+				//($node->type == "page" || $node->type == "blog")
+				!empty($node->teaser)
 			)
+		)
 		//&& empty($node->teaser)
 		&& empty($node->sticky)
 		) {
