@@ -116,6 +116,10 @@ var directory = "/<?php print $directory; ?>";
 </div>
 </td>
 </tr>
+
+<!-- No idea WHY this works, but it does, and removes that stupid black line. -->
+<tr><td></td></tr>
+
   <tr>
     <?php if ($left) { ?><td id="sidebar-left">
       <?php print $left ?>
@@ -240,7 +244,7 @@ var directory = "/<?php print $directory; ?>";
 <table border="0">
 <tr>
 <td>
-<img src="/<?php print $directory; ?>/images/anthrocon-buffalo-chase.png" />
+<img src="/<?php print $directory; ?>/images/anthrocon-2011/bunny-hat.png" />
 </td>
 <td width="100%">
   <?php print $footer_message ?>

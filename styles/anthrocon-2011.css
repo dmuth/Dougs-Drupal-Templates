@@ -29,7 +29,7 @@ body {
   color: #000;
   background-color: #fff;
   font: 76% Verdana, Arial, Helvetica, sans-serif;
-	background-image:url("backgrounds/anthrocon-white-rock.jpg");
+	background-image:url("backgrounds/anthrocon-2011/wood-tile.jpg");
 }
 tr.odd td, tr.even td {
   padding: 0.3em;
@@ -242,7 +242,7 @@ table {
 */
 	padding-left: 10px;
 	padding-right: 10px;
-	background-image:url("backgrounds/anthrocon-white-rock.jpg");
+	background-image:url("backgrounds/anthrocon-2011/wood-tile.jpg");
 }
 #mission, .node .content, .comment .content {
   line-height: 1.4;
@@ -265,6 +265,9 @@ table {
   border: 1px solid #ccc;
   padding: 0.3em;
   margin-bottom: 1em;
+/*
+	background-image:url("backgrounds/anthrocon-2011/yellow-tile.jpg");
+*/
 }
 .error {
   border-color: red;
@@ -277,23 +280,26 @@ table {
 	/* Anthrocon */
 	width: 190px;
 	background-color: #d2b48c;
-	background-image:url("backgrounds/anthrocon-tan-rock.jpg");
+	background-image:url("backgrounds/anthrocon-2011/blue-tile.jpg");
 	border: 1px solid black;
+	color: #f8d97f
 }
 
 /* Anthrocon */
-#sidebar-left .active {
-	color: #000000;
-}
-
-/* Anthrocon */
-#sidebar-left a, #sidebar-right a:visited {
+#sidebar-left a, #sidebar-left a:visited, #sidebar-right a, #sidebar-right a:visited {
 	color: #222222;
+	color: #f8d97f;
 }
 
 /* Anthrocon */
-#sidebar-left a:hover {
+#sidebar-left a:hover, #sidebar-right a:hover {
 	color: #000000;
+	color: #ffffff;
+}
+
+/* Anthrocon */
+#sidebar-left a.active, #sidebar-right a.active {
+	color: #ffffff;
 }
 
 #footer {
@@ -303,7 +309,7 @@ table {
 	background-color: #c2c2c2;
 	font-family: Arial, Helvetica, sans-serif;
 	padding: 1em;
-	background-image:url("backgrounds/anthrocon-white-rock.jpg");
+	background-image:url("backgrounds/anthrocon-2011/wood-tile.jpg");
 }
 
 /* Anthrocon */
@@ -691,8 +697,7 @@ code, tt {
 }
 
 .ac_outer {
-	background-color: #d2b48c;
-	background-image:url("backgrounds/anthrocon-tan-rock.jpg");
+	background-color: #c0b59a;
 	border: 1px solid black;
 	min-width: 700px;
 	padding: 5px;
