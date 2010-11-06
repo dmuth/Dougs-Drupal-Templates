@@ -107,7 +107,7 @@ var directory = "/<?php print $directory; ?>";
 <tr>
 <td colspan="2" 
 	id="banner"
-	background="/<?php print $directory; ?>/logo.jpg"
+	background="/<?php print $directory; ?>/images/anthrocon-2011/logo.png"
 	>
 <div id="menu">
       <?php if (isset($primary_links)) { 
