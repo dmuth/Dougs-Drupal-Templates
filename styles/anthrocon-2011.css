@@ -302,6 +302,10 @@ table {
 	color: #ffffff;
 }
 
+#sidebar-left label, #sidebar-right label {
+	color: #f8d97f;
+}
+
 #footer {
 	/* Anthrocon */
 	font-size: x-small;
