@@ -831,3 +831,16 @@ ul.secondary a.active {
 	font-weight: bold;
 }
 
+li.leaf {
+	list-style-image:url("images/anthrocon-2011/menu-leaf.png");
+}
+
+li.collapsed {
+	list-style-image:url("images/anthrocon-2011/menu-collapsed.png");
+}
+
+li.expanded {
+	list-style-image:url("images/anthrocon-2011/menu-expanded.png");
+}
+
+
