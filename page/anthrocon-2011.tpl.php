@@ -248,13 +248,23 @@ var directory = "/<?php print $directory; ?>";
 </td>
 <td width="100%">
   <?php print $footer_message ?>
-Site design by <a href="http://www.cuprohastes.com/">Cuprohastes</a>.
-<?php
-/*
-Page last generated: <?php print date("r"); ?> 
-</div>
-*/
-?>
+Site design by <a href="http://www.cuprohastes.com/">Cuprohastes</a>.<br/>
+<br/>
+
+<a href="/about">About</a>
+| 
+<a href="/sitemap">Site Map</a>
+| 
+<a href="http://twitter.com/anthrocon">Twitter</a>
+| 
+<a href="http://www.facebook.com/group.php?gid=49844448265">Facebook</a>
+| 
+<a href="http://www.flickr.com/groups/anthrocon/pool/">Flickr</a>
+| 
+<a href="http://www.youtube.com/user/anthrocon">YouTube</a>
+|
+<a href="/contact">Contact Us</a>
+
 </td>
 </tr>
 </table>
