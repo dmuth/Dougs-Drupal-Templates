@@ -49,7 +49,7 @@ $submitted = "Submitted by " . l($node->name, "user/" . $node->uid)
 <span class="taxonomy">
 <?php
 if (!empty($terms)) {
-	print "Tags: " . $terms;
+	print "<br/>\nTags: " . $terms;
 }
 
 ?></span>
