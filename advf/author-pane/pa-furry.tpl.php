@@ -169,6 +169,23 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
         </div>
       <?php endif; ?>
 
+	<?php
+		//
+		// How this user's posts and comments were rated
+		//	
+		if (module_exists("fivestarstats")) {
+	?>
+        <div class="author-pane-line author-posts">
+          <span class="author-pane-label"><?php print t('Votes Received'); ?>:</span>
+		<?php
+			$html = fivestarstats_uid_received_summary_html($account->uid, true);
+			print $html;
+		?>
+        </div>
+		<?php
+		}
+		?>
+
       <?php if (isset($userpoints_points)): ?>
         <div class="author-pane-line author-points">
           <span class="author-pane-label"><?php print t('!Points', userpoints_translation()); ?></span>: <?php print $userpoints_points; ?>
