@@ -123,6 +123,7 @@ LOGO="logos/${SITE}.jpg"
 FAVICON="favicons/${SITE}.ico"
 LIB="lib/${SITE}.inc.php"
 AUTHOR_PANE="advf/author-pane/${SITE}.tpl.php"
+TEMPLATE="template/${SITE}.tpl.php"
 
 
 #
@@ -144,6 +145,7 @@ then
 	ln -sf ${FAVICON} favicon.ico
 	ln -sf ${LIB} lib.inc.php
 	ln -sf ${AUTHOR_PANE} advf-author-pane.tpl.php
+	ln -sf ${TEMPLATE} template.php
 
 else
 	#
@@ -158,6 +160,7 @@ else
 	cp -f ${FAVICON} favicon.ico
 	cp -f ${LIB} lib.inc.php
 	cp -f ${AUTHOR_PANE} advf-author-pane.tpl.php
+	cp -f ${TEMPLATE} template.php
 
 fi
 
