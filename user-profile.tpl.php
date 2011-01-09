@@ -497,6 +497,21 @@ $summary = $account->content["summary"];
 
 
 	//
+	// How this user's posts and comments were rated
+	//	
+	if (module_exists("fivestarstats")) {
+		$html = fivestarstats_uid_received_summary_html($account->uid);
+		$row = array(
+			array("valign" => "top", "align" => "right", 
+				"class" => "name",
+				"data" => t("Ratings received:")),
+			array("valign" => "top", "data" => $html)
+			);
+		$rows[] = $row;
+	}
+
+
+	//
 	// How long have they been a member?
 	//
 	$member_len = (time() - $account->created);
