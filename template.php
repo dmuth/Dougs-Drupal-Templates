@@ -1,1 +1,0 @@
-template/pa-furry.tpl.php
