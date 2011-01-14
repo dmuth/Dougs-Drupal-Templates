@@ -690,4 +690,11 @@ blockquote {
 	color: #FFFFFF;
 }
 
+/**
+* Turn off wrapping in this field so that rows aren't like 4 lines high.
+*/
+.views-field-last-comment-timestamp {
+	white-space: nowrap;
+}
+
 
