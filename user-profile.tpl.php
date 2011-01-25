@@ -86,6 +86,30 @@ $summary = $account->content["summary"];
 	$rows[] = $row;
 
 	//
+	// Location
+	//
+	$key = "profile_location";
+	$location = "(none given)";
+	if (!empty($public_profile[$key])) {
+		$location = $public_profile[$key]["#value"];
+	}
+
+	//
+	// If the user is logged in, give them a link to edit the field
+	//
+	if ($account->uid == $user->uid) {
+		$location .= " "  . l("[Edit]", "user/me/edit/Public Profile");
+	}
+
+	$row = array(
+		array("valign" => "top", "align" => "right", 
+			"class" => "name",
+			"data" => t("Location:")),
+		array("valign" => "top", "data" => $location)
+		);
+	$rows[] = $row;
+
+	//
 	// User Comment
 	//
 	$html = "(none given)";
@@ -250,29 +274,35 @@ $summary = $account->content["summary"];
 	}
 	
 	//
-	// Location
+	// Only print up foxes if it exists, since it may not be in
+	// all installations.
 	//
-	$key = "profile_location";
-	$location = "(none given)";
-	if (!empty($public_profile[$key])) {
-		$location = $public_profile[$key]["#value"];
+	if (isset($account->profile_orientation)) {
+
+		$html = t("(none given)");
+		$key = "profile_orientation";
+		
+		if (!empty($public_profile[$key])) {
+			$html = check_plain($public_profile[$key]["#value"]);
+		}
+		
+		//
+		// If the user is logged in, give them a link to edit the field
+		//
+		if ($account->uid == $user->uid) {
+			$html .= " "  . l("[Edit]", "user/me/edit/Public Profile");
+		}
+
+		$row = array(
+			array("valign" => "top", "align" => "right", 
+				"class" => "name",
+				"data" => t("Sexual&nbsp;Orientation:")),
+			array("valign" => "top", "data" => $html)
+			);
+		$rows[] = $row;
+
 	}
-
-	//
-	// If the user is logged in, give them a link to edit the field
-	//
-	if ($account->uid == $user->uid) {
-		$location .= " "  . l("[Edit]", "user/me/edit/Public Profile");
-	}
-
-	$row = array(
-		array("valign" => "top", "align" => "right", 
-			"class" => "name",
-			"data" => t("Location:")),
-		array("valign" => "top", "data" => $location)
-		);
-	$rows[] = $row;
-
+	
 	//
 	// Each of our social networks.
 	//
