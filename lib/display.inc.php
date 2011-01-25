@@ -126,6 +126,18 @@ function get_social_network_links($public_profile) {
 		"add_http" => true,
 		"target" => "_blank",
 		);
+	$fields["profile_facebook"] = array(
+		"img" => "facebook.png",
+		"alt" => t("Facebook"),
+		"add_http" => true,
+		"target" => "_blank",
+		);
+	$fields["profile_twitter"] = array(
+		"img" => "twitter.png",
+		"alt" => t("Twitter"),
+		"add_http" => true,
+		"target" => "_blank",
+		);
 	$fields["profile_linkedin"] = array(
 		"img" => "linkedin.png",
 		"alt" => t("LinkedIn Profile"),
@@ -184,18 +196,6 @@ function get_social_network_links($public_profile) {
 	$fields["profile_flickr"] = array(
 		"img" => "flickr.png",
 		"alt" => t("Flickr"),
-		"add_http" => true,
-		"target" => "_blank",
-		);
-	$fields["profile_twitter"] = array(
-		"img" => "twitter.png",
-		"alt" => t("Twitter"),
-		"add_http" => true,
-		"target" => "_blank",
-		);
-	$fields["profile_facebook"] = array(
-		"img" => "facebook.png",
-		"alt" => t("Facebook"),
 		"add_http" => true,
 		"target" => "_blank",
 		);
