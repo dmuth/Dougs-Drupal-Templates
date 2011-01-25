@@ -138,6 +138,12 @@ function get_social_network_links($public_profile) {
 		"add_http" => true,
 		"target" => "_blank",
 		);
+	$fields["profile_pounced"] = array(
+		"img" => "pounced.png",
+		"alt" => t("Pounced Personal"),
+		"add_http" => true,
+		"target" => "_blank",
+		);
 	$fields["profile_linkedin"] = array(
 		"img" => "linkedin.png",
 		"alt" => t("LinkedIn Profile"),
