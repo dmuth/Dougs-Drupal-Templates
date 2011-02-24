@@ -247,7 +247,15 @@ var directory = "/<?php print $directory; ?>";
 <img src="/<?php print $directory; ?>/images/anthrocon-2011/bunny-hat.png" />
 </td>
 <td width="100%">
-  <?php print $footer_message ?>
+<?php //print $footer_message ?>
+&copy; 1996-<?php print date("Y"); ?>, Anthrocon, Inc. / PO Box 476 / Malvern, PA 19355 
+	- "Fur, Fun, And So Much More!"
+	- Use of this website <a href="/legal">covered by our AUP</a>.
+<p>
+
+Anthrocon and the Anthrocon logo are registered servicemarks of Anthrocon, Inc., a Pennsylvania-incorporated 501(c)7 nonprofit organization
+<p>
+
 Site design by <a href="http://www.cuprohastes.com/">Cuprohastes</a>.<br/>
 <br/>
 
