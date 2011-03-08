@@ -153,9 +153,8 @@ if (
   	<?php print $footer_message ?><p>
 
 All posts and comments on this site are Copyright (C) their authors.  All other content is licensed under the Gnu Free Documentation License.<br/><br/>
-
-Website design by <a href="/user/8">Omnibahumut</a>.  We think he rocks.<br/><br/>
-
+<br/>
+Page last updated: <?php print date("r"); ?>
     </div>
 
 </div>
