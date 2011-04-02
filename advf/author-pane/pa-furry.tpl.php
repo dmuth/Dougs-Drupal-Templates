@@ -38,23 +38,10 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
  <div class="author-pane-inner">
     <div class="author-pane-name-status author-pane-section">
       <div class="author-pane-line author-name"> 
-	<?php print $account_name; ?> 
+	<?php //print $account_name; ?> 
 	</div>
 
       <div class="author-pane-line author-real-name"> 
-	<?php
-	//
-	// Print the public display name
-	//
-	$name = "";
-
-	if (!empty($public_profile["profile_display_name"]["#value"])) {
-		$name = "(" . $public_profile["profile_display_name"]["#value"] . ")";
-	}
-
-	?>
-
-	<?php print $name; ?> 
 	</div>
 
       <?php if (!empty($facebook_status_status)): ?>
@@ -114,12 +101,12 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
 	//
 	// Print up the user comment
 	//
-	if (!empty($public_profile["profile_comment"]["#value"])) {
-		//$html = check_plain($public_profile["profile_comment"]["#value"]);
-		$html = ($public_profile["profile_comment"]["#value"]);
-		$html = "<em>\"" . $html . "\"</em><br/>\n";
-		print $html;
-	}
+	//if (!empty($public_profile["profile_comment"]["#value"])) {
+	//	$html = check_plain($public_profile["profile_comment"]["#value"]);
+	//	$html = ($public_profile["profile_comment"]["#value"]);
+	//	$html = "<em>\"" . $html . "\"</em><br/>\n";
+	//	print $html;
+	//}
 
 	?>
 	</div>
@@ -129,15 +116,15 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
 	//
 	// Each of our social networks.
 	//
-	$html = get_social_network_links($public_profile);
+	//$html = get_social_network_links($public_profile);
 
-	if (!empty($html)) {
+	//if (!empty($html)) {
 		//
 		// Wrap these all in a class.
 		//
-		$html = "<span class=\"profile_icons\">" . $html . "</span>";
-		print $html;
-	}
+	//	$html = "<span class=\"profile_icons\">" . $html . "</span>";
+	//	print $html;
+	//}
 	
 	?>
 
@@ -150,15 +137,15 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
     <div class="author-pane-stats author-pane-section">
       <?php if (!empty($joined)): ?>
         <div class="author-pane-line author-joined">
-          <span class="author-pane-label"><?php print t('Joined'); ?>:</span> 
 	<?php 
+          //<span class="author-pane-label"><?php print t('Joined'); ? >:</span> 
 	//
 	// For some reason, there's a colon with numbers on the end.  Let's
 	// just split out spaces to get rid of them.
 	//
-	$results = explode(" ", $joined);
-	$joined = $results[0];
-	print $joined; 
+	//$results = explode(" ", $joined);
+	//$joined = $results[0];
+	//print $joined; 
 	?>
         </div>
       <?php endif; ?>

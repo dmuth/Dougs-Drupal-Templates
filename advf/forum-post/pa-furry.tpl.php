@@ -21,20 +21,9 @@
 
  */
 
-//print_r($account->profile);
-foreach ($account as $key => $value) {
-//print "TEST: $key<br/>";
-}
-//$tmp = get_social_network_links($account);
-//print_r($tmp);
-//$public_profile = $account->content["Public Profile"];
-//print_r($account->content["Public Profile"]);
-
-
 //
 // Reference to our public profile array
 //
-//$public_profile = $profile["Public Profile"];
 $public_profile = $account->content["Public Profile"];
 //print_r($public_profile); // Debugging
 
@@ -43,14 +32,6 @@ $public_profile = $account->content["Public Profile"];
 //
 $social_html = get_social_network_links($public_profile);
 
-	if (!empty($html)) {
-		//
-		// Wrap these all in a class.
-		//
-		$html = "<span class=\"profile_icons\">" . $html . "</span>";
-		//print $html;
-	}
-	
 ?>
 
 <?php if ($top_post): ?>
@@ -73,14 +54,47 @@ $social_html = get_social_network_links($public_profile);
 	?>
 	 - <?php print l($account->name, "user/$uid"); ?> 
 
+	<?php
+	//
+	// Print the public display name
+	//
+	$name = "";
+
+	if (!empty($public_profile["profile_display_name"]["#value"])) {
+		$name = "(" . $public_profile["profile_display_name"]["#value"] . ")";
+	}
+
+	?>
+
+	<span class="author-real-name">
+	<?php print $name; ?> 
+
+	<?php 
+	$joined = format_date($account->created, "custom", "M j, Y");
+	?>
+	</span>
+
+	<span class="author-joined">
+	<?php print t('Member since'); ?>: 
+	<?php print $joined; ?>
+	</span> 
+	<br/>
+
+	<div class="profile-icons" style="margin-top: 5px; ">
+	<?php print $social_html; ?>
+	</div>
+
+	<?php //$comment->new = true; $new = "new"; // Debugging ?>
       <?php if (!$top_post && !empty($comment->new)): ?>
         <a id="new"><span class="new">(<?php print $new ?>)</span></a>
       <?php endif; ?>
+
     </div>
 
     <?php if (!$top_post): ?>
       <span class="post-num"><?php print $comment_link . ' ' . $page_link; ?></span>
     <?php endif; ?>
+
   </div>
 
   <div class="forum-post-wrapper">

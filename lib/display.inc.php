@@ -222,7 +222,6 @@ function get_social_network_links($public_profile) {
 	// link for each
 	//
 	foreach ($fields as $key => $value) {
-
 		if (empty($public_profile[$key]["#value"])) {
 			continue;
 		}
