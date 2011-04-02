@@ -152,8 +152,22 @@ if (
 	<?php print $footer; ?>
   	<?php print $footer_message ?><p>
 
-All posts and comments on this site are Copyright (C) their authors.  All other content is licensed under the Gnu Free Documentation License.<br/><br/>
+All posts and comments on this site are Copyright (C) their authors.
+All other content is licensed under the Gnu Free Documentation License.<br/>
 <br/>
+
+<a href="/wahtisfurry">What Is "Furry"?</a>
+| 
+<a href="/events">Calendar</a>
+| 
+<a href="/tags">Tag Cloud</a>
+| 
+<a href="/search">Search</a>
+| 
+<a href="/contact">Contact Us</a>
+<br/>
+<br/>
+
 Page last updated: <?php print date("r"); ?>
     </div>
 
