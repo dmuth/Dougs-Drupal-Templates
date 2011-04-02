@@ -9,6 +9,7 @@ page.tpl.php
 screenshot.png
 script.js
 style.css
+template.php
 
 #
 # Ignore the (automatically-created) .info file in the current directory,
