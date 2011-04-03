@@ -43,15 +43,15 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
 	//
 	// Print the public display name
 	//
-	$name = "";
+	//$name = "";
 
-	if (!empty($public_profile["profile_display_name"]["#value"])) {
-		$name = "(" . $public_profile["profile_display_name"]["#value"] . ")";
-	}
+	//if (!empty($public_profile["profile_display_name"]["#value"])) {
+	//	$name = "(" . $public_profile["profile_display_name"]["#value"] . ")";
+	//}
 
 	?>
 
-	<?php print $name; ?> 
+	<?php //print $name; ?> 
 	</div>
 
       <?php if (!empty($facebook_status_status)): ?>
@@ -105,15 +105,15 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
 	//
 	// Each of our social networks.
 	//
-	$html = get_social_network_links($public_profile);
+	//$html = get_social_network_links($public_profile);
 
-	if (!empty($html)) {
+	//if (!empty($html)) {
 		//
 		// Wrap these all in a class.
 		//
-		$html = "<span class=\"profile_icons\">" . $html . "</span>";
-		print $html;
-	}
+		//$html = "<span class=\"profile_icons\">" . $html . "</span>";
+		//print $html;
+	//}
 
 	?>
 
@@ -126,15 +126,15 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
     <div class="author-pane-stats author-pane-section">
       <?php if (!empty($joined)): ?>
         <div class="author-pane-line author-joined">
-          <span class="author-pane-label"><?php print t('Joined'); ?>:</span> 
+          <span class="author-pane-label"><?php //print t('Joined'); ?></span> 
 	<?php 
 	//
 	// For some reason, there's a colon with numbers on the end.  Let's
 	// just split out spaces to get rid of them.
 	//
-	$results = explode(" ", $joined);
-	$joined = $results[0];
-	print $joined; 
+	//$results = explode(" ", $joined);
+	//$joined = $results[0];
+	//print $joined; 
 	?>
         </div>
       <?php endif; ?>
