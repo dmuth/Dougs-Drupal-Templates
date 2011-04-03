@@ -143,7 +143,7 @@ var directory = "/<?php print $directory; ?>";
         <h1 class="title"><?php print $title ?>
 		<iframe src="<?php print $fb_url; ?>" 
 		scrolling="no" frameborder="0" 
-		style="border:none; overflow:hidden; width:90px; height: 40px; float: right; padding-top: 10px; " 
+		style="border:none; overflow:hidden; width:90px; height: 40px; float: right; padding-top: 5px; " 
 		allowTransparency="true"></iframe></h1>
 <?php
 	//
