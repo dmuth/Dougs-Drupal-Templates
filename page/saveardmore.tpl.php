@@ -84,7 +84,22 @@ var directory = "/<?php print $directory; ?>";
     <td valign="top">
       <div id="main">
         <?php print $breadcrumb ?>
-	<h1 class="title"><?php print $title ?></h1>
+	<?php
+	//
+	// Facebook code.
+	//
+	$url = $GLOBALS["base_url"] . request_uri();
+	$url_string = rawurlencode($url);
+	$fb_url = "http://www.facebook.com/plugins/like.php?"
+		. "href=${url_string}&amp;"
+		. "layout=button_count&amp;show_faces=true&amp;action=like&amp;font&amp;colorscheme=light"
+		;
+	?>
+	<h1 class="title"><?php print $title ?>
+		<iframe src="<?php print $fb_url; ?>" 
+		scrolling="no" frameborder="0" 
+		style="border:none; overflow:hidden; width:90px; height: 20px; float: right; padding-top: 10px; " 
+		allowTransparency="true"></iframe></h1>
 <?php
 //
 // If this is a forum post and the user is not logged in, print
