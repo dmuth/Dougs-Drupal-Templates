@@ -181,6 +181,18 @@ if (
 	<?php print $footer; ?>
       <?php print $footer_message; ?>
 
+<a href="/about">About</a>
+| 
+<a href="/tags">Tag Cloud</a>
+| 
+<a href="/contact">Contact Us</a>
+|
+<a href="/node/5293/sac-believes-you-shoulddiscover-more-ardmore">Discover More In Ardmore!</a>
+|
+<a href="/warrant-canary">Search Warrant Canary</a>
+<br/>
+<br/>
+
 Copyright 2004-<?php print date("Y"); ?>, <a href="/">Save Ardmore Coalition</a>, 
 A 501(c)(4) Non-Profit Civic Action Organization.<br/>
 <br/>
@@ -188,6 +200,7 @@ A 501(c)(4) Non-Profit Civic Action Organization.<br/>
 All content on this site is considered to be released under the <a href="http://en.wikipedia.org/wiki/GNU_Free_Documentation_License" >GNU Free Documentation License</a>.  Blog entries, forum posts, and comments are Copyright by their individual owners and are not endorsed by SAC, its Officers, Directors, or members.<br/>
 <br/>
 Page last updated: <?php print date("r"); ?>
+<br/>
 
     </div>
 </div>
