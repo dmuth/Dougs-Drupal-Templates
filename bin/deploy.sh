@@ -171,7 +171,7 @@ fi
 # what directory this theme is in.
 #
 cp -f ${INFO} ${THEME}.info
-echo "description = (Theme directory: ${THEME})" >> ${THEME}.info
+#echo "description = (Theme directory: ${THEME})" >> ${THEME}.info
 
 #
 # Finally clear the cache, in case the current template has any remaining 
