@@ -139,7 +139,6 @@ var directory = "/<?php print $directory; ?>";
 		. "href=${url_string}&amp;"
 		. "layout=button_count&amp;show_faces=true&amp;action=like&amp;font&amp;colorscheme=light"
 		;
-	reg_debug($_SERVER["DOCUMENT_ROOT"]);
 	?>
 	<h1 class="title"><?php print $title ?>
 		<?php
