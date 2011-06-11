@@ -143,11 +143,6 @@ var directory = "/<?php print $directory; ?>";
 	?>
 	<h1 class="title"><?php print $title ?>
 		<?php
-		//
-		// If we are running under Wamp, that only happens
-		// for onsite reg, so suppres the Facebook Like 
-		// button there. 	
-		//
 		if (!strstr($_SERVER["DOCUMENT_ROOT"], "/wamp/")) {
 		?>
 		<iframe src="<?php print $fb_url; ?>" 
