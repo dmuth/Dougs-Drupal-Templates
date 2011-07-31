@@ -181,6 +181,8 @@ All other content is licensed under the Gnu Free Documentation License.<br/>
 <a href="/search">Search</a>
 | 
 <a href="/contact">Contact Us</a>
+| 
+<a href="https://www.facebook.com/pages/Pennsylvania-Furries/242129352474917">PA Furries on Facebook</a>
 <br/>
 <br/>
 
