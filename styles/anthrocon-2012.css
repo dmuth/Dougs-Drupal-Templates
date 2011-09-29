@@ -62,7 +62,7 @@ a:link {
 	/* Anthrocon */
 	font-weight: bold;
 	color: #606060;
-	color: black;
+	color: #16004f;
 	text-decoration: underline;
 }
 
@@ -70,7 +70,7 @@ a:visited {
 	/* Anthrocon */
 	font-weight: bold;
 	color: #606060;
-	color: black;
+	color: #16004f;
 	text-decoration: underline;
 }
 
@@ -326,16 +326,12 @@ table {
 */
 .title, .title a {
 
-	/* Anthrocon */
-	color: #000000;
   margin: 0 auto 0 auto;  /* decrease default margins for h<x>.title */
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: large;
 
 }
 .submitted {
-  color: #999;
-  color: black;
   font-size: 0.8em;
 }
 .links {
