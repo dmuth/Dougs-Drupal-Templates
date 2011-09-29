@@ -29,12 +29,13 @@ body {
   color: #000;
   background-color: #fff;
   font: 76% Verdana, Arial, Helvetica, sans-serif;
-	background-image:url("backgrounds/anthrocon-2011/wood-tile.jpg");
+	background-color: #16004f;
+	color: #16004f;
 }
 tr.odd td, tr.even td {
   padding: 0.3em;
-	background-color: #c0b59a;
-	border-bottom: 1px solid #a0957a;
+	background-color: #a8c8c8;
+	border-bottom: 1px solid #d3ecd2;
 }
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
@@ -242,7 +243,7 @@ table {
 */
 	padding-left: 10px;
 	padding-right: 10px;
-	background-image:url("backgrounds/anthrocon-2011/wood-tile.jpg");
+	background-color: #16004f;
 }
 #mission, .node .content, .comment .content {
   line-height: 1.4;
@@ -265,9 +266,6 @@ table {
   border: 1px solid #ccc;
   padding: 0.3em;
   margin-bottom: 1em;
-/*
-	background-image:url("backgrounds/anthrocon-2011/yellow-tile.jpg");
-*/
 }
 .error {
   border-color: red;
@@ -279,21 +277,17 @@ table {
   vertical-align: top;
 	/* Anthrocon */
 	width: 190px;
-	background-color: #d2b48c;
-	background-image:url("backgrounds/anthrocon-2011/blue-tile.jpg");
+	background-color: #a8c8c8;
 	border: 1px solid black;
-	color: #f8d97f
 }
 
 /* Anthrocon */
 #sidebar-left a, #sidebar-left a:visited, #sidebar-right a, #sidebar-right a:visited {
-	color: #222222;
-	color: #f8d97f;
+	color: #16004f;
 }
 
 /* Anthrocon */
 #sidebar-left a:hover, #sidebar-right a:hover {
-	color: #000000;
 	color: #ffffff;
 }
 
@@ -313,13 +307,15 @@ table {
 	background-color: #c2c2c2;
 	font-family: Arial, Helvetica, sans-serif;
 	padding: 1em;
-	background-image:url("backgrounds/anthrocon-2011/wood-tile.jpg");
+	background-color: #16004f;
+	color: #a8c8c8;
 }
 
 /* Anthrocon */
 #footer a {
 	font-weight: bold;
 	text-decoration: underline;
+	color: #a8c8c8;
 }
 
 /*
@@ -370,10 +366,10 @@ table {
 	padding-bottom: 0px;
 	margin-bottom: 5px;
 }
+
 .block .title {
   margin-bottom: .25em;
 	/* Anthrocon stuff for custom menu titles. */
-	color: black;
 /*
 	color: white;
 	background-color: #3D3D3D;
@@ -383,9 +379,9 @@ table {
 	font-size: small;
 	padding-top: 3px;
 	padding-bottom: 3px;
-	background-color: #b0a58a;
-	border: 1px solid black;
-	font-weight: normal;
+	font-weight: bold;
+	color: #a8c8c8;
+	background-color: #16004f;
 }
 
 .box .title {
@@ -404,6 +400,9 @@ table {
 }
 
 .sticky {
+	background-color: #d3ecd2;
+	padding: 5px;
+	border: none;
 }
 
 .node .content, .comment .content {
@@ -487,16 +486,10 @@ table {
   padding: 0.5em 0.5em 0.5em 0.5em;
 }
 #forum td.forum, #forum td.posts {
-  background-color: #eee;
-	background-color: #c0b59a;
 }
 #forum td.topics, #forum td.last-reply {
-  background-color: #ddd;
-	background-color: #b0a58a;
 }
 #forum td.container {
-  background-color: #ccc;
-	background-color: #b0a58a;
 }
 #forum td.container a {
   color: #555;
@@ -566,15 +559,12 @@ table {
 }
 
 
-/**
-* Borrowed from phillyfuture.org.
-*/
 blockquote {
 	background-color: #eeeeee;
 	padding: .5em;
 	margin-left: .5em;
 	margin-right: .5em;
-	background-color: #c0a58a;
+	background-color: #d3ecd2;
 }
 
 
@@ -586,13 +576,8 @@ blockquote {
 	top: 100px;
 	left: 610px;
 	font-family: Arial, Helvetica, sans-serif;
-/*
-	color: #9cf;
-	background-color: #3D3D3D
-	background-image:url("images/title.jpg");
-*/
-	color: black;
-	background-color: #b0a58a;
+	color: #16004f;
+	background-color: #a8c8c8;
 }
 
 #primary a {
@@ -605,8 +590,8 @@ blockquote {
 }
 
 #primary a:hover {
-	color: white;
-	background: #000000;
+	color: #a8c8c8;
+	background: #16004f;
 }
 
 
@@ -701,11 +686,11 @@ code, tt {
 }
 
 .ac_outer {
-	background-color: #c0b59a;
 	border: 1px solid black;
 	min-width: 700px;
 	padding: 5px;
 	width: 850px;
+	background-color: #a8c8c8;
 }
 
 tbody th { 
@@ -723,10 +708,12 @@ ul.primary {
 
 ul.primary li a {
 	border-color: black;
+	background-color: #d3ecd2;
 }
 
 ul.primary li.active a {
-	border-color: black;
+	color: #d3ecd2;
+	background-color: #16004f
 }
 
 ul.primary li a.active {
