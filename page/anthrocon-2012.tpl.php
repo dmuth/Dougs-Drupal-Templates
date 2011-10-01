@@ -143,7 +143,7 @@ var directory = "/<?php print $directory; ?>";
 			. "scrolling=\"no\" frameborder=\"0\" "
 			. "style=\"border:none; overflow:hidden; width:90px; "
 				. "height: 40px; float: right; "
-				. "padding-top: 5px; \" "
+				. "padding-top: 10px; \" "
 			. "allowTransparency=\"true\">"
 			. "</iframe>"
 			;
@@ -159,6 +159,13 @@ var directory = "/<?php print $directory; ?>";
 		. "</script>\n"
 		;
 
+	$plus_one_html = ""
+		//. "<span style=\"float: right; height: 40px; width: 50px; \">"
+		. "<span style=\"float: right; padding-top: 10px; \">"
+		. $plus_one
+		. "</span>"
+		;
+
 	?>
 	<h1 class="title"><?php print $title ?>
 		<?php
@@ -172,8 +179,9 @@ var directory = "/<?php print $directory; ?>";
 			&& (arg(0) != "admin")
 			) {
 			print $fb_html;
-print $plus_one;
+			print $plus_one_html;
 		}
+
 		?>
 	</h1>
 <?php
