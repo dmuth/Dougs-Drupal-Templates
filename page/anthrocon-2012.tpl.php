@@ -148,6 +148,17 @@ var directory = "/<?php print $directory; ?>";
 			. "</iframe>"
 			;
 
+	$plus_one = ""
+		. "<g:plusone size=\"medium\"></g:plusone>\n"
+		. "<script type=\"text/javascript\">\n"
+		. "(function() {\n"
+			. "var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;\n"
+			. "po.src = 'https://apis.google.com/js/plusone.js';\n"
+			. "var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);\n"
+		. "})();\n"
+		. "</script>\n"
+		;
+
 	?>
 	<h1 class="title"><?php print $title ?>
 		<?php
@@ -161,6 +172,7 @@ var directory = "/<?php print $directory; ?>";
 			&& (arg(0) != "admin")
 			) {
 			print $fb_html;
+print $plus_one;
 		}
 		?>
 	</h1>
