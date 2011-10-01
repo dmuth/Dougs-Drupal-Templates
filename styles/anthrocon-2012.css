@@ -815,15 +815,15 @@ ul.secondary a.active {
 }
 
 li.leaf {
-	list-style-image:url("images/anthrocon-2011/menu-leaf.png");
+	list-style-image:url("images/anthrocon-2012/menu-leaf.png");
 }
 
 li.collapsed {
-	list-style-image:url("images/anthrocon-2011/menu-collapsed.png");
+	list-style-image:url("images/anthrocon-2012/menu-collapsed.png");
 }
 
 li.expanded {
-	list-style-image:url("images/anthrocon-2011/menu-expanded.png");
+	list-style-image:url("images/anthrocon-2012/menu-expanded.png");
 }
 
 
