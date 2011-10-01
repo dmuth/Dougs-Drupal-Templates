@@ -139,6 +139,15 @@ var directory = "/<?php print $directory; ?>";
 		. "href=${url_string}&amp;"
 		. "layout=button_count&amp;show_faces=true&amp;action=like&amp;font&amp;colorscheme=light"
 		;
+	$fb_html = "<iframe src=\"" . $fb_url . "\""
+			. "scrolling=\"no\" frameborder=\"0\" "
+			. "style=\"border:none; overflow:hidden; width:90px; "
+				. "height: 40px; float: right; "
+				. "padding-top: 5px; \" "
+			. "allowTransparency=\"true\">"
+			. "</iframe>"
+			;
+
 	?>
 	<h1 class="title"><?php print $title ?>
 		<?php
@@ -147,13 +156,11 @@ var directory = "/<?php print $directory; ?>";
 		// for onsite reg, so suppres the Facebook Like 
 		// button there. 	
 		//
-		if (!strstr($_SERVER["DOCUMENT_ROOT"], "/wamp/")) {
-		?>
-		<iframe src="<?php print $fb_url; ?>" 
-		scrolling="no" frameborder="0" 
-		style="border:none; overflow:hidden; width:90px; height: 40px; float: right; padding-top: 5px; " 
-		allowTransparency="true"></iframe>
-		<?php
+		if (
+			!strstr($_SERVER["DOCUMENT_ROOT"], "/wamp/")
+			&& (arg(0) != "admin")
+			) {
+			print $fb_html;
 		}
 		?>
 	</h1>
