@@ -45,7 +45,7 @@ check_pending_friend_requests();
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="<?php print $language->language ?>" xml:lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" lang="<?php print $language->language ?>" xml:lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
 
 <head>
   <title><?php print $head_title ?></title>
@@ -190,7 +190,7 @@ var directory = "/<?php print $directory; ?>";
 			. "<ul>\n"
 			. "<li>Access to all of our posts and comments</li>\n"
 			. "<li>Your own profile including an avatar, buddy lists, and other social networking features</li>\n"
-			. "<li>The ability to participate in a community of over 6,000 furry fans!</li>\n"
+			. "<li>The ability to participate in a community of over 8,000 furry fans!</li>\n"
 			. "</ul>\n"
 
 			. "<span style=\"font-size: larger; \">"
