@@ -186,7 +186,6 @@ All other content is licensed under the Gnu Free Documentation License.<br/>
 <br/>
 <br/>
 
-Page last updated: <?php print date("r"); ?>
     </div>
 
 </div>
