@@ -160,7 +160,6 @@ var directory = "/<?php print $directory; ?>";
 		;
 
 	$plus_one_html = ""
-		//. "<span style=\"float: right; height: 40px; width: 50px; \">"
 		. "<span style=\"float: right; padding-top: 10px; \">"
 		. $plus_one
 		. "</span>"
