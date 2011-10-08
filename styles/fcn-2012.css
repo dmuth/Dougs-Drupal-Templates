@@ -200,6 +200,7 @@ ul.links li.first {
 #footer {
   padding: 1em;
   font-size: 0.8em;
+	color: #fff;
 }
 
 /*
@@ -574,6 +575,7 @@ blockquote {
   padding: 1em;
   font-size: 0.8em;
   font-weight: bold;
+	text-align: center;
 }
 
 /* Float Properties (borrowed from Arthemia) */
