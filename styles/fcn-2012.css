@@ -194,7 +194,9 @@ ul.links li.first {
   padding: 10px;
   padding-top: 0;
   vertical-align: top;
+	background-color: #24273A;
 }
+
 #footer {
   padding: 1em;
   font-size: 0.8em;
