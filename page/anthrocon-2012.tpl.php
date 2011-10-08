@@ -318,7 +318,7 @@ Site design by <a href="http://www.cuprohastes.com/">Cuprohastes</a>.<br/>
 | 
 <a href="http://twitter.com/anthrocon">Twitter</a>
 | 
-<a href="http://www.facebook.com/group.php?gid=49844448265">Facebook</a>
+<a href="https://www.facebook.com/Anthrocon">Facebook</a>
 | 
 <a href="http://www.flickr.com/groups/anthrocon/pool/">Flickr</a>
 | 
