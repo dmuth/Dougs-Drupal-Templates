@@ -164,7 +164,7 @@ ul.links li.first {
 #main {
   /* padding in px not ex because IE messes up 100% width tables otherwise */
   padding: 10px;
-  width: 800px;
+  width: 843px;
   background-color: #ffffff
 }
 #mission, .node .content, .comment .content {
