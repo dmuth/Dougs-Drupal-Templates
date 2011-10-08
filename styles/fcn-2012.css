@@ -35,15 +35,11 @@ a {
 }
 a:link {
   color: #39c;
-  color: #fe40d0;
 }
 a:visited {
   color: #369;
-  color: #fe40d0;
 }
 a:hover {
-  color: #39c;
-  color: black;
   text-decoration: underline;
 }
 fieldset {
