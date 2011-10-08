@@ -220,6 +220,8 @@ if (
 <a href="/tags">Tag Cloud</a>
 | 
 <a href="http://twitter.com/FurryConnect">Twitter</a>
+|
+<a href="https://www.facebook.com/pages/Furry-Connection-North/177692785151">Facebook</a>
 | 
 <a href="/registration">Registration</a>
 | 
