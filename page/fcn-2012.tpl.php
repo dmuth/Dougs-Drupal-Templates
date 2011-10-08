@@ -39,6 +39,15 @@ check_pending_friend_requests();
   <?php print $scripts ?>
 </head>
 
+<?php
+/**
+* The reason the background CSS is here instead of in the CSS is because
+* we need the dynamic path to the directory holding the graphic.
+*
+* Furthermore, it would make no sense to just have the URL here
+* and the rest of the background style in a separate location.
+*/
+?>
 <body style="background: #383b60 url(/<?php print $directory; ?>/images/fcn-2012/background.jpg/); background-repeat: repeat-x; background-position: top">
 
 <table border="0" cellpadding="0" cellspacing="0" id="header"
