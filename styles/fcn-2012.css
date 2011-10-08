@@ -1,0 +1,606 @@
+/* $Id: style.css,v 1.7 2009/11/12 03:13:44 doug Exp doug $ */
+
+/*
+** HTML elements
+*/
+body {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font: 76% Verdana, Arial, Helvetica, sans-serif;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+tr.odd td, tr.even td {
+  padding: 0.3em;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em;
+}
+h1 {
+  font-size: 1.3em;
+}
+h2 {
+  font-size: 1.2em;
+}
+h3, h4, h5, h6 {
+  font-size: 1.1em;
+}
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.9em;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+a:link {
+  color: #39c;
+  color: #fe40d0;
+}
+a:visited {
+  color: #369;
+  color: #fe40d0;
+}
+a:hover {
+  color: #39c;
+  color: black;
+  text-decoration: underline;
+}
+fieldset {
+  border: 1px solid #ccc;
+  border: 1px solid #000066;
+}
+pre {
+  background-color: #eee;
+  padding: 0.75em 1.5em;
+  font-size: 12px;
+  border: 1px solid #ddd;
+}
+table {
+  /* make <td> sizes relative to body size! */
+  font-size: 1em;
+}
+.form-item label {
+  font-size: 1em;
+  color: #222;
+}
+.item-list .title {
+  font-size: 1em;
+  color: #222;
+}
+.links {
+  margin-bottom: 0;
+}
+.comment .links {
+  margin-bottom: 0;
+}
+
+/*
+** Page layout blocks / IDs
+*/
+#header, #content {
+  width: 100%;
+}
+#header {
+}
+#logo {
+  vertical-align: middle;
+  border: 0;
+}
+#logo img {
+  float: left; /* LTR */
+  padding: 0 1em;
+  padding: 0;
+  border: 0;
+}
+#menu {
+  padding: 0.5em 0.5em 0 0.5em; /* LTR */
+  text-align: right; /* LTR */
+  vertical-align: middle;
+}
+#navlist {
+  font-size: 1.0em;
+  padding: 0 0.8em 1.2em 0; /* LTR */
+  color: #9cf;
+}
+#navlist a {
+  font-weight: bold;
+  color: #fff;
+}
+#subnavlist {
+  padding: 0.5em 1.2em 0.4em 0; /* LTR */
+  font-size: 0.8em;
+  color: #9cf;
+}
+#subnavlist a {
+  font-weight: bold;
+  color: #9cf;
+}
+ul.links li {
+  border-left: 1px solid #9cf; /* LTR */
+  border: none;
+}
+ul.links li.first {
+  border: none;
+}
+#search .form-text, #search .form-submit {
+  border: 1px solid #369;
+  font-size: 1.1em;
+  height: 1.5em;
+  vertical-align: middle;
+}
+#search .form-text {
+  width: 8em;
+  padding: 0 0.5em;
+}
+#mission {
+  padding: 1.5em 2em;
+  color: #fff;
+}
+#mission a, #mission a:visited {
+  color: #9cf;
+  font-weight: bold;
+}
+.site-name {
+  margin: 0.6em 0 0 ;
+  padding: 0;
+  font-size: 2em;
+}
+.site-name a:link, .site-name a:visited {
+  color: #fff;
+}
+.site-name a:hover {
+  color: #369;
+  text-decoration: none;
+}
+.site-slogan {
+  font-size: 1em;
+  color: #eee;
+  display: block;
+  margin: 0;
+  font-style: italic;
+  font-weight: bold;
+}
+#main {
+  /* padding in px not ex because IE messes up 100% width tables otherwise */
+  padding: 10px;
+  width: 800px;
+  background-color: #ffffff
+}
+#mission, .node .content, .comment .content {
+  line-height: 1.4em;
+}
+#help {
+  font-size: 0.9em;
+  margin-bottom: 1em;
+}
+.breadcrumb {
+  margin-bottom: .5em;
+}
+.messages {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 0.3em;
+  margin-bottom: 1em;
+  color: black;
+}
+.error {
+  border-color: red;
+  color: black;
+}
+#sidebar-left, #sidebar-right {
+  width: 16em;
+  /* padding in px not ex because IE messes up 100% width tables otherwise */
+  padding: 10px;
+  padding-top: 0;
+  vertical-align: top;
+}
+#footer {
+  padding: 1em;
+  font-size: 0.8em;
+}
+
+/*
+** Common declarations for child classes of node, comment, block, box, etc.
+** If you want any of them styled differently for a specific parent, add
+** additional rules /with only the differing properties!/ to .parent .class.
+** See .comment .title for an example.
+*/
+.title, .title a {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #777;
+  margin: 0 auto;  /* decrease default margins for h<x>.title */
+}
+.submitted {
+  color: #999;
+  font-size: 0.8em;
+}
+.links {
+  color: #999;
+}
+.links a {
+  font-weight: bold;
+}
+.block, .box {
+  padding: 0 0 1.5em 0; /* LTR */
+}
+.block {
+  border-bottom: 1px solid #bbb;
+  border: 0;
+  padding-bottom: 0.75em;
+  padding: 0.5em;
+  margin-bottom: 1.5em;
+  background-color: #ffffff;
+}
+.block .title {
+  margin-bottom: .25em;
+  color: #000000;
+}
+.box .title {
+  font-size: 1.1em;
+}
+.node {
+  margin: .5em 0 2em; /* LTR */
+  padding: .5em;
+  border: solid 1px black;
+  border: solid 1px #000066;
+  background-color: #ffffff;
+}
+.sticky {
+  padding: .5em;
+  border: solid 1px black;
+  border: solid 1px #000066;
+  background-color: #eee;
+}
+.node .content, .comment .content {
+  margin: .5em 0 .5em;
+}
+.node .taxonomy {
+  color: #999;
+  font-size: 0.8em;
+  padding-left: 1.5em; /* LTR */
+}
+.node .picture {
+/*
+  border: 1px solid #ddd;
+  float: right;
+  */
+  margin: 0.5em;
+}
+.comment {
+  border: 1px solid #abc;
+  padding: .5em;
+  margin-bottom: 1em;
+}
+.comment .title a {
+  font-size: 1.1em;
+  font-weight: normal;
+}
+.comment .new {
+  text-align: right; /* LTR */
+  font-weight: bold;
+  font-size: 0.8em;
+  float: right; /* LTR */
+  color: red;
+}
+.comment .picture {
+  border: 1px solid #abc;
+  float: right; /* LTR */
+  margin: 0.5em;
+}
+
+/*
+** Module specific styles
+*/
+#aggregator .feed-source {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin: 1em 0;
+}
+#aggregator .news-item .categories, #aggregator .source, #aggregator .age {
+  color: #999;
+  font-style: italic;
+  font-size: 0.9em;
+}
+#aggregator .title {
+  margin-bottom: 0.5em;
+  font-size: 1em;
+}
+#aggregator h3 {
+  margin-top: 1em;
+}
+#forum table {
+  width: 100%;
+}
+#forum td {
+  padding: 0.5em;
+}
+#forum td.forum, #forum td.posts {
+  background-color: #eee;
+}
+#forum td.topics, #forum td.last-reply {
+  background-color: #ddd;
+}
+#forum td.container {
+  background-color: #ccc;
+}
+#forum td.container a {
+  color: #555;
+}
+#forum td.statistics, #forum td.settings, #forum td.pager {
+  height: 1.5em;
+  border: 1px solid #bbb;
+}
+#forum td .name {
+  color: #96c;
+}
+#forum td .links {
+  padding-top: 0.7em;
+  font-size: 0.9em;
+}
+#profile .profile {
+  clear: both;
+  border: 1px solid #abc;
+  padding: .5em;
+  margin: 1em 0em;
+}
+#profile .profile .name {
+  padding-bottom: 0.5em;
+}
+.block-forum h3 {
+  margin-bottom: .5em;
+}
+div.admin-panel .description {
+  color: #999;
+}
+div.admin-panel .body {
+  background: #f4f4f4;
+}
+div.admin-panel h3 {
+  background-color: #69c;
+  color: #fff;
+  padding: 5px 8px 5px;
+  margin: 0;
+}
+
+/**
+* Custom CSS.
+*/
+
+body {
+}
+
+/**
+* Get rid of that annoying default top header on tbody.
+*/
+tbody {
+	border: none;
+}
+
+ul.primary li a {
+}
+
+ul.primary li.active a {
+}
+
+ul.primary li a:hover {
+}
+
+
+.block-region {
+	color: black;
+}
+
+.profile h3 {
+	border-bottom-color: #000066;
+}
+
+td {
+}
+
+td.active {
+}
+
+th {
+}
+
+.preview .node {
+}
+
+.node {
+	/*
+	font-size: 14px;
+	*/
+}
+
+.service-links {
+	padding-top: 10px;
+}
+
+.service-label {
+	font-size: 12px;
+}
+
+.content td {
+	padding: 5px;
+	border: 1px solid #FF3FD2;
+}
+
+blockquote {
+	padding: 5px;
+	margin: 10px;
+	border: 1px solid #FF3FD2;
+}
+
+.profile td.name {
+	font-weight: bold;
+}
+
+/**
+* Downsize the titles in forum posts
+*/
+#forum .title, #forum .title a {
+	/*
+  	font-size: smaller;
+  	*/
+  	font-size: 10px;
+}
+
+/**
+* Stuff for the Advanced Forums module.
+*/
+.forum-links li {
+	list-style-type: none;
+}
+.forum-post {
+	border-top: 1px solid black;
+}
+
+.forum-post-panel-sub {
+}
+
+.user_badges img {
+	padding: 2px;
+}
+ 
+.new {
+  text-align: right;
+  font-weight: bold;
+  float: right;
+  color: red;
+}
+
+/**
+* Put padding around each of our profile icons.
+*/
+.profile_icons img {
+	margin: 1px;
+	margin-top: 5px;
+}
+
+.author-pane-label {
+	font-weight: bold;
+}
+
+.author-real-name, .author-species, .author-location, .author-comment, .author-joined, .author-posts {
+	font-size: smaller;
+}
+
+.author-pane {
+}
+
+.author-pane-inner {
+	width: 150px;
+}
+
+/* Footer (borrowed from Arthemia) */
+
+#footer-region {
+	color: #000000;
+	font-weight: bold;
+}
+
+#footer-left {
+	/*
+	width:360px;
+	*/
+	width:380px;
+	float:left;
+	padding:10px;
+}
+
+#footer-middle {
+	/*
+	width:360px;
+	*/
+	width:380px;
+	float:left;
+	padding-top:10px;
+	padding-left: 30px;
+}
+
+#footer-right {
+	/*
+	width:360px;
+	float:right;
+	padding:10px;
+	*/
+	width:380px;
+	float:left;
+	padding-top:10px;
+	padding-left: 30px;
+}
+
+#footer-region a {
+}
+
+#footer-region ul {
+	margin:5px 0 0 0;
+	padding:0px;
+}
+
+#footer-region .item-list ul li {
+	margin: 0;
+	list-style-type: none;
+	list-style-position: inside;
+	border-top-width: 1px;
+	border-top-style: dotted;
+	/*
+	border-top-color: #aaaaaa;
+	*/
+	border-top-color: black;
+}
+
+#footer-region li{
+	/*
+	* When this is enabled, we don't see the discs...
+	*/
+	display:block;
+}
+
+#footer-region h3{
+	text-transform:lowercase;
+	margin:0;
+	font-weight:bold;
+	font-size:1.5em;
+	letter-spacing:-0.05em;
+}
+
+#footer-message {
+  padding: 1em;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+/* Float Properties (borrowed from Arthemia) */
+
+.clearfloat:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+
+.clearfloat {
+	display: inline-block;
+}
+
+
+/* Hides from IE-mac \*/
+* html .clearfloat {
+	height:1%;
+}
+
+*+html .clearfloat {
+	height:1%;
+}
+
+.clearfloat {
+	display:block;
+}
+  
+
+
