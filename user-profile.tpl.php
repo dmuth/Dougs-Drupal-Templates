@@ -277,36 +277,6 @@ $summary = $account->content["summary"];
 	// Only print this up if it exists, since it may not be in
 	// all installations.
 	//
-	if (isset($account->profile_orientation)) {
-
-		$html = t("(none given)");
-		$key = "profile_orientation";
-		
-		if (!empty($public_profile[$key])) {
-			$html = check_plain($public_profile[$key]["#value"]);
-		}
-		
-		//
-		// If the user is logged in, give them a link to edit the field
-		//
-		if ($account->uid == $user->uid) {
-			$html .= " "  . l("[Edit]", "user/me/edit/Public Profile");
-		}
-
-		$row = array(
-			array("valign" => "top", "align" => "right", 
-				"class" => "name",
-				"data" => t("Sexual&nbsp;Orientation:")),
-			array("valign" => "top", "data" => $html)
-			);
-		$rows[] = $row;
-
-	}
-	
-	//
-	// Only print this up if it exists, since it may not be in
-	// all installations.
-	//
 	if (isset($account->profile_gender)) {
 
 		$html = t("(none given)");
@@ -329,6 +299,36 @@ $summary = $account->content["summary"];
 				"data" => t("Gender:")),
 			array("valign" => "top", "data" => $html)
 		);
+		$rows[] = $row;
+
+	}
+	
+	//
+	// Only print this up if it exists, since it may not be in
+	// all installations.
+	//
+	if (isset($account->profile_orientation)) {
+
+		$html = t("(none given)");
+		$key = "profile_orientation";
+		
+		if (!empty($public_profile[$key])) {
+			$html = check_plain($public_profile[$key]["#value"]);
+		}
+		
+		//
+		// If the user is logged in, give them a link to edit the field
+		//
+		if ($account->uid == $user->uid) {
+			$html .= " "  . l("[Edit]", "user/me/edit/Public Profile");
+		}
+
+		$row = array(
+			array("valign" => "top", "align" => "right", 
+				"class" => "name",
+				"data" => t("Sexual&nbsp;Orientation:")),
+			array("valign" => "top", "data" => $html)
+			);
 		$rows[] = $row;
 
 	}
