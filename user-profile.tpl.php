@@ -274,7 +274,7 @@ $summary = $account->content["summary"];
 	}
 	
 	//
-	// Only print up foxes if it exists, since it may not be in
+	// Only print this up if it exists, since it may not be in
 	// all installations.
 	//
 	if (isset($account->profile_orientation)) {
