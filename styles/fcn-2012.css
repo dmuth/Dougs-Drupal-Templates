@@ -160,7 +160,7 @@ ul.links li.first {
 #main {
   /* padding in px not ex because IE messes up 100% width tables otherwise */
   padding: 10px;
-  width: 843px;
+  width: 825px;
   background-color: #ffffff
 }
 #mission, .node .content, .comment .content {
@@ -197,6 +197,7 @@ ul.links li.first {
   padding: 1em;
   font-size: 0.8em;
 	color: #fff;
+	width: 1077px;
 }
 
 /*
@@ -505,7 +506,7 @@ blockquote {
 	/*
 	width:360px;
 	*/
-	width:380px;
+	width:325px;
 	float:left;
 	padding:10px;
 }
@@ -514,7 +515,7 @@ blockquote {
 	/*
 	width:360px;
 	*/
-	width:380px;
+	width:338px;
 	float:left;
 	padding-top:10px;
 	padding-left: 30px;
@@ -526,7 +527,7 @@ blockquote {
 	float:right;
 	padding:10px;
 	*/
-	width:380px;
+	width:325px;
 	float:left;
 	padding-top:10px;
 	padding-left: 30px;
