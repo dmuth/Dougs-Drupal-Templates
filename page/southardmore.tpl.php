@@ -37,7 +37,7 @@ var directory = "/<?php print $directory; ?>";
 // jQuery cookie plugin.
 //
 ?>
-<script type="text/javascript" src="/<?php print $directory; ?>/cookie.js"></script>
+<script type="text/javascript" src="/<?php print $directory; ?>/lib/cookie.js"></script>
 <?php
 //
 // Load our custom JS
