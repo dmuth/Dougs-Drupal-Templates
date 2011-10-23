@@ -211,7 +211,8 @@ if (
 	<?php print $footer; ?>
 	<?php print $footer_message ?>
 
-	Copyright &copy; 2008-<?php print date("Y"); ?> Furry Connection North, Inc. Design by Erika Lehigh R. Unless otherwise noted. All Rights Reserved.
+	Copyright &copy; 2008-<?php print date("Y"); ?> Furry Connection North, Inc. 
+	Design by <a href="/user/267/chillymouse">Erika Lehigh R.</a> Unless otherwise noted. All Rights Reserved.
 <br/>
 <br/>
 
