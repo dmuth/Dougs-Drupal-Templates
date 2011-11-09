@@ -320,6 +320,8 @@ Site design by <a href="http://www.cuprohastes.com/">Cuprohastes</a>.<br/>
 | 
 <a href="https://www.facebook.com/Anthrocon">Facebook</a>
 | 
+<a href="https://plus.google.com/101117427637511847175">Google Plus</a>
+|
 <a href="http://www.flickr.com/groups/anthrocon/pool/">Flickr</a>
 | 
 <a href="http://www.youtube.com/user/anthrocon">YouTube</a>
