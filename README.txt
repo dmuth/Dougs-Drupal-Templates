@@ -6,10 +6,10 @@ I built this theme to solve the problem I had, wherein I managed several
 different websites that used templates that were similar, but not 100%
 identical.  Specifically, I needed to solve:
 
-+ Whenever I added a tweak to one template, deploying the changes to 
+1. Whenever I added a tweak to one template, deploying the changes to 
 	the other teplates in a safe and sane manner, and
 
-+ Dealing with the fact that the styles on different websites were 
+2. Dealing with the fact that the styles on different websites were 
 	similar, but not 100% identical.
 
 So I wrote this tool.  I can make changes on one site, and then simply
@@ -20,13 +20,13 @@ for me somewhat.
 
 To use these templates:
 
-+ Make sure you have this file (and the others) in a directory under DOCROOT/site/all/templates/
+1. Make sure you have this file (and the others) in a directory under DOCROOT/site/all/templates/
 
-+ Run the script bin/deploy.sh (site name).  As of this writing, 
+2. Run the script bin/deploy.sh (site name).  As of this writing, 
 	valid sitenames are "pa-furry" and "saveardmore".  That will create
 	symlinks to the appropriate files.
 
-+ Go to /admin/build/themes in Drupal.  The template you just deployed should be there.
+3. Go to /admin/build/themes in Drupal.  The template you just deployed should be there.
 
 
 If you have any questions about this project, don't hesitate to call on me.
