@@ -190,7 +190,10 @@ ul.links li.first {
   padding: 10px;
   padding-top: 0;
   vertical-align: top;
-	background-color: #24273A;
+	/**
+	* Fade from dark blue to light blue...
+	*/
+	background-image: -webkit-linear-gradient(#24273A, #383b60);
 }
 
 #footer {
