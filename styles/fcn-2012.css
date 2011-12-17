@@ -193,7 +193,8 @@ ul.links li.first {
 	/**
 	* Fade from dark blue to light blue...
 	*/
-	background-image: -webkit-linear-gradient(#24273A, #383b60);
+	background-color: #24273a;
+	background-image: -webkit-linear-gradient(#24273a, #383b60);
 }
 
 #footer {
