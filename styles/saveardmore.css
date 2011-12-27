@@ -222,6 +222,7 @@ table {
 	/* DTM */
 	background-color: #FFBB00;
 	width: 16em;
+
 }
 
 #footer {
@@ -284,17 +285,27 @@ table {
         padding-top: 3px;
         padding-bottom: 3px;
 
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
 }
+
 .box .title {
   font-size: 1.1em;
 }
+
 .node {
   margin: .5em 0 2em 0;
 	/* DTM */
 	border: solid 1px #ddd;
 	padding: .5em;
 	background-color: #f8f8f8;
+
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
 }
+
 .sticky {
 /*
   background-color: #eee;
