@@ -89,6 +89,7 @@ var directory = "/<?php print $directory; ?>";
 //}
 //]]>
 </script>
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
 </head>
 
 <body >
