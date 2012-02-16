@@ -690,3 +690,11 @@ tbody {
 	white-space: nowrap;
 }
 
+.views-table {
+	/**
+	* This is to keep the Plus 1 button from getting into the table's 
+	* space and making the table narrow.
+	*/
+	margin-top: 15px;
+}
+
