@@ -37,6 +37,7 @@ check_pending_friend_requests();
   <?php print $head ?>
   <?php print $styles ?>
   <?php print $scripts ?>
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
 </head>
 
 <body>
