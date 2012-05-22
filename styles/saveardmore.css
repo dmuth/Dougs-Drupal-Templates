@@ -570,7 +570,7 @@ tbody {
 }
 
 .author-pane-inner {
-	width: 150px;
+	width: 140px;
 }
 
 .biography p {
@@ -688,5 +688,13 @@ tbody {
 */
 .views-field-last-comment-timestamp {
 	white-space: nowrap;
+}
+
+.views-table {
+	/**
+	* This is to keep the Plus 1 button from getting into the table's 
+	* space and making the table narrow.
+	*/
+	margin-top: 20px;
 }
 
