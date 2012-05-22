@@ -210,7 +210,7 @@ var directory = "/<?php print $directory; ?>";
 			. "<ul>\n"
 			. "<li>Access to all of our posts and comments</li>\n"
 			. "<li>Your own profile including an avatar, buddy lists, and other social networking features</li>\n"
-			. "<li>The ability to participate in a community of over 8,000 furry fans!</li>\n"
+			. "<li>The ability to participate in a community of over 9,000 furry fans!</li>\n"
 			. "</ul>\n"
 
 			. "<span style=\"font-size: larger; \">"
