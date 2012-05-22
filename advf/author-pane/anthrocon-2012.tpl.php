@@ -143,17 +143,6 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
 		}
 		?>
 
-        <div class="author-pane-icon"><?php //print $user_relationships_api; ?></div>
-	<?php
-		//
-		// Print a link to the user's buddy list
-		//
-		$uid = $account->uid;
-		$url = "user/$uid/buddies";
-		$url_text = t("Buddy List");
-		$link = l($url_text, $url);
-		print $link;
-	?>
       <?php if (!empty($user_relationships_api)): ?>
       <?php endif; ?>
       
@@ -186,18 +175,5 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
       <?php endif; ?>        
     </div>
 
-    <div class="author-pane-contact author-pane-section">
-      <?php if (!empty($contact)): ?>
-        <div class="author-pane-icon"><?php print $contact; ?></div>
-      <?php endif; ?>
-
-      <?php if (!empty($buddylist)): ?>
-        <div class="author-pane-icon"><?php print $buddylist; ?></div>
-      <?php endif; ?>
-
-      <?php if (!empty($flag_friend)): ?>
-        <div class="author-pane-icon"><?php print $flag_friend; ?></div>
-      <?php endif; ?>
-    </div>
   </div>
 </div>
