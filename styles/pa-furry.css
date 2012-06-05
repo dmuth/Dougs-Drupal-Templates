@@ -119,15 +119,38 @@ table {
   text-align: right;
   vertical-align: middle;
 }
+
 #primary {
   font-size: 1.0em;
   padding: 0em 0.8em 0.5em 0;
   color: #9cf;
+	background-color: #8C32F0;
+	padding: 4px 0px 0px 0px;
+	border: 1px solid black;
+	height: 20px;
+	position: absolute;
+	top: 75px;
+	left: 670px;
+	font-family: Arial, Helvetica, sans-serif;
 }
+
 #primary a {
-  font-weight: bold;
-  color: #fff;
+  	font-weight: bold;
+  	color: #fff;
+	padding: 4px 5px 6px 5px;
+	margin: 4px 0px 0px 0px;
+	height: 20px;
 }
+
+#primary a:hover {
+	color: #8C32F0;
+	background: white;
+	font-weight: bold;
+	padding: 4px 5px 6px 5px;
+	margin: 4px 0px 0px 0px;
+	height: 20px;
+}
+
 #secondary {
   padding: 0 1em 0.5em 0;
   font-size: 0.8em;
