@@ -552,19 +552,13 @@ blockquote {
 }
 
 #footer-left {
-	/*
 	width:360px;
-	*/
-	width:380px;
 	float:left;
 	padding:10px;
 }
 
 #footer-middle {
-	/*
 	width:360px;
-	*/
-	width:380px;
 	float:left;
 	padding-top:10px;
 	padding-left: 30px;
@@ -576,7 +570,7 @@ blockquote {
 	float:right;
 	padding:10px;
 	*/
-	width:380px;
+	width:360px;
 	float:left;
 	padding-top:10px;
 	padding-left: 30px;
