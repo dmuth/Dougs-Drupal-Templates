@@ -125,8 +125,13 @@ check_pending_friend_requests();
 		// button there. 	
 		//
 		if (
-			!strstr($_SERVER["DOCUMENT_ROOT"], "/wamp/")
-			&& (arg(0) != "admin")
+			(	!strstr($_SERVER["DOCUMENT_ROOT"], "/wamp/")
+				&& (arg(0) != "admin")
+			) &&
+			(
+				!strstr($_SERVER["SERVER_NAME"], "localdomain")
+			)
+
 			) {
 			print $fb_html;
 			print $plus_one_html;
