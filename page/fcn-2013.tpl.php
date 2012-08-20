@@ -54,17 +54,16 @@ $image_dir = "/" . $directory . "/images/fcn-2013";
 
 <span id="fcn-header" style="float: left; ">
 
+<?php if (isset($secondary_links)) { ?><div id="secondary"><?php print theme('links', $secondary_links) ?></div><?php } ?>
+<?php if (isset($primary_links)) { ?><div id="primary"><?php print theme('links', $primary_links) ?></div><?php } ?>
+
 <img src="<?php print $image_dir . "/header-left.gif"; ?>" style=" " 
 	/><img src="<?php print $image_dir . "/header-right.gif"; ?>" style=" " 
-	/>
-      <?php if (isset($secondary_links)) { ?><div id="secondary"><?php print theme('links', $secondary_links) ?></div><?php } ?>
-      <?php if (isset($primary_links)) { ?><div id="primary"><?php print theme('links', $primary_links) ?></div><?php } ?>
-
-<div id="sidebar-left" style="float: left; ">
+	/><br/><div id="sidebar-left" style="float: left; ">
 <?php print $left; ?>
-</div> <?php // sidebar-left ?>
+</div><?php // sidebar-left ?>
 
-<div id="fcn-main" style="background-color: white; ">
+<div id="fcn-main" style="background-color: white; width: 950px; ">
 <?php
 
 include_once("fcn-2013/main.tpl.php");
