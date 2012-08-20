@@ -1,5 +1,5 @@
 ; $Id: saveardmore.info,v 1.2 2010/04/11 23:42:39 doug Exp $
-name = Furry Connection North 2012 Website
+name = Furry Connection North 2013 Website
 description = (based on Bluemarine)
 core = 6.x
 ;version = 6.16
