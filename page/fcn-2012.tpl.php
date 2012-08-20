@@ -54,7 +54,7 @@ check_pending_friend_requests();
 	>
   <tr>
     <td id="logo">
-    	<span class="fcn_header"><a href="/"><img src="/<?php print $directory; ?>/images/fcn-2012/header.jpg" /></a></span>
+    	<span class="fcn_header"><a href="/"><img src="/<?php print $directory; ?>/images/fcn-2012/header.jpg" height="123" /></a></span>
       <?php if ($logo) { ?><a href="<?php print $base_path ?>" title="<?php print t('Home') ?>"><img src="<?php print $logo ?>" alt="<?php print t('Home') ?>" /></a><?php } ?>
       <?php if ($site_name) { ?><h1 class='site-name'><a href="<?php print $base_path ?>" title="<?php print t('Home') ?>"><?php print $site_name ?></a></h1><?php } ?>
       <?php if ($site_slogan) { ?><div class='site-slogan'><?php print $site_slogan ?></div><?php } ?>
@@ -211,7 +211,8 @@ if (
 	<?php print $footer; ?>
 	<?php print $footer_message ?>
 
-	Copyright &copy; 2008-<?php print date("Y"); ?> Furry Connection North, Inc. Design by Erika Lehigh R. Unless otherwise noted. All Rights Reserved.
+	Copyright &copy; 2008-<?php print date("Y"); ?> Furry Connection North, Inc. 
+	Design by <a href="/user/267/chillymouse">Erika Lehigh R.</a> Unless otherwise noted. All Rights Reserved.
 <br/>
 <br/>
 

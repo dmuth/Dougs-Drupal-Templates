@@ -89,6 +89,7 @@ var directory = "/<?php print $directory; ?>";
 //}
 //]]>
 </script>
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
 </head>
 
 <body >
@@ -209,7 +210,7 @@ var directory = "/<?php print $directory; ?>";
 			. "<ul>\n"
 			. "<li>Access to all of our posts and comments</li>\n"
 			. "<li>Your own profile including an avatar, buddy lists, and other social networking features</li>\n"
-			. "<li>The ability to participate in a community of over 8,000 furry fans!</li>\n"
+			. "<li>The ability to participate in a community of over 9,000 furry fans!</li>\n"
 			. "</ul>\n"
 
 			. "<span style=\"font-size: larger; \">"
@@ -318,8 +319,10 @@ Site design by <a href="http://www.cuprohastes.com/">Cuprohastes</a>.<br/>
 | 
 <a href="http://twitter.com/anthrocon">Twitter</a>
 | 
-<a href="http://www.facebook.com/group.php?gid=49844448265">Facebook</a>
+<a href="https://www.facebook.com/Anthrocon">Facebook</a>
 | 
+<a href="https://plus.google.com/101117427637511847175">Google Plus</a>
+|
 <a href="http://www.flickr.com/groups/anthrocon/pool/">Flickr</a>
 | 
 <a href="http://www.youtube.com/user/anthrocon">YouTube</a>
