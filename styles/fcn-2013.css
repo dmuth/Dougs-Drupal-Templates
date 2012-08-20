@@ -75,7 +75,6 @@ table {
 ** Page layout blocks / IDs
 */
 #header, #content {
-  width: 100%;
 }
 #header {
 }
@@ -160,11 +159,12 @@ ul.links li.first {
 #main {
   /* padding in px not ex because IE messes up 100% width tables otherwise */
   padding: 10px;
-  width: 843px;
   background-color: #ffffff
 }
+
 #mission, .node .content, .comment .content {
   line-height: 1.4em;
+	width: 500px;
 }
 #help {
   font-size: 0.9em;
@@ -190,13 +190,12 @@ ul.links li.first {
   padding: 10px;
   padding-top: 0;
   vertical-align: top;
-	background-color: #24273A;
+	background-color: white;
 }
 
 #footer {
   padding: 1em;
   font-size: 0.8em;
-	color: #fff;
 }
 
 /*

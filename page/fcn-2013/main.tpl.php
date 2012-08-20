@@ -1,21 +1,24 @@
+<?php
+/**
+* Our main section of page.tpl.php.
+*
+* @author Douglas Muth <http://www.dmuth.org/>
+*/
 
-TEST IN MAIN<br/>
-        
-<?php print $breadcrumb ?>
+print $breadcrumb;
 
+//
+// Facebook code
+//
+include("social.tpl.php");
+
+?>
+<h1 class="title"><?php print $title ?>
 	<?php
-	//
-	// Facebook code
-	//
-	include("social.tpl.php");
-
+	print $fb_html;
+	print $plus_one_html;
 	?>
-	<h1 class="title"><?php print $title ?>
-		<?php
-		print $fb_html;
-		print $plus_one_html;
-		?>
-		</h1>
+	</h1>
 
 <?php
 	include("anon-welcome.tpl.php");
@@ -25,6 +28,4 @@ TEST IN MAIN<br/>
 <?php print $help ?>
 <?php print $messages ?>
 <?php print $content; ?>
-</div>
-
 
