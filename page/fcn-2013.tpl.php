@@ -60,8 +60,10 @@ $image_dir = "/" . $directory . "/images/fcn-2013";
 <div style="float: left; ">
 <img src="<?php print $image_dir . "/header-left.gif"; ?>" style=" " />
 </div>
+
 <div style="float: left; ">
-<div id="fcn-links-primary" style="color: white; background-color: black; width: 100%; height: 29px; ">
+
+<div id="primary" style="background-color: black; width: 100%; height: 29px; ">
 <?php print theme('links', $primary_links) ?>
 </div><?php // fcn-links-primary ?>
 
@@ -69,9 +71,11 @@ $image_dir = "/" . $directory . "/images/fcn-2013";
 <img src="<?php print $image_dir . "/header-right.gif"; ?>" style=" " />
 </div>
 
-<div id="fcn-links-secondary" style="color: white; background-color: black; width: 100%; height: 32px; ">
+<div id="secondary" style="color: white; background-color: black; width: 100%; height: 25px; ">
 April 12 - 14, 2013 Detroit Novi Sheraton
+<div style="float: right; ">
 <?php print theme('links', $secondary_links) ?>
+</div>
 </div> <?php // fcn-links-secondary ?>
 
 </div>

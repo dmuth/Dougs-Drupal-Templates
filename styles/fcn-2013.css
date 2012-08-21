@@ -595,4 +595,24 @@ blockquote {
 }
   
 
+#primary, #secondary {
+	font-size: 14px;
+}
+#primary a, #secondary a {
+	color: #62D182;
+	text-transform: uppercase;
+}
+#primary a:hover, #secondary a:hover {
+	color: white;
+	text-transform: uppercase;
+}
+
+#primary ul.links {
+	padding-top: 7px;
+}
+
+#secondary {
+	padding-top: 7px;
+}
+
 
