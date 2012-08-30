@@ -96,6 +96,10 @@ $image_dir = "/" . $directory . "/images/fcn-2013";
 <?php // The center part of the site, including the left sidebar ?>
 <div id="fcn-center" 
 	><div id="sidebar-left" style="float: left; ">
+<a href="http://twitter.com/furryconnect"><img src="<?php print $image_dir; ?>/twitter.png" class="social-icon" /></a>
+<a href="http://www.facebook.com/pages/Furry-Connection-North/177692785151"><img src="<?php print $image_dir; ?>/facebook.png" class="social-icon" /></a>
+<a href="http://fcn-convention.livejournal.com/"><img src="<?php print $image_dir; ?>/livejournal.png"  class="social-icon" /></a>
+<a href="/tags"><img src="<?php print $image_dir; ?>/tags.png" class="social-icon" /></a>
 <?php print $left; ?>
 </div><?php // sidebar-left ?>
 
