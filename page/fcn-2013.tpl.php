@@ -48,38 +48,46 @@ $image_dir = "/" . $directory . "/images/fcn-2013";
 ?>
 <body style="background: #0b3926; background-repeat: repeat-x; background-position: top">
 
+<!--
 <span id="sidebar-left" 
 	style="background: url(<?php print $image_dir . "/background-left.gif"; ?>) no-repeat; float: left; height: 1500px; width:130px; "
+	></span>
+-->
+<span id="sidebar-left" 
+	style="float: left; height: 1500px; width:130px; 
+		background: #0b3926;
+		"
 	></span>
 
 <span id="fcn-header" style="float: left; background-color: white; ">
 
-
-<div id="fcn-header-graphics" style="padding: 0; " >
 <?php // The set of two header graphics and Menus ?>
+<div id="fcn-header-graphics" style="padding: 0; " >
+
 <div style="float: left; ">
 <img src="<?php print $image_dir . "/header-left.gif"; ?>" style=" " />
 </div>
 
 <div style="float: left; ">
 
-<div id="primary" style="background-color: black; width: 100%; height: 29px; ">
-<?php print theme('links', $primary_links) ?>
-</div><?php // fcn-links-primary ?>
+	<div id="primary" style="background-color: black; width: 100%; height: 29px; ">
+	<?php print theme('links', $primary_links) ?>
+	</div><?php // fcn-links-primary ?>
 
-<div style="height: 174px; ">
-<img src="<?php print $image_dir . "/header-right.gif"; ?>" style=" " />
+	<div style="height: 174px; ">
+	<img src="<?php print $image_dir . "/header-right.gif"; ?>" style=" " />
+	</div>
+
+	<div id="secondary" style="color: white; background-color: black; width: 100%; height: 25px; ">
+		April 12 - 14, 2013 Detroit Novi Sheraton
+		<div style="float: right; ">
+		<?php print theme('links', $secondary_links) ?>
+		</div>
+	</div> <?php // fcn-links-secondary ?>
+
 </div>
 
-<div id="secondary" style="color: white; background-color: black; width: 100%; height: 25px; ">
-April 12 - 14, 2013 Detroit Novi Sheraton
-<div style="float: right; ">
-<?php print theme('links', $secondary_links) ?>
-</div>
-</div> <?php // fcn-links-secondary ?>
-
-</div>
-</div>
+</div><?php // fcn-header-graphics ?>
 <br clear="all" />
 
 <?php // The center part of the site, including the left sidebar ?>
@@ -103,9 +111,11 @@ include_once("fcn-2013/footer.tpl.php");
 
 </span><?php // fcn-header ?>
 
+<!--
 <span id="sidebar-right" 
 	style="background: url(<?php print $image_dir . "/background-right.gif"; ?>) no-repeat; float: left; height: 1500px; width: 130px; "
 	></span>
+-->
 
 <br clear="all" />
 
