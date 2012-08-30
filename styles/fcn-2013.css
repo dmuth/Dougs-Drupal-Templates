@@ -416,13 +416,12 @@ th {
 
 .content td {
 	padding: 5px;
-	border: 1px solid #FF3FD2;
 }
 
 blockquote {
 	padding: 5px;
 	margin: 10px;
-	border: 1px solid #FF3FD2;
+	border: 1px solid;
 }
 
 .profile td.name {
