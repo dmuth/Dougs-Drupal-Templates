@@ -50,7 +50,10 @@ $image_dir = "/" . $directory . "/images/fcn-2013";
 
 <!--
 <span id="sidebar-left" 
-	style="background: url(<?php print $image_dir . "/background-left.gif"; ?>) no-repeat; float: left; height: 1500px; width:130px; "
+	style="
+		background: url(<?php print $image_dir . "/background-left.gif"; ?>) no-repeat; 
+		float: left; height: 1500px; width:130px; 
+		"
 	></span>
 -->
 <span id="sidebar-left" 
