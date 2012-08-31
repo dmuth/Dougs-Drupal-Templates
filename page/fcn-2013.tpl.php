@@ -62,7 +62,7 @@ $image_dir = "/" . $directory . "/images/fcn-2013";
 		"
 	></span>
 
-<span id="fcn-header" style="float: left; background-color: white; ">
+<span id="fcn-header" style="float: left; background-color: #f9f8f3; ">
 
 <?php // The set of two header graphics and Menus ?>
 <div id="fcn-header-graphics" style="padding: 0; " >
@@ -73,7 +73,7 @@ $image_dir = "/" . $directory . "/images/fcn-2013";
 
 <div style="float: left; ">
 
-	<div id="primary" style="background-color: black; width: 100%; height: 29px; ">
+	<div id="primary" style="background-color: black; width: 100%; height: 29px; padding-right: 0px; ">
 	<?php print theme('links', $primary_links) ?>
 	</div><?php // fcn-links-primary ?>
 
@@ -81,9 +81,11 @@ $image_dir = "/" . $directory . "/images/fcn-2013";
 	<img src="<?php print $image_dir . "/header-right.gif"; ?>" style=" " />
 	</div>
 
-	<div id="secondary" style="color: white; background-color: black; width: 100%; height: 25px; ">
+	<div id="secondary" style="color: white; background-color: black; width: 100%; height: 25px; a">
+		<span style="font-style: italic; ">
 		April 12 - 14, 2013 Detroit Novi Sheraton
-		<div style="float: right; ">
+		</span>
+		<div style="float: right; padding-right: 20px; ">
 		<?php print theme('links', $secondary_links) ?>
 		</div>
 	</div> <?php // fcn-links-secondary ?>
@@ -104,7 +106,7 @@ $image_dir = "/" . $directory . "/images/fcn-2013";
 </div><?php // sidebar-left ?>
 
 
-<div id="fcn-main" style="background-color: white; float: left; width: 763px; ">
+<div id="fcn-main" style="background-color: white; float: left; width: 763px; background-color: #f9f8f3; ">
 <?php
 
 include_once("fcn-2013/main.tpl.php");

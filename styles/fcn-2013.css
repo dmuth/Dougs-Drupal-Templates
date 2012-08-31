@@ -193,6 +193,7 @@ ul.links li.first {
 #footer {
   padding: 1em;
   font-size: 0.8em;
+color: #093d27;
 }
 
 /*
@@ -236,13 +237,15 @@ ul.links li.first {
   font-size: 1.1em;
 }
 .node {
-  background-color: #ffffff;
-	margin-right: 10px;
+  background-color: #f9f8f3;
+	margin-right: 20px;
 	margin-top: 10px;
+	padding-left: 10px;
 }
 .sticky {
   padding: .5em;
   background-color: #eee;
+  background-color: #f9f8f3;
 }
 .node .content, .comment .content {
   margin: .5em 0 .5em;
