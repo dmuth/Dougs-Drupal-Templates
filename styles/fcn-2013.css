@@ -9,7 +9,12 @@ body {
   color: #000;
   font: 76% Verdana, Arial, Helvetica, sans-serif;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	/**
+	* Thie keeps the entire content page from moving down when the window is narrowed.
+	*/
+	min-width: 1150px;
 }
+
 tr.odd td, tr.even td {
   padding: 0.3em;
 }
