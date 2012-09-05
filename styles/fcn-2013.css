@@ -193,6 +193,7 @@ ul.links li.first {
   /* padding in px not ex because IE messes up 100% width tables otherwise */
   padding: 10px;
 	background-color: white;
+	background-color: #f9f8f3;
 }
 
 #footer {
@@ -232,7 +233,7 @@ color: #093d27;
   padding-bottom: 0.75em;
   padding: 0.5em;
   margin-bottom: 1.5em;
-  background-color: #ffffff;
+	background-color: #f9f8f3;
 }
 .block .title {
   margin-bottom: .25em;
