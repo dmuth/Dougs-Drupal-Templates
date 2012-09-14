@@ -48,17 +48,10 @@ $image_dir = "/" . $directory . "/images/fcn-2013";
 ?>
 <body style="background: #0b3926; background-repeat: repeat-x; background-position: top">
 
-<!--
-<span id="sidebar-left" 
-	style="
-		background: url(<?php print $image_dir . "/background-left.gif"; ?>) no-repeat; 
-		float: left; height: 1500px; width:130px; 
-		"
-	></span>
--->
 <span id="sidebar-left" 
 	style="float: left; height: 1500px; width:130px; 
 		background: #0b3926;
+		background: url(<?php print $image_dir . "/background-left.gif"; ?>) no-repeat; 
 		"
 	></span>
 
@@ -120,10 +113,10 @@ include_once("fcn-2013/footer.tpl.php");
 
 </span><?php // fcn-header ?>
 
-<!--
 <span id="sidebar-right" 
 	style="background: url(<?php print $image_dir . "/background-right.gif"; ?>) no-repeat; float: left; height: 1500px; width: 130px; "
 	></span>
+<!--
 -->
 
 <br clear="all" />

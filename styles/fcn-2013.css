@@ -12,7 +12,7 @@ body {
 	/**
 	* Thie keeps the entire content page from moving down when the window is narrowed.
 	*/
-	min-width: 1150px;
+	min-width: 1301px;
 }
 
 tr.odd td, tr.even td {
