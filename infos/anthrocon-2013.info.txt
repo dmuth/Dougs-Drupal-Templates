@@ -1,0 +1,6 @@
+
+name = Anthrocon 2013
+description = Anthrocon 2013 theme
+core = 6.x
+engine = phptemplate
+
