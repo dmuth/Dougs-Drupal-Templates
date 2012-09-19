@@ -8,6 +8,11 @@ body {
   font: 76% Verdana, Arial, Helvetica, sans-serif;
 	background-color: #252525;
 	color: #dedede;
+
+	background-image: url('images/anthrocon-2013/tile.png');
+	background-repeat: repeat-x;
+	background-position: bottom;
+
 }
 tr.odd td, tr.even td {
   padding: 0.3em;
@@ -238,6 +243,10 @@ table {
 	width: 190px;
 	background-color: #322d2d;
 	border: 1px solid black;
+
+	background-image: url('images/anthrocon-2013/tile.png');
+	background-repeat: repeat-x;
+	background-position: bottom;
 }
 
 /* Anthrocon */
@@ -336,10 +345,15 @@ table {
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: black;
+
+	background-image: url('images/anthrocon-2013/tile.png');
+	background-repeat: repeat-x;
+	background-position: bottom;
 }
 
 .sticky {
 	color: #252525;
+	background-image: none;
 	background-color: #dbc69c;
 	padding: 5px;
 	border: none;
