@@ -1,4 +1,3 @@
-/* $Id: style.css,v 1.46 2010/03/17 03:03:43 doug Exp doug $ */
 
 /*
 HTML elements
@@ -6,16 +5,14 @@ HTML elements
 body {
   margin: 0;
   padding: 0;
-  color: #000;
-  background-color: #fff;
   font: 76% Verdana, Arial, Helvetica, sans-serif;
-	background-color: #16004f;
-	color: #16004f;
+	background-color: #252525;
+	color: #dedede;
 }
 tr.odd td, tr.even td {
   padding: 0.3em;
-	background-color: #a8c8c8;
-	border-bottom: 1px solid #d3ecd2;
+	background-color: #322d2d;
+	border-bottom: 1px solid #ddc69d;;
 }
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
@@ -34,29 +31,19 @@ p {
   margin-bottom: 0.9em;
 }
 a {
-  text-decoration: none;
   font-weight: bold;
 }
 
 a:link {
-	/* Anthrocon */
-	font-weight: bold;
-	color: #606060;
-	color: #16004f;
-	text-decoration: underline;
+	color: #ff8a00;
 }
 
 a:visited {
-	/* Anthrocon */
-	font-weight: bold;
-	color: #606060;
-	color: #16004f;
-	text-decoration: underline;
+	color: #ae0000;
 }
 
 a:hover {
-	/* Anthrocon */
-	color: #000000;
+	color: #ae0000;
 	text-decoration: none;
 }
 
@@ -83,7 +70,6 @@ table {
 }
 .form-item label {
   font-size: 1em;
-  color: #222;
 }
 .item-list .title {
   font-size: 1em;
@@ -120,7 +106,6 @@ table {
 #header {
 	/* Anthrocon */
 	/* This displays a bar right under the graphic.  Argh! */
-	background-color: #B0D5E6;
 }
 #logo {
   vertical-align: middle;
@@ -183,8 +168,6 @@ table {
   color: #fff;
 }
 #mission a, #mission a:visited {
-  color: #9cf;
-  font-weight: bold;
 }
 .site-name {
   margin: 0.6em 0em 0em 0em;
@@ -192,10 +175,8 @@ table {
   font-size: 2em;
 }
 .site-name a:link, .site-name a:visited {
-  color: #fff;
 }
 .site-name a:hover {
-  color: #369;
   text-decoration: none;
 }
 .site-slogan {
@@ -216,14 +197,12 @@ table {
 	for more details.
 	height: 100%; 
 	*/
-	background-color: #fff;
 /*
 	width: 750px;
   padding: 10px;
 */
 	padding-left: 10px;
 	padding-right: 10px;
-	background-color: #16004f;
 }
 #mission, .node .content, .comment .content {
   line-height: 1.4;
@@ -257,18 +236,18 @@ table {
   vertical-align: top;
 	/* Anthrocon */
 	width: 190px;
-	background-color: #a8c8c8;
+	background-color: #322d2d;
 	border: 1px solid black;
 }
 
 /* Anthrocon */
 #sidebar-left a, #sidebar-left a:visited, #sidebar-right a, #sidebar-right a:visited {
-	color: #16004f;
+	color: #ff8a00;
 }
 
 /* Anthrocon */
 #sidebar-left a:hover, #sidebar-right a:hover {
-	color: #ffffff;
+	color: #ae0000;
 }
 
 /* Anthrocon */
@@ -283,18 +262,13 @@ table {
 	/* Anthrocon */
 	font-size: x-small;
 	text-align: center;
-	background-color: #c2c2c2;
 	font-family: Arial, Helvetica, sans-serif;
 	padding: 1em;
-	background-color: #16004f;
-	color: #a8c8c8;
+	color: #dedede;
 }
 
 /* Anthrocon */
 #footer a {
-	font-weight: bold;
-	text-decoration: underline;
-	color: #a8c8c8;
 }
 
 /*
@@ -330,12 +304,6 @@ table {
 }
 
 .block {
-	/* Anthrocon */
-	/*
-	border-bottom: 1px solid #2c6c48;
-	padding-bottom: 0.75em;
-  	margin-bottom: 1em;
-	*/
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	padding-bottom: 0px;
@@ -345,18 +313,14 @@ table {
 .block .title {
   margin-bottom: .25em;
 	/* Anthrocon stuff for custom menu titles. */
-/*
-	color: white;
-	background-color: #3D3D3D;
-*/
 	text-align: center;
 	font-size: medium;
 	font-size: small;
 	padding-top: 3px;
 	padding-bottom: 3px;
 	font-weight: bold;
-	color: #a8c8c8;
-	background-color: #16004f;
+	color: #ae0000;
+	background-color: #ff8a00;
 }
 
 .box .title {
@@ -375,7 +339,8 @@ table {
 }
 
 .sticky {
-	background-color: #d3ecd2;
+	color: #252525;
+	background-color: #dbc69c;
 	padding: 5px;
 	border: none;
 }
@@ -467,8 +432,6 @@ table {
 #forum td.container {
 }
 #forum td.container a {
-  color: #555;
-	color: black;
 }
 #forum td.statistics, #forum td.settings, #forum td.pager {
   height: 1.5em;
@@ -548,11 +511,11 @@ blockquote {
 	border: 1px solid black;
 	height: 20px;
 	position: absolute;
-	top: 100px;
+	top: 158px;
 	left: 610px;
 	font-family: Arial, Helvetica, sans-serif;
-	color: #16004f;
-	background-color: #a8c8c8;
+	color: black;
+	background-color: #ffa800;
 }
 
 #primary a {
@@ -565,8 +528,8 @@ blockquote {
 }
 
 #primary a:hover {
-	color: #a8c8c8;
-	background: #16004f;
+	color: #ae0000;
+	background: #252525;
 }
 
 
@@ -665,12 +628,11 @@ code, tt {
 	min-width: 700px;
 	padding: 5px;
 	width: 850px;
-	background-color: #a8c8c8;
+	background-color: #322d2d;
 }
 
 tbody th { 
-	border-bottom-color: #a0957a;
-	border-bottom-color: black;
+	border-bottom: 2px solid #dedede;
 }
 
 .profile h3 {
@@ -683,16 +645,17 @@ ul.primary {
 
 ul.primary li a {
 	border-color: black;
-	background-color: #d3ecd2;
+	background-color: #252525;
 }
 
 ul.primary li.active a {
 	color: #d3ecd2;
-	background-color: #16004f
+	background-color: #dbc69c;
 }
 
 ul.primary li a.active {
 	border-color: black;
+	color: red;
 }
 
 ul.secondary {
@@ -708,8 +671,8 @@ ul.secondary a.active {
 }
 
 #banner {
-	height: 125px;
-	width: 982px;
+	height: 183px;
+	width: 970px;
 	background-repeat: no-repeat;
 }
 
@@ -810,4 +773,6 @@ li.expanded {
 	margin-top: 15px;
 }
 
-
+li a.active {
+	color: #ff8a00;
+}
