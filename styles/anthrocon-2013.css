@@ -359,6 +359,10 @@ table {
 	border: none;
 }
 
+.sticky a {
+	color: #ae0000;
+}
+
 .node .content, .comment .content {
   margin: .5em 0 .5em 0;
 	/* Anthrocon */
