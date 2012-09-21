@@ -121,6 +121,12 @@ include_once("fcn-2013/footer.tpl.php");
 
 <br clear="all" />
 
-<?php //print $closure ?>
+<?php
+//
+// We need this for Google Analytics.
+//
+print $closure;
+
+?>
 </body>
 </html>
