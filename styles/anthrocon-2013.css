@@ -45,6 +45,8 @@ a:link {
 
 a:visited {
 	color: #ae0000;
+	/* Let's try making this a light grey instead. */
+	color: #808080;
 }
 
 a:hover {
@@ -227,9 +229,11 @@ table {
 }
 .messages {
   background-color: #eee;
+	background-color: #ddc69c;
   border: 1px solid #ccc;
   padding: 0.3em;
   margin-bottom: 1em;
+	color: #252525;
 }
 .error {
   border-color: red;
@@ -520,7 +524,8 @@ blockquote {
 	padding: .5em;
 	margin-left: .5em;
 	margin-right: .5em;
-	background-color: #d3ecd2;
+	background-color: #252525;
+	color: #ff8a00;
 }
 
 
@@ -667,7 +672,6 @@ ul.primary li a {
 }
 
 ul.primary li.active a {
-	color: #d3ecd2;
 	background-color: #dbc69c;
 }
 
@@ -794,3 +798,16 @@ li.expanded {
 li a.active {
 	color: #ff8a00;
 }
+
+/**
+* Admin-related stuff goes here.
+*/
+table.system-status-report tr.odd td, table.system-status-report tr.even td {
+	background-color: #dbc69c;
+}
+
+table.system-status-report .info {
+	color: #252525;
+}
+
+
