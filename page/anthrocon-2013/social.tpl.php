@@ -5,24 +5,21 @@
 * @author Douglas Muth <http://www.dmuth.org/>
 */
 
+
 //
-// If we are running under Wamp, that only happens
-// for onsite reg, so suppres the Facebook Like 
-// button there. 	
+// Check to see if we are in WAMP (onsite registration) in the admin 
+// (not public) or on dev (devinitely not public).  If any of those 
+// is true, don't display social link.
 //
-if (
-	(	strstr($_SERVER["DOCUMENT_ROOT"], "/wamp/")
-		&& (arg(0) != "admin")
-	) ||
-	(
-		//
-		// Suppress my development servers, too.
-		//
-		strstr($_SERVER["SERVER_NAME"], "localdomain")
-	)
-	) {
+$_template_in_wamp = strstr($_SERVER["DOCUMENT_ROOT"], "/wamp/");
+$_template_in_admin = (arg(0) == "admin");
+$_template_on_dev = strstr($_SERVER["SERVER_NAME"], "localdomain");
+//print "Debug: $_template_in_wamp, $_template_in_admin, $_template_on_dev";
+
+if ( $_template_in_wamp || $_template_in_admin || $_template_on_dev ) {
 	return(null);
 }
+
 
 $url = $GLOBALS["base_url"] . request_uri();
 $url_string = rawurlencode($url);
