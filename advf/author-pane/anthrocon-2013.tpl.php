@@ -132,13 +132,15 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
 		//	
 		if (module_exists("fivestarstats")) {
 	?>
+	<!--
         <div class="author-pane-line author-posts">
-          <span class="author-pane-label"><?php print t('Votes Received'); ?>:</span>
+          <span class="author-pane-label"><?php //print t('Votes Received'); ?>:</span>
 		<?php
-			$html = fivestarstats_uid_received_summary_html($account->uid, true);
-			print $html;
+			//$html = fivestarstats_uid_received_summary_html($account->uid, true);
+			//print $html;
 		?>
         </div>
+	-->
 		<?php
 		}
 		?>
