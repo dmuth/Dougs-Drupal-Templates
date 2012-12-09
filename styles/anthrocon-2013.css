@@ -1,0 +1,814 @@
+
+/*
+HTML elements
+*/
+body {
+  margin: 0;
+  padding: 0;
+  font: 76% Verdana, Arial, Helvetica, sans-serif;
+	background-color: #252525;
+	color: #dedede;
+
+	background-image: url('images/anthrocon-2013/tile.png');
+	background-repeat: repeat-x;
+	background-position: bottom;
+
+}
+tr.odd td, tr.even td {
+  padding: 0.3em;
+	background-color: #322d2d;
+	border-bottom: 1px solid #ddc69d;;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em;
+}
+h1 {
+  font-size: 1.3em;
+}
+h2 {
+  font-size: 1.2em;
+}
+h3, h4, h5, h6 {
+  font-size: 1.1em;
+}
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.9em;
+}
+a {
+  font-weight: bold;
+}
+
+a:link {
+	color: #ff8a00;
+}
+
+a:visited {
+	color: #ae0000;
+	/* Let's try making this a light grey instead. */
+	color: #808080;
+}
+
+a:hover {
+	color: #ae0000;
+	text-decoration: none;
+}
+
+#sidebar-left a:link {
+	text-decoration: none;
+}
+#sidebar-left a:visited {
+	text-decoration: none;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border: 1px solid black;
+}
+pre {
+  background-color: #eee;
+  padding: 0.75em 1.5em;
+  font-size: 12px;
+  border: 1px solid #ddd;
+}
+table {
+  /* make <td> sizes relative to body size! */
+  font-size: 1em;
+}
+.form-item label {
+  font-size: 1em;
+}
+.item-list .title {
+  font-size: 1em;
+  color: #222;
+	/* Anthrocon */
+	text-decoration: none;
+}
+.links {
+  margin-bottom: 0em;
+	/* Anthrocon */
+	color: #999;
+	/*
+	* This was added with Drupal 5 to get the links at the bottom
+	* of each comment displaying properly.
+	*/
+	display: inline;
+
+}
+.comment .links {
+  margin-bottom: 0em;
+	/* Anthrocon */
+	/* This is so that comments are high enough for user pictures. */
+	/*
+	margin-top: 2em;
+	*/
+}
+
+/*
+** Page layout blocks / IDs
+*/
+#header, #content {
+	/* Anthrocon */
+}
+#header {
+	/* Anthrocon */
+	/* This displays a bar right under the graphic.  Argh! */
+}
+#logo {
+  vertical-align: middle;
+  border: 0;
+}
+#logo img {
+  float: left;
+  padding: 0em 1.0em 0em 1em;
+  border: 0;
+}
+#menu {
+/*
+  padding: 0.5em 0.5em 0 0.5em;
+  text-align: right;
+  vertical-align: middle;
+*/
+
+}
+
+#secondary {
+  padding: 0 1em 0.5em 0;
+  font-size: 0.8em;
+  color: #9cf;
+}
+#secondary a {
+  font-weight: bold;
+  color: #9cf;
+}
+
+#search .form-text, #search .form-submit {
+  border: 1px solid #369;
+  font-size: 1.1em;
+  height: 1.5em;
+  vertical-align: middle;
+}
+
+/* Anthrocon */
+#edit-keys {
+	border: 1px solid #757575;
+	font-size: 1.1em;
+	width: 8em;
+}
+
+/* Anthrocon */
+.form-submit {
+	height: 1.5em;
+	margin: 5px;
+	font-size: 1.1em;
+	border: 1px solid #757575;
+	border: 1px solid black;
+}
+
+#search .form-text {
+  width: 8em;
+  padding: 0 0.5em 0 0.5em;
+}
+#mission {
+  background-color: #369;
+  padding: 1.5em 2em;
+  color: #fff;
+}
+#mission a, #mission a:visited {
+}
+.site-name {
+  margin: 0.6em 0em 0em 0em;
+  padding: 0em;
+  font-size: 2em;
+}
+.site-name a:link, .site-name a:visited {
+}
+.site-name a:hover {
+  text-decoration: none;
+}
+.site-slogan {
+  font-size: 1em;
+  color: #eee;
+  display: block;
+  margin: 0em 0em 0em 0em;
+  font-style: italic;
+  font-weight: bold;
+}
+#main {
+  /* padding in px not ex because IE messes up 100% width tables otherwise */
+	/* Anthrocon */
+	/*
+	Comment this out to see if it fixes the footer overlapping
+	the content problem.  See:
+	http://archivist.incutio.com/viewlist/css-discuss/51230
+	for more details.
+	height: 100%; 
+	*/
+/*
+	width: 750px;
+  padding: 10px;
+*/
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#mission, .node .content, .comment .content {
+  line-height: 1.4;
+	/* Anthrocon */
+/*
+	padding-bottom: 2em;
+*/
+}
+#help {
+  font-size: 0.9em;
+  margin-bottom: 1em;
+}
+.breadcrumb {
+ 	margin-bottom: .5em;
+	color: #545454;
+	color: black;
+}
+.messages {
+  background-color: #eee;
+	background-color: #ddc69c;
+  border: 1px solid #ccc;
+  padding: 0.3em;
+  margin-bottom: 1em;
+	color: #252525;
+}
+.error {
+  border-color: red;
+}
+
+#sidebar-left, #sidebar-right {
+  /* padding in px not ex because IE messes up 100% width tables otherwise */
+  padding: 10px;
+  vertical-align: top;
+	/* Anthrocon */
+	width: 190px;
+	background-color: #322d2d;
+	border: 1px solid black;
+
+	background-image: url('images/anthrocon-2013/tile.png');
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+/* Anthrocon */
+#sidebar-left a, #sidebar-left a:visited, #sidebar-right a, #sidebar-right a:visited {
+	color: #ff8a00;
+}
+
+/* Anthrocon */
+#sidebar-left a:hover, #sidebar-right a:hover {
+	color: #ae0000;
+}
+
+/* Anthrocon */
+#sidebar-left a.active, #sidebar-right a.active {
+	color: #ffffff;
+}
+
+#sidebar-left label, #sidebar-right label {
+}
+
+#footer {
+	/* Anthrocon */
+	font-size: x-small;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 1em;
+	color: #dedede;
+}
+
+/* Anthrocon */
+#footer a {
+}
+
+/*
+** Common declarations for child classes of node, comment, block, box, etc.
+** If you want any of them styled differently for a specific parent, add
+** additional rules /with only the differing properties!/ to .parent .class.
+** See .comment .title for an example.
+*/
+.title, .title a {
+
+  margin: 0 auto 0 auto;  /* decrease default margins for h<x>.title */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: large;
+
+}
+.submitted {
+  font-size: 0.8em;
+}
+.links {
+  color: #999;
+	color: black;
+}
+.links a {
+  font-weight: bold;
+}
+.block, .box {
+  padding: 0 0 1.5em 0;
+}
+
+/* Anthrocon */
+.block leaf a:link {
+	color: #FFFFFF;
+}
+
+.block {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	padding-bottom: 0px;
+	margin-bottom: 5px;
+}
+
+.block .title {
+  margin-bottom: .25em;
+	/* Anthrocon stuff for custom menu titles. */
+	text-align: center;
+	font-size: medium;
+	font-size: small;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	font-weight: bold;
+	color: #ae0000;
+	background-color: #ff8a00;
+}
+
+.box .title {
+  font-size: 1.1em;
+}
+
+.node {
+	/**
+	* Put a line after every post.
+	*/
+	margin: .5em 0 1em 0;
+	padding: .5em 0 1em 0;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+
+	background-image: url('images/anthrocon-2013/tile.png');
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+.sticky {
+	color: #252525;
+	background-image: none;
+	background-color: #dbc69c;
+	padding: 5px;
+	border: none;
+}
+
+.sticky a {
+	color: #ae0000;
+}
+
+.node .content, .comment .content {
+  margin: .5em 0 .5em 0;
+	/* Anthrocon */
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.node .taxonomy {
+  color: #999;
+  font-size: 0.8em;
+  padding: 1.5em;
+}
+.node .picture {
+/*
+  border: 1px solid #ddd;
+  float: right;
+*/
+  margin: 0.5em;
+	/* Anthrocon */
+	width: 120px;
+}
+.comment {
+  border: 1px solid #abc;
+  border: 1px solid black;
+  padding: .5em;
+  margin-bottom: 1em;
+}
+.comment .title a {
+  font-size: 1.1em;
+  font-weight: normal;
+}
+.comment .new {
+  text-align: right;
+  font-weight: bold;
+  font-size: 0.8em;
+  float: right;
+  color: red;
+}
+.comment .picture {
+/*
+  border: 1px solid #abc;
+  float: right;
+*/
+  margin: 0.5em;
+	/* Anthrocon */
+	/**
+	* Set height to be the pixel size and removed the borders.
+	height: 100px;
+	*/
+	border: 0;
+	/* Anthrocon */
+	width: 120px;
+}
+
+/*
+** Module specific styles
+*/
+#aggregator .feed-source {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin: 1em 0 1em 0;
+}
+#aggregator .news-item .categories, #aggregator .source, #aggregator .age {
+  color: #999;
+  font-style: italic;
+  font-size: 0.9em;
+}
+#aggregator .title {
+  margin-bottom: 0.5em;
+  font-size: 1em;
+}
+#aggregator h3 {
+  margin-top: 1em;
+}
+#forum table {
+  width: 100%;
+}
+#forum td {
+  padding: 0.5em 0.5em 0.5em 0.5em;
+}
+#forum td.forum, #forum td.posts {
+}
+#forum td.topics, #forum td.last-reply {
+}
+#forum td.container {
+}
+#forum td.container a {
+}
+#forum td.statistics, #forum td.settings, #forum td.pager {
+  height: 1.5em;
+  border: 1px solid #bbb;
+}
+#forum td .name {
+  color: #96c;
+}
+#forum td .links {
+  padding-top: 0.7em;
+  font-size: 0.9em;
+}
+#profile .profile {
+  clear: both;
+  border: 1px solid #abc;
+  padding: .5em;
+  margin: 1em 0em 1em 0em;
+	/* Anthrocon */
+/*
+	padding-bottom: 5em;
+*/
+}
+#profile .profile .name {
+  padding-bottom: 0.5em;
+}
+.block-forum h3 {
+  margin-bottom: .5em;
+}
+.calendar a {
+  text-decoration: none;
+}
+.calendar td, .calendar th {
+  padding: 0.4em 0;
+  border-color: #888;
+}
+.calendar .day-today {
+  background-color: #69c;
+}
+.calendar .day-today a {
+  color: #fff;
+}
+.calendar .day-selected {
+  background-color: #369;
+  color: #fff;
+}
+.calendar .header-week {
+  background-color: #ccc;
+}
+.calendar .day-blank {
+  background-color: #ccc;
+}
+.calendar .row-week td a:hover {
+  background-color: #fff; color: #000;
+}
+
+.service-links {
+	font-size: smaller;
+	padding: .5em;
+	margin-top: 1em;
+	vertical-align: bottom;
+	background-color: #eeeeee;
+	background-color: #c0a58a;
+}
+
+
+blockquote {
+	background-color: #eeeeee;
+	padding: .5em;
+	margin-left: .5em;
+	margin-right: .5em;
+	background-color: #252525;
+	color: #ff8a00;
+}
+
+
+#primary {
+	padding: 4px 0px 0px 0px;
+	border: 1px solid black;
+	height: 20px;
+	position: absolute;
+	top: 158px;
+	left: 610px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: black;
+	background-color: #ffa800;
+}
+
+#primary a {
+	font-weight: bold;
+	color: #fff;
+	color: black;
+	padding: 4px 5px 6px 5px;
+	margin: 4px 0px 0px 0px;
+	height: 20px;
+}
+
+#primary a:hover {
+	color: #ae0000;
+	background: #252525;
+}
+
+
+#logo_local {
+	background-color: #B0D5E6;
+}
+
+
+/* Anthrocon */
+.form-text {
+	border: 1px solid #757575;
+	border: 1px solid black;
+}
+
+/* Anthrocon */
+.form-select {
+	border: 1px solid #757575;
+	border: 1px solid black;
+}
+
+/* Anthrocon */
+/* This is so that the forum navigation text on the bottom of each forum
+	post is pushed down past the user picture.
+*/
+.forum-topic-navigation {
+/*
+	margin-top: 5em;
+*/
+	visibility: hidden;
+}
+
+.picture-comment {
+	/*
+	font-style: italic;
+	*/
+	font-size: x-small;
+	width: 100px;
+}
+
+.node-unpublished, .comment-unpublished {
+	background-color: #ffd4d4;
+	color: black;
+}
+
+/**
+* This overrides the element found in modules/system/system.css.
+* Otherwise, there's an annoying line printed right under each article
+* attribution...
+*/ 
+tbody {
+  border-top: 0px solid #ccc;
+}
+
+/**
+* These styles for rows in tables, such as the one on the contact page.
+*/
+.row-header {
+	color: #ffffff;
+	background-color: #3d815b;
+	font-size: small;
+	padding: 5px;
+}
+
+.row-body {
+	padding-top: 5px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	padding-right: 20px;
+}
+
+/**
+* Borrowed from the Drupal website.
+*/
+code, tt {
+	padding: 1px;
+	font-size: 0.9em;
+	font-family: "Bitstream Vera Sans Mono", Monaco, "Lucida Console", monospace;
+	background-color: #EDF1F3;
+}
+
+/**
+* For our "please wait" box on form submission.
+*/
+.please_wait {
+	font-size: large;
+	background-color: #eeeeee;
+	padding: .5em;
+}
+
+.markasread {
+	float: right;
+	padding: 5px;
+}
+
+.ac_outer {
+	border: 1px solid black;
+	min-width: 700px;
+	padding: 5px;
+	width: 850px;
+	background-color: #322d2d;
+}
+
+tbody th { 
+	border-bottom: 2px solid #dedede;
+}
+
+.profile h3 {
+	border-bottom-color: black;
+}
+
+ul.primary {
+	border-bottom-color: black;
+}
+
+ul.primary li a {
+	border-color: black;
+	background-color: #252525;
+}
+
+ul.primary li.active a {
+	background-color: #dbc69c;
+}
+
+ul.primary li a.active {
+	border-color: black;
+	color: red;
+}
+
+ul.secondary {
+	border-color: black;
+}
+
+ul.secondary li {
+	border-right-color: black;
+}
+
+ul.secondary a.active {
+	border-color: black;
+}
+
+#banner {
+	height: 183px;
+	width: 970px;
+	background-repeat: no-repeat;
+}
+
+/**
+* Don't let the default preview class set its own background.
+*/
+.preview .node {
+	background-color: transparent;
+}
+
+.fivestar-widget {
+}
+
+/**
+* Fix up some elements from the private message module.
+*/
+.message-participants {
+	border-bottom: none;
+}
+.bottom-border {
+	border-bottom-color: black;
+}
+
+/**
+* Tweak the profile viewing pages
+*/
+#profile .profile {
+	border-color: transparent;
+	border-top-color: black;
+}
+
+
+/**
+* Stuff for the Advanced Forums module.
+*/
+.forum-links li {
+	list-style-type: none;
+}
+.forum-post {
+	border-top: 1px solid black;
+}
+
+.forum-post-panel-sub {
+}
+
+.user_badges img {
+	padding: 2px;
+}
+ 
+.new {
+  text-align: right;
+  font-weight: bold;
+  float: right;
+  color: red;
+}
+
+/**
+* Put padding around each of our profile icons.
+*/
+.profile_icons img {
+	margin: 1px;
+	margin-top: 5px;
+}
+
+.author-pane-label {
+	font-weight: bold;
+}
+
+.author-real-name, .author-location, .author-comment, .author-joined, .author-posts {
+	font-size: smaller;
+}
+
+.author-pane {
+}
+
+.biography p {
+	margin-top: 0;
+}
+
+.profile td.name {
+	font-weight: bold;
+}
+
+li.leaf {
+}
+
+li.collapsed {
+}
+
+li.expanded {
+}
+
+.views-table {
+	/**
+	* This is to keep the Plus 1 button from getting into the table's 
+	* space and making the table narrow.
+	*/
+	margin-top: 15px;
+}
+
+li a.active {
+	color: #ff8a00;
+}
+
+/**
+* Admin-related stuff goes here.
+*/
+table.system-status-report tr.odd td, table.system-status-report tr.even td {
+	background-color: #dbc69c;
+}
+
+table.system-status-report .info {
+	color: #252525;
+}
+
+

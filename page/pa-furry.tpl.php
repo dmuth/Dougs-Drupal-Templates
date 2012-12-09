@@ -52,9 +52,7 @@ check_pending_friend_requests();
     </td>
     <td id="menu">
       <?php if (isset($secondary_links)) { ?><div id="secondary"><?php print theme('links', $secondary_links) ?></div><?php } ?>
-<!--
       <?php if (isset($primary_links)) { ?><div id="primary"><?php print theme('links', $primary_links) ?></div><?php } ?>
--->
       <?php print $search_box ?>
     </td>
   </tr>
@@ -209,7 +207,7 @@ All posts and comments on this site are Copyright (C) their authors.
 All other content is licensed under the Gnu Free Documentation License.<br/>
 <br/>
 
-<a href="/wahtisfurry">What Is "Furry"?</a>
+<a href="/whatisfurry">What Is "Furry"?</a>
 | 
 <a href="/events">Calendar</a>
 | 

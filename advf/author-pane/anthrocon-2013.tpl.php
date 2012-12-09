@@ -1,5 +1,5 @@
 <?php
-// $Id: advf-author-pane.tpl.php,v 1.1 2010/04/20 03:09:51 doug Exp $
+// $Id: advf-author-pane.tpl.php,v 1.6 2010/04/15 04:33:40 doug Exp $
 
 /**
  * @file
@@ -7,9 +7,7 @@
  *
  * See author-pane.tpl.php in Author Pane module for a full list of variables.
  */
-?>
 
-<?php
 //
 // Load our functions conditionally.
 // The reason for this function_exists() silliness is because touching the
@@ -36,25 +34,6 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
 <div class="author-pane">
  <div class="author-pane-inner">
     <div class="author-pane-name-status author-pane-section">
-      <div class="author-pane-line author-name"> 
-	<?php print $account_name; ?> 
-	</div>
-
-      <div class="author-pane-line author-real-name"> 
-	<?php
-	//
-	// Print the public display name
-	//
-	$name = "";
-
-	if (!empty($public_profile["profile_display_name"]["#value"])) {
-		$name = "(" . $public_profile["profile_display_name"]["#value"] . ")";
-	}
-
-	?>
-
-	<?php print $name; ?> 
-	</div>
 
       <?php if (!empty($facebook_status_status)): ?>
         <div class="author-pane-line author-facebook-status"><?php print $facebook_status_status;  ?></div>
@@ -107,15 +86,15 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
 	//
 	// Each of our social networks.
 	//
-	$html = get_social_network_links($public_profile);
+	//$html = get_social_network_links($public_profile);
 
-	if (!empty($html)) {
+	//if (!empty($html)) {
 		//
 		// Wrap these all in a class.
 		//
-		$html = "<span class=\"profile_icons\">" . $html . "</span>";
-		print $html;
-	}
+	//	$html = "<span class=\"profile_icons\">" . $html . "</span>";
+	//	print $html;
+	//}
 
 	?>
 
@@ -128,15 +107,15 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
     <div class="author-pane-stats author-pane-section">
       <?php if (!empty($joined)): ?>
         <div class="author-pane-line author-joined">
-          <span class="author-pane-label"><?php print t('Joined'); ?>:</span> 
+          <span class="author-pane-label"><?php //print t('Joined'); ?></span> 
 	<?php 
 	//
 	// For some reason, there's a colon with numbers on the end.  Let's
 	// just split out spaces to get rid of them.
 	//
-	$results = explode(" ", $joined);
-	$joined = $results[0];
-	print $joined; 
+	//$results = explode(" ", $joined);
+	//$joined = $results[0];
+	//print $joined; 
 	?>
         </div>
       <?php endif; ?>
@@ -153,7 +132,7 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
 		//	
 		if (module_exists("fivestarstats")) {
 	?>
-		<!--
+	<!--
         <div class="author-pane-line author-posts">
           <span class="author-pane-label"><?php //print t('Votes Received'); ?>:</span>
 		<?php
@@ -161,11 +140,14 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
 			//print $html;
 		?>
         </div>
-		-->
+	-->
 		<?php
 		}
 		?>
 
+      <?php if (!empty($user_relationships_api)): ?>
+      <?php endif; ?>
+      
       <?php if (isset($userpoints_points)): ?>
         <div class="author-pane-line author-points">
           <span class="author-pane-label"><?php print t('!Points', userpoints_translation()); ?></span>: <?php print $userpoints_points; ?>
@@ -195,22 +177,5 @@ $path = $GLOBALS["base_path"] . "sites/all/themes/" . $GLOBALS["theme"];
       <?php endif; ?>        
     </div>
 
-    <div class="author-pane-contact author-pane-section">
-      <?php if (!empty($contact)): ?>
-        <div class="author-pane-icon"><?php print $contact; ?></div>
-      <?php endif; ?>
-
-      <?php if (!empty($buddylist)): ?>
-        <div class="author-pane-icon"><?php print $buddylist; ?></div>
-      <?php endif; ?>
-
-      <?php if (!empty($user_relationships_api)): ?>
-        <div class="author-pane-icon"><?php print $user_relationships_api; ?></div>
-      <?php endif; ?>
-      
-      <?php if (!empty($flag_friend)): ?>
-        <div class="author-pane-icon"><?php print $flag_friend; ?></div>
-      <?php endif; ?>
-    </div>
   </div>
 </div>

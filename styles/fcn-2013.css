@@ -1,4 +1,4 @@
-/* $Id: style.css,v 1.11 2010/04/25 17:30:21 doug Exp $ */
+/* $Id: style.css,v 1.7 2009/11/12 03:13:44 doug Exp doug $ */
 
 /*
 ** HTML elements
@@ -7,9 +7,14 @@ body {
   margin: 0;
   padding: 0;
   color: #000;
-  background-color: #fff;
   font: 76% Verdana, Arial, Helvetica, sans-serif;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	/**
+	* Thie keeps the entire content page from moving down when the window is narrowed.
+	*/
+	min-width: 1301px;
 }
+
 tr.odd td, tr.even td {
   padding: 0.3em;
 }
@@ -35,25 +40,16 @@ a {
 }
 a:link {
   color: #39c;
-	/* DTM */
-	color: #DDC8F8;
-	color: #FFFFFF;
 }
 a:visited {
   color: #369;
-	/* DTM */
-	color: #DDC8F8;
-	color: #FFFFFF;
 }
 a:hover {
-  color: #39c;
   text-decoration: underline;
-	/* DTM */
-	color: #DDC8F8;
-	color: #FFFFFF;
 }
 fieldset {
   border: 1px solid #ccc;
+  border: 1px solid #000066;
 }
 pre {
   background-color: #eee;
@@ -74,106 +70,70 @@ table {
   color: #222;
 }
 .links {
-  margin-bottom: 0em;
+  margin-bottom: 0;
 }
 .comment .links {
-  margin-bottom: 0em;
+  margin-bottom: 0;
 }
 
 /*
 ** Page layout blocks / IDs
 */
 #header, #content {
-  width: 100%;
-	/* DTM */
-  /*
-  border: #8C32F0 solid;
-  */
-}
-#content {
-	/*
-	border-top: black solid 1px;
-	border-top: #8C32F0 solid 2px;
-	*/
 }
 #header {
-/*
-  background-color: #69c;
-	background="/<?php print $directory; ?>/background.jpg"
-*/
-	background-color: #8C32F0;
-	background-image:url('backgrounds/pa-furry.jpg');
-	background-repeat: repeat-x;
 }
 #logo {
   vertical-align: middle;
   border: 0;
 }
 #logo img {
-  float: left;
-  padding: 0em 1.0em 0em 1em;
+  float: left; /* LTR */
+  padding: 0 1em;
+  padding: 0;
   border: 0;
 }
 #menu {
-  padding: 0.5em 0.5em 0 0.5em;
-  text-align: right;
+  padding: 0.5em 0.5em 0 0.5em; /* LTR */
+  text-align: right; /* LTR */
   vertical-align: middle;
 }
-
-#primary {
+#navlist {
   font-size: 1.0em;
-  padding: 0em 0.8em 0.5em 0;
+  padding: 0 0.8em 1.2em 0; /* LTR */
   color: #9cf;
-	background-color: #8C32F0;
-	padding: 4px 0px 0px 0px;
-	border: 1px solid black;
-	height: 20px;
-	position: absolute;
-	top: 75px;
-	left: 670px;
-	font-family: Arial, Helvetica, sans-serif;
 }
-
-#primary a {
-  	font-weight: bold;
-  	color: #fff;
-	padding: 4px 5px 6px 5px;
-	margin: 4px 0px 0px 0px;
-	height: 20px;
+#navlist a {
+  font-weight: bold;
+  color: #fff;
 }
-
-#primary a:hover {
-	color: #8C32F0;
-	background: white;
-	font-weight: bold;
-	padding: 4px 5px 6px 5px;
-	margin: 4px 0px 0px 0px;
-	height: 20px;
-}
-
-#secondary {
-  padding: 0 1em 0.5em 0;
+#subnavlist {
+  padding: 0.5em 1.2em 0.4em 0; /* LTR */
   font-size: 0.8em;
   color: #9cf;
 }
-#secondary a {
+#subnavlist a {
   font-weight: bold;
   color: #9cf;
+}
+ul.links li {
+  border-left: 1px solid #9cf; /* LTR */
+  border: none;
+}
+ul.links li.first {
+  border: none;
 }
 #search .form-text, #search .form-submit {
   border: 1px solid #369;
   font-size: 1.1em;
   height: 1.5em;
   vertical-align: middle;
-	/* DTM */
-	border: 1px solid #8C32F0;
 }
 #search .form-text {
   width: 8em;
-  padding: 0 0.5em 0 0.5em;
+  padding: 0 0.5em;
 }
 #mission {
-  background-color: #369;
   padding: 1.5em 2em;
   color: #fff;
 }
@@ -182,9 +142,9 @@ table {
   font-weight: bold;
 }
 .site-name {
-  padding: 0em;
+  margin: 0.6em 0 0 ;
+  padding: 0;
   font-size: 2em;
-  margin: 0.3em 0em 0em 0em;
 }
 .site-name a:link, .site-name a:visited {
   color: #fff;
@@ -192,25 +152,23 @@ table {
 .site-name a:hover {
   color: #369;
   text-decoration: none;
-	/* DTM */
-	color: #DDC8F8;
 }
 .site-slogan {
   font-size: 1em;
   color: #eee;
   display: block;
-  margin: 0em 0em 0em 0em;
+  margin: 0;
   font-style: italic;
   font-weight: bold;
 }
 #main {
   /* padding in px not ex because IE messes up 100% width tables otherwise */
   padding: 10px;
-	/* DTM */
-	width:700px;
+  background-color: #ffffff
 }
+
 #mission, .node .content, .comment .content {
-  line-height: 1.4;
+  line-height: 1.4em;
 }
 #help {
   font-size: 0.9em;
@@ -224,34 +182,24 @@ table {
   border: 1px solid #ccc;
   padding: 0.3em;
   margin-bottom: 1em;
-	/* DTM */
-	background-color: #DDC8F8;
+  color: black;
 }
 .error {
   border-color: red;
+  color: black;
 }
 #sidebar-left, #sidebar-right {
   width: 16em;
   /* padding in px not ex because IE messes up 100% width tables otherwise */
   padding: 10px;
-  vertical-align: top;
-	/* DTM */
-	font-family: Arial, Helvetica, sans-serif;
-	color: #DDC8F8;
-	color: #FFFFFF;
-	background-color: #8C32F0;
-}
-
-#sidebar-right {
-	width: 250px;
+	background-color: white;
+	background-color: #f9f8f3;
 }
 
 #footer {
   padding: 1em;
   font-size: 0.8em;
-	/* DTM */
-	background-color: #8C32F0;
-	color: #DDC8F8;
+color: #093d27;
 }
 
 /*
@@ -264,7 +212,7 @@ table {
   font-weight: bold;
   font-size: 1.3em;
   color: #777;
-  margin: 0 auto 0 auto;  /* decrease default margins for h<x>.title */
+  margin: 0 auto;  /* decrease default margins for h<x>.title */
 }
 .submitted {
   color: #999;
@@ -277,83 +225,69 @@ table {
   font-weight: bold;
 }
 .block, .box {
-  padding: 0 0 1.5em 0;
+  padding: 0 0 1.5em 0; /* LTR */
 }
 .block {
   border-bottom: 1px solid #bbb;
-  border-bottom: 1px solid #000000;
+  border: 0;
   padding-bottom: 0.75em;
+  padding: 0.5em;
   margin-bottom: 1.5em;
+	background-color: #f9f8f3;
 }
 .block .title {
   margin-bottom: .25em;
-	/* DTM */
-	color: #DDC8F8;
-	color: #FFFFFF;
+  color: #000000;
 }
 .box .title {
   font-size: 1.1em;
 }
 .node {
-  margin: .5em 0 2em 0;
-	/** DTM
-	Set up a border on our nodes that is the same as sticky nodes.
-	This will improve readability as per Rigel's suggestion.
-	*/
-	border: solid 1px #ddd;
-	border: 1px solid #8C32F0;
-	padding: .5em;
+  background-color: #f9f8f3;
+	margin-right: 20px;
+	margin-top: 10px;
+	padding-left: 10px;
 }
 .sticky {
   padding: .5em;
   background-color: #eee;
-  border: solid 1px #ddd;
-	/* DTM */
-	background-color: #DDC8F8;
+  background-color: #f9f8f3;
 }
 .node .content, .comment .content {
-  margin: .5em 0 .5em 0;
+  margin: .5em 0 .5em;
 }
 .node .taxonomy {
   color: #999;
   font-size: 0.8em;
-  padding-left: 1.5em;
+  padding-left: 1.5em; /* LTR */
 }
 .node .picture {
 /*
   border: 1px solid #ddd;
   float: right;
-*/
+  */
   margin: 0.5em;
 }
 .comment {
-/*
   border: 1px solid #abc;
-*/
   padding: .5em;
   margin-bottom: 1em;
-	/* DTM */
-	border: solid 1px #000000;
 }
 .comment .title a {
   font-size: 1.1em;
   font-weight: normal;
 }
 .comment .new {
-  text-align: right;
+  text-align: right; /* LTR */
   font-weight: bold;
   font-size: 0.8em;
-  float: right;
+  float: right; /* LTR */
   color: red;
 }
 .comment .picture {
-/* DTM
   border: 1px solid #abc;
-  float: right;
-*/
+  float: right; /* LTR */
   margin: 0.5em;
-	/* DTM */
-	width: 120px;
 }
 
 /*
@@ -363,7 +297,7 @@ table {
   background-color: #eee;
   border: 1px solid #ccc;
   padding: 1em;
-  margin: 1em 0 1em 0;
+  margin: 1em 0;
 }
 #aggregator .news-item .categories, #aggregator .source, #aggregator .age {
   color: #999;
@@ -381,7 +315,7 @@ table {
   width: 100%;
 }
 #forum td {
-  padding: 0.5em 0.5em 0.5em 0.5em;
+  padding: 0.5em;
 }
 #forum td.forum, #forum td.posts {
   background-color: #eee;
@@ -410,7 +344,7 @@ table {
   clear: both;
   border: 1px solid #abc;
   padding: .5em;
-  margin: 1em 0em 1em 0em;
+  margin: 1em 0em;
 }
 #profile .profile .name {
   padding-bottom: 0.5em;
@@ -418,69 +352,85 @@ table {
 .block-forum h3 {
   margin-bottom: .5em;
 }
-.calendar a {
-  text-decoration: none;
+div.admin-panel .description {
+  color: #999;
 }
-.calendar td, .calendar th {
-  padding: 0.4em 0;
-  border-color: #888;
+div.admin-panel .body {
+  background: #f4f4f4;
 }
-.calendar .day-today {
+div.admin-panel h3 {
   background-color: #69c;
-}
-.calendar .day-today a {
   color: #fff;
-}
-.calendar .day-selected {
-  background-color: #369;
-}
-.calendar .day-selected a {
-  color: #fff;
-}
-.calendar .header-week {
-  background-color: #ccc;
-}
-.calendar .day-blank {
-  background-color: #ccc;
-}
-.calendar .row-week td a:hover {
-  background-color: #fff; color: #000;
+  padding: 5px 8px 5px;
+  margin: 0;
 }
 
 /**
-* Local styles
+* Custom CSS.
 */
 
-/* This is so that the forum navigation text on the bottom of each forum
-	post is pushed down past the user picture.
+body {
+}
+
+/**
+* Get rid of that annoying default top header on tbody.
 */
-.forum-topic-navigation {
-	visibility: hidden;
+tbody {
+	border: none;
 }
 
-.node-unpublished, .comment-unpublished {
-  background-color: #ffd4d4;
+ul.primary li a {
 }
 
-#sidebar-left .active {
-	color: #3D2858;
+ul.primary li.active a {
 }
 
-/* Make the links darker in the body of the page. */
-#main a {
-	color: #8C32F0;
+ul.primary li a:hover {
 }
 
-.form-submit, .form-text {
-	border: 1px solid #8C32F0;
+
+.block-region {
+	color: black;
+}
+
+.profile h3 {
+	border-bottom-color: #000066;
+}
+
+td {
+}
+
+td.active {
+}
+
+th {
+}
+
+.preview .node {
+}
+
+.node {
+	/*
+	font-size: 14px;
+	*/
+}
+
+.service-links {
+	padding-top: 10px;
+}
+
+.service-label {
+	font-size: 12px;
+}
+
+.content td {
+	padding: 5px;
 }
 
 blockquote {
-        background-color: #ddd;
-        margin: 0;
-        padding: .5em;
-        margin-left: .5em;
-        margin-right: .5em;
+	padding: 5px;
+	margin: 10px;
+	border: 1px solid;
 }
 
 .profile td.name {
@@ -552,13 +502,19 @@ blockquote {
 }
 
 #footer-left {
+	/*
 	width:360px;
+	*/
+	width:380px;
 	float:left;
 	padding:10px;
 }
 
 #footer-middle {
+	/*
 	width:360px;
+	*/
+	width:380px;
 	float:left;
 	padding-top:10px;
 	padding-left: 30px;
@@ -570,7 +526,7 @@ blockquote {
 	float:right;
 	padding:10px;
 	*/
-	width:360px;
+	width:380px;
 	float:left;
 	padding-top:10px;
 	padding-left: 30px;
@@ -615,6 +571,7 @@ blockquote {
   padding: 1em;
   font-size: 0.8em;
   font-weight: bold;
+	text-align: center;
 }
 
 /* Float Properties (borrowed from Arthemia) */
@@ -644,81 +601,28 @@ blockquote {
 .clearfloat {
 	display:block;
 }
- 
-/**
-* CSS for our chat room embedded in a block.
-*/
-.block #chatroom-board-container {
-	color: black;
+  
+
+#primary, #secondary {
+	font-size: 14px;
+}
+#primary a, #secondary a {
+	color: #62D182;
+	text-transform: uppercase;
+}
+#primary a:hover, #secondary a:hover {
+	color: white;
+	text-transform: uppercase;
 }
 
-.block #chatroom-board-container a:link {
-	color: #8C32F0;
-}
-.block #chatroom-board-container a:visited {
-	color: #8C32F0;
-}
-.block #chatroom-board-container a:hover {
-	text-decoration: underline;
-	color: #8C32F0;
+#primary ul.links {
+	padding-top: 7px;
 }
 
-.chatroom-popout {
-	background-color: #8C32F0;
+#secondary {
+	padding-top: 7px;
 }
 
-.chatroom-popout a:link {
-	color: #8C32F0;
+.social-icon {
+	padding-right: 10px;
 }
-
-.chatroom-popout a:visited {
-	color: #8C32F0;
-}
-.chatroom-popout a:hover {
-	text-decoration: underline;
-	color: #8C32F0;
-}
-
-/**
-* Userlist on the popout out.
-*/
-.chatroom-popout #chatroom-user-list a:link {
-	color: #FFFFFF;
-}
-.chatroom-popout #chatroom-user-list a:visited {
-	color: #FFFFFF;
-}
-.chatroom-popout #chatroom-user-list a:hover {
-	text-decoration: underline;
-	color: #FFFFFF;
-}
-
-.chatroom-popout .submitted, .chatroom-popout .taxonomy {
-	color: #000000;
-}
-.chatroom-popout .submitted a:link, .chatroom-popout .taxonomy a:link {
-	color: #FFFFFF;
-}
-.chatroom-popout .submitted a:visited, .chatroom-popout .taxonomy a:visited {
-	color: #FFFFFF;
-}
-.chatroom-popout .submitted a:hover, .chatroom-popout .taxonomy a:hover {
-	text-decoration: underline;
-	color: #FFFFFF;
-}
-
-/**
-* Turn off wrapping in this field so that rows aren't like 4 lines high.
-*/
-.views-field-last-comment-timestamp {
-	white-space: nowrap;
-}
-
-/**
-* For our "recent posts" page.
-*/
-.views-table {
-	width: 700 px;
-}
-
-

@@ -22,17 +22,6 @@
  */
 
 //
-// Load our functions conditionally.
-// The reason for this function_exists() silliness is because touching the
-// lib/display.inc.php file causes the first reload afterward to somwhoe
-// load the file twice.
-//
-if (!function_exists("check_private_messages")) {
-	$file = dirname(__FILE__) . "/../../lib/display.inc.php";
-	include($file);
-}
-
-//
 // Reference to our public profile array
 //
 $public_profile = $account->content["Public Profile"];
@@ -108,7 +97,7 @@ $social_html = get_social_network_links($public_profile);
 
   </div>
 
-  <div class="forum-post-wrapper">
+  <div class="forum-post-wrapper" >
 
     <div class="forum-post-panel-sub">
       <?php print $author_pane; ?>

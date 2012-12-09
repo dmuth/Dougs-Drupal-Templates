@@ -1,5 +1,7 @@
 <?php
 
+include("anthrocon-2013/social.tpl.php");
+
 //
 // Load our functions conditionally.
 // The reason for this function_exists() silliness is because touching the
@@ -108,7 +110,7 @@ var directory = "/<?php print $directory; ?>";
 <tr>
 <td colspan="2" 
 	id="banner"
-	background="/<?php print $directory; ?>/images/anthrocon-2012/logo.png"
+	background="/<?php print $directory; ?>/images/anthrocon-2013/banner.png"
 	>
 <div id="menu">
       <?php if (isset($primary_links)) { 
@@ -130,57 +132,13 @@ var directory = "/<?php print $directory; ?>";
       <div id="main">
 <div class="ac_outer">
         <?php print $breadcrumb ?>
-	<?php
-	//
-	// Facebook code.
-	//
-	$url = $GLOBALS["base_url"] . request_uri();
-	$url_string = rawurlencode($url);
-	$fb_url = "http://www.facebook.com/plugins/like.php?"
-		. "href=${url_string}&amp;"
-		. "layout=button_count&amp;show_faces=true&amp;action=like&amp;font&amp;colorscheme=light"
-		;
-	$fb_html = "<iframe src=\"" . $fb_url . "\""
-			. "scrolling=\"no\" frameborder=\"0\" "
-			. "style=\"border:none; overflow:hidden; width:90px; "
-				. "height: 40px; float: right; "
-				. "padding-top: 10px; \" "
-			. "allowTransparency=\"true\">"
-			. "</iframe>"
-			;
-
-	$plus_one = ""
-		. "<g:plusone size=\"medium\"></g:plusone>\n"
-		. "<script type=\"text/javascript\">\n"
-		. "(function() {\n"
-			. "var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;\n"
-			. "po.src = 'https://apis.google.com/js/plusone.js';\n"
-			. "var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);\n"
-		. "})();\n"
-		. "</script>\n"
-		;
-
-	$plus_one_html = ""
-		. "<span style=\"float: right; padding-top: 10px; \">"
-		. $plus_one
-		. "</span>"
-		;
-
-	?>
 	<h1 class="title"><?php print $title ?>
 		<?php
 		//
-		// If we are running under Wamp, that only happens
-		// for onsite reg, so suppres the Facebook Like 
-		// button there. 	
+		// Print up our Facebook and Google Plus widgets.
 		//
-		if (
-			!strstr($_SERVER["DOCUMENT_ROOT"], "/wamp/")
-			&& (arg(0) != "admin")
-			) {
-			print $fb_html;
-			print $plus_one_html;
-		}
+		print $fb_html;
+		print $plus_one_html;
 
 		?>
 	</h1>
@@ -298,7 +256,7 @@ var directory = "/<?php print $directory; ?>";
 <table border="0">
 <tr>
 <td>
-<img src="/<?php print $directory; ?>/images/anthrocon-2012/footer.png" />
+<img src="/<?php print $directory; ?>/images/anthrocon-2013/footer.png" />
 </td>
 <td width="100%">
 <?php //print $footer_message ?>
