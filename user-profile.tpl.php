@@ -443,7 +443,11 @@ $summary = $account->content["summary"];
 	//
 	if (module_exists("user_relationships_ui")) {
 
-		$relationships = _user_relationships_ui_between($user, $account);
+		//
+		// _user_relationships_ui_between doesn't seem to exist anymore!
+		//
+		//$relationships = _user_relationships_ui_between($user, $account);
+
 		if (!empty($relationships)) {
 
 			$html .= "<br/>";
