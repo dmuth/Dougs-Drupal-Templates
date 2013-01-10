@@ -448,25 +448,12 @@ $summary = $account->content["summary"];
 		//
 		//$relationships = _user_relationships_ui_between($user, $account);
 
+		$relationships = _user_relationships_ui_actions_between($user, $account);
 		if (!empty($relationships)) {
 
 			$html .= "<br/>";
-			$name = t("You are !name's:", array("!name" => $account->name));
+			$name = t("Your relationships with !name:", array("!name" => $account->name));
 			$html .= $name . "<br/>";
-
-			$html .= "<ul>";
-			foreach ($relationships as $key => $value) {
-				$html .= "<li>" . $value . "</li>";
-			}
-			$html .= "</ul>";
-
-		}
-
-		$relationships = _user_relationships_ui_actions_between($user, $account);
-
-		if (!empty($relationships)) {
-
-			$html .= t("You can:") . "<br/>";
 
 			$html .= "<ul>";
 			foreach ($relationships as $key => $value) {
