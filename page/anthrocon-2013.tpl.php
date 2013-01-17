@@ -216,7 +216,8 @@ var directory = "/<?php print $directory; ?>";
 			//$date <= 20070708
 			//$date <= 20080629
 			//$date <= 20090706
-			$date <= 20100616
+			//$date <= 20100616
+			$date <= 20120617
 			&& $node->type == "forum" 
 			&& empty($node->teaser)
 			&& !$sticky
