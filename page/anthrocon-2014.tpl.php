@@ -1,6 +1,6 @@
 <?php
 
-include("anthrocon-2013/social.tpl.php");
+include("anthrocon-2014/social.tpl.php");
 
 //
 // Load our functions conditionally.
@@ -108,9 +108,10 @@ var directory = "/<?php print $directory; ?>";
 
 <table border="0" cellpadding="0" cellspacing="0" id="content">
 <tr>
-<td colspan="2" 
+<td colspan="3" 
 	id="banner"
-	background="/<?php print $directory; ?>/images/anthrocon-2013/banner.png"
+	background="/<?php print $directory; ?>/images/anthrocon-2014/banner.png"
+	width="969" height="125"
 	>
 <div id="menu">
       <?php if (isset($primary_links)) { 
@@ -124,9 +125,14 @@ var directory = "/<?php print $directory; ?>";
 <tr><td></td></tr>
 
   <tr>
-    <?php if ($left) { ?><td id="sidebar-left">
+    <?php if ($left) { ?>
+
+	<?php // Add in some spacing to the left of the sidebar ?>
+	<td width="10"></td>
+
+	<td id="sidebar-left">
       <?php print $left ?>
-    </td><?php } ?>
+    	</td><?php } ?>
     <td valign="top">
       <?php if ($mission) { ?><div id="mission"><?php print $mission ?></div><?php } ?>
       <div id="main">
@@ -257,9 +263,11 @@ var directory = "/<?php print $directory; ?>";
 <table border="0">
 <tr>
 <td>
-<img src="/<?php print $directory; ?>/images/anthrocon-2013/footer.png" />
+<img src="/<?php print $directory; ?>/images/anthrocon-2014/footer.png" 
+	width="248" height="126"
+	/>
 </td>
-<td width="100%">
+<td width="800">
 <?php //print $footer_message ?>
 &copy; 1996-<?php print date("Y"); ?>, Anthrocon, Inc. / PO Box 476 / Malvern, PA 19355 
 	- "Fur, Fun, And So Much More!"
