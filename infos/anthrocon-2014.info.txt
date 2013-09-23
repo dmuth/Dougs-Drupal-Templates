@@ -1,6 +1,6 @@
 
-name = Anthrocon 2013
-description = Anthrocon 2013 theme
+name = Anthrocon 2014
+description = Anthrocon 2014 theme
 core = 6.x
 engine = phptemplate
 
