@@ -23,7 +23,7 @@ if ( $_template_in_wamp || $_template_in_admin || $_template_on_dev ) {
 
 $url = $GLOBALS["base_url"] . request_uri();
 $url_string = rawurlencode($url);
-$fb_url = "http://www.facebook.com/plugins/like.php?"
+$fb_url = "https://www.facebook.com/plugins/like.php?"
 	. "href=${url_string}&amp;"
 	. "layout=button_count&amp;show_faces=true&amp;action=like&amp;font&amp;colorscheme=light"
 	;
