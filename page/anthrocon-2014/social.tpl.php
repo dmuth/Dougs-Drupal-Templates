@@ -14,9 +14,16 @@
 $_template_in_wamp = strstr($_SERVER["DOCUMENT_ROOT"], "/wamp/");
 $_template_in_admin = (arg(0) == "admin");
 $_template_on_dev = strstr($_SERVER["SERVER_NAME"], "localdomain");
-//print "Debug: $_template_in_wamp, $_template_in_admin, $_template_on_dev";
 
-if ( $_template_in_wamp || $_template_in_admin || $_template_on_dev ) {
+$_editing = false;
+if (strstr($_GET["q"], "/edit")) { $_editing = true; }
+if ($_GET["q"] == "messages") { $_editing = true; }
+if (strstr($_GET["q"], "messages/")) { $_editing = true; }
+
+//print $_GET["q"];
+//print "Debug: $_template_in_wamp, $_template_in_admin, $_template_on_dev, $_editing";
+
+if ( $_template_in_wamp || $_template_in_admin || $_template_on_dev || $_editing) {
 	return(null);
 }
 
