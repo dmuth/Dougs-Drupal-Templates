@@ -5,7 +5,9 @@
 // lib/display.inc.php file causes the first reload afterward to somwhoe
 // load the file twice.
 //
-if (!function_exists("check_private_messages")) {
+if (!function_exists("check_private_messages")
+	|| !function_exists("display_user_details")
+	) {
 	$file = dirname(__FILE__) . "/../lib/display.inc.php";
 	include($file);
 }
