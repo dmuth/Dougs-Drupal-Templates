@@ -189,11 +189,13 @@ ul.links li.first {
   color: black;
 }
 #sidebar-left, #sidebar-right {
-  width: 16em;
   /* padding in px not ex because IE messes up 100% width tables otherwise */
+/*
   padding: 10px;
+  width: 16em;
 	background-color: white;
 	background-color: #f9f8f3;
+*/
 }
 
 #footer {
