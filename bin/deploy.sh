@@ -177,12 +177,12 @@ cp -f ${INFO} ${THEME}.info
 # Finally clear the cache, in case the current template has any remaining 
 # references to old template files.
 #
-if test ! "$NO_DRUSH"
-then
-	drush -q cache clear
-else
-	echo "$0: Unable to clear the cache.  You may need to do this by hand."
-fi
+#if test ! "$NO_DRUSH"
+#then
+#	drush -q cache clear
+#else
+#	echo "$0: Unable to clear the cache.  You may need to do this by hand."
+#fi
 
 echo "Site '${SITE}' deployed in theme '${THEME}'!"
 
