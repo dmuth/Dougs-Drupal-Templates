@@ -29,19 +29,14 @@ if ( $_template_in_wamp || $_template_in_admin || $_template_on_dev || $_editing
 
 
 $url = $GLOBALS["base_url"] . request_uri();
-$url_string = rawurlencode($url);
-$fb_url = "https://www.facebook.com/plugins/like.php?"
-	. "href=${url_string}&amp;"
-	. "layout=button_count&amp;show_faces=true&amp;action=like&amp;font&amp;colorscheme=light"
+
+$fb_html = "<div "
+	. "class=\"fb-like\" "
+	. "style=\"float: right; padding-top: 10px; height: 24px; \" "
+	. "data-href=\"${url}\" "
+	. "data-width=\"250\" data-layout=\"button\" data-action=\"like\" "
+	. "data-show-faces=\"false\" data-share=\"true\"></div>"
 	;
-$fb_html = "<iframe src=\"" . $fb_url . "\""
-		. "scrolling=\"no\" frameborder=\"0\" "
-		. "style=\"border:none; overflow:hidden; width:90px; "
-			. "height: 40px; float: right; "
-			. "padding-top: 10px; \" "
-		. "allowTransparency=\"true\">"
-		. "</iframe>"
-		;
 
 $plus_one = ""
 	. "<g:plusone size=\"medium\"></g:plusone>\n"
