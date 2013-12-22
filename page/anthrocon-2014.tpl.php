@@ -153,8 +153,8 @@ var directory = "/<?php print $directory; ?>";
 		//
 		// Print up our Facebook and Google Plus widgets.
 		//
-		print $plus_one_html;
 		print $fb_html;
+		print $plus_one_html;
 
 		?>
 	</h1>

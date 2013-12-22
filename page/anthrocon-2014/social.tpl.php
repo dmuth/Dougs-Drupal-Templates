@@ -34,7 +34,7 @@ $fb_html = "<div "
 	. "class=\"fb-like\" "
 	. "style=\"float: right; padding-top: 10px; height: 24px; \" "
 	. "data-href=\"${url}\" "
-	. "data-width=\"250\" data-layout=\"button\" data-action=\"like\" "
+	. "data-width=\"250\" data-layout=\"button_count\" data-action=\"like\" "
 	. "data-show-faces=\"false\" data-share=\"true\"></div>"
 	;
 
