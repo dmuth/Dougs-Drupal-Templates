@@ -20,6 +20,12 @@ check_dev_theme($directory);
 <html xmlns="http://www.w3.org/1999/xhtml" lang="<?php print $language->language ?>" xml:lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
 
 <head>
+<?php
+if ($_SERVER["SERVER_PORT"] == 443) {
+	echo "<!-- Sorry Google, but I'm using a self-signed cert. So no indexing of HTTPS for you! -->\n";
+	echo "<meta name=\"robots\" content=\"noindex\" />\n";
+}
+?>
   <title><?php print $head_title ?></title>
   <?php print $head ?>
   <?php print $styles ?>
