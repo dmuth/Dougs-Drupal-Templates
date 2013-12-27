@@ -233,13 +233,15 @@ var directory = "/<?php print $directory; ?>";
 			//$date <= 20080629
 			//$date <= 20090706
 			//$date <= 20100616
-			$date <= 20120617
+			//$date <= 20120617
+			$date <= 20130704
 			&& $node->type == "forum" 
 			&& empty($node->teaser)
 			&& !$sticky
 			) {
 			$html = "<div style=\"border: 1px solid black; font-size: large; "
-				. "text-align: center; padding: 5px; margin: 5px;\" "
+				. "text-align: center; "
+				. "padding: 5px; margin: 20px;\" "
 				. "class=\"messages\"; "
 				. ">"
 				. "This page is from a past convention.  It is kept here for archival "
