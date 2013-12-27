@@ -43,6 +43,14 @@ check_pending_friend_requests();
 </head>
 
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=555152114579817";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <table border="0" cellpadding="0" cellspacing="0" id="header"
 	>
@@ -76,19 +84,13 @@ check_pending_friend_requests();
 	// Facebook code.
 	//
 	$url = $GLOBALS["base_url"] . request_uri();
-	$url_string = rawurlencode($url);
-	$fb_url = "http://www.facebook.com/plugins/like.php?"
-		. "href=${url_string}&amp;"
-		. "layout=button_count&amp;show_faces=true&amp;action=like&amp;font&amp;colorscheme=light"
+
+	$fb_html = "<div class=\"fb-like\" "
+		. "style=\"float: right; padding-top: 10px; height: 24px; \" "
+		. "data-href=\"${url}\" "
+		. "data-layout=\"button_count\" data-action=\"like\" "
+		. "data-show-faces=\"false\" data-share=\"true\"></div>"
 		;
-	$fb_html = "<iframe src=\"" . $fb_url . "\""
-			. "scrolling=\"no\" frameborder=\"0\" "
-			. "style=\"border:none; overflow:hidden; width:90px; "
-				. "height: 40px; float: right; "
-				. "padding-top: 10px; \" "
-			. "allowTransparency=\"true\">"
-			. "</iframe>"
-			;
 
 	$plus_one = ""
 		. "<g:plusone size=\"medium\"></g:plusone>\n"
@@ -115,8 +117,8 @@ check_pending_friend_requests();
 		// button there. 	
 		//
 		if (
-			!strstr($_SERVER["DOCUMENT_ROOT"], "/wamp/")
-			&& (arg(0) != "admin")
+			!strstr($url, "/edit")
+			&& !strstr($url, "/admin")
 			) {
 			print $fb_html;
 			print $plus_one_html;
