@@ -119,15 +119,10 @@ var directory = "/<?php print $directory; ?>";
 <table border="0" cellpadding="0" cellspacing="0" id="content">
 <tr>
 <td colspan="3" 
-	id="banner"
+	id="banner_onsite"
 	background="/<?php print $directory; ?>/images/anthrocon-2014/banner.png"
 	width="969" height="125"
 	>
-<div id="menu">
-      <?php if (isset($primary_links)) { 
-	?><div id="primary"><?php print theme('links', $primary_links) ?></div><?php 
-	} ?>
-</div>
 </td>
 </tr>
 

@@ -699,6 +699,12 @@ ul.secondary a.active {
 	background-repeat: no-repeat;
 }
 
+#banner_onsite {
+	height: 130px;
+	width: 970px;
+	background-repeat: no-repeat;
+}
+
 /**
 * Don't let the default preview class set its own background.
 */
