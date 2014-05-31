@@ -1,0 +1,6 @@
+
+name = Anthrocon 2014
+description = Onsitereg - Anthrocon 2014 theme
+core = 6.x
+engine = phptemplate
+
