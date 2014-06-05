@@ -243,7 +243,10 @@ function get_social_network_links($public_profile) {
 		// Add in the http:// protocol if it's not present.
 		//
 		if (!empty($value["add_http"])) {
-			if (!stristr($link, "http://")) {
+			if (
+				!stristr($link, "http://")
+				&& !stristr($link, "https://")
+				) {
 				$link = "http://" . $link;
 			}
 		}
