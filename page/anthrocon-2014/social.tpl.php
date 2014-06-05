@@ -20,6 +20,16 @@ $_editing = false;
 if (strstr($_GET["q"], "/edit")) { $_editing = true; }
 if ($_GET["q"] == "messages") { $_editing = true; }
 if (strstr($_GET["q"], "messages/")) { $_editing = true; }
+//
+// If not logged in, don't show this on the /user page, because it obscures
+// the "create new account" button.
+//
+if (
+	$_GET["q"] == "user"
+	&& !$user->uid
+	) { 
+	$_editing = true;
+}
 
 //print $_GET["q"];
 //print "Debug: $_template_in_wamp, $_template_in_admin, $_template_on_dev, $_editing";
