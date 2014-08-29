@@ -42,6 +42,11 @@ if ( $_template_in_wamp || $_template_in_admin || $_template_on_dev
 
 $url = $GLOBALS["base_url"] . request_uri();
 
+//
+// Facebook treats these URLs differently, so let's point them all over to HTTP.
+//
+$url = preg_replace("/^https:/", "http:", $url);
+
 $fb_html = "<div "
 	. "class=\"fb-like\" "
 	. "style=\"float: right; padding-top: 10px; height: 24px; \" "
