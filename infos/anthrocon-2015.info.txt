@@ -1,0 +1,6 @@
+
+name = Anthrocon 2015
+description = Anthrocon 2015 theme
+core = 6.x
+engine = phptemplate
+
