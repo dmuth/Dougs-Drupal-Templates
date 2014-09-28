@@ -276,7 +276,7 @@ var directory = "/<?php print $directory; ?>";
 <tr>
 <td>
 <img src="/<?php print $directory; ?>/images/anthrocon-2015/footer.png" 
-	width="248" height="126"
+	width="200" height="168"
 	/>
 </td>
 <td width="800">
