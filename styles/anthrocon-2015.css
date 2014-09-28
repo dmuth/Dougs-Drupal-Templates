@@ -13,7 +13,7 @@ Disclaimer (light): #e9e9e9
 body {
   margin: 0;
   padding: 0;
-  font: 76% Verdana, Arial, Helvetica, sans-serif;
+  font: 76% Trebuchet, Verdana, Arial, Helvetica, sans-serif;
 	/* This is the text color for MOST of the site */
 	color: black;
 	background-color: #856145;
@@ -273,13 +273,11 @@ table {
 
 #footer {
 	/* Anthrocon */
-	font-size: x-small;
+	font-size: small;
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	padding: 1em;
-	color: #e9e9e9;
-
-color: #57402a;
+	color: black;
 }
 
 #footer a {
@@ -342,6 +340,7 @@ color: #57402a;
 	background-color: #fffc00;
 	background-image: url('images/anthrocon-2015/tile-block-title.jpg');
 	color: white;
+  font: 120% Trebuchet, Verdana, Arial, Helvetica, sans-serif;
 }
 
 .box .title {
