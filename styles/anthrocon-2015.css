@@ -1,19 +1,14 @@
 
-/*
-HTML elements
 
-Primary links: #000000 on #fffc00
-Links (blue): #0b257e
-Mouseover/followed links (red): #a11717
-Text (dark): #000000
-Background sticky (light): #e9e9e9
-Disclaimer (light): #e9e9e9
-
-*/
 body {
   margin: 0;
   padding: 0;
+/* TEST
   font: 76% Trebuchet, Verdana, Arial, Helvetica, sans-serif;
+*/
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: .85em;
+
 	/* This is the text color for MOST of the site */
 	color: black;
 	background-color: #856145;
@@ -337,7 +332,6 @@ table {
 	padding-top: 3px;
 	padding-bottom: 3px;
 	font-weight: normal;
-	background-color: #fffc00;
 	background-image: url('images/anthrocon-2015/tile-block-title.jpg');
 	color: white;
   font: 120% Trebuchet, Verdana, Arial, Helvetica, sans-serif;
@@ -373,7 +367,7 @@ table {
 .node .content, .comment .content {
   margin: .5em 0 .5em 0;
 	/* Anthrocon */
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
 .node .taxonomy {
@@ -539,7 +533,6 @@ blockquote {
 	left: 610px;
 	font-family: Arial, Helvetica, sans-serif;
 	color: black;
-	background-color: #fffc00;
 	background-image: url('images/anthrocon-2015/tile-block-title.jpg');
 }
 
@@ -655,7 +648,6 @@ code, tt {
 	min-width: 700px;
 	padding: 5px;
 	width: 850px;
-	background-color: yellow;
 	background-image: url('images/anthrocon-2015/tile-ac-outer.jpg');
 }
 
@@ -674,7 +666,6 @@ ul.primary {
 
 ul.primary li a {
 	border-color: black;
-	background-color: #fffc00;
 }
 
 ul.primary li.active a {
