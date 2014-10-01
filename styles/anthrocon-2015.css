@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	font-size: .85em;
+	font-size: 1em;
 
 	/* This is the text color for MOST of the site */
 	color: black;
@@ -238,7 +238,7 @@ table {
   padding: 10px;
   vertical-align: top;
 	/* Anthrocon */
-	width: 190px;
+	width: 240px;
 	border: 1px solid black;
 	background-image: url('images/anthrocon-2015/tile-block-background.jpg');
 }
@@ -644,7 +644,7 @@ code, tt {
 	border: 1px solid black;
 	min-width: 700px;
 	padding: 5px;
-	width: 850px;
+	width: 950px;
 	background-image: url('images/anthrocon-2015/tile-ac-outer.jpg');
 }
 
