@@ -526,7 +526,7 @@ blockquote {
 	border: 1px solid black;
 	height: 20px;
 	position: absolute;
-	top: 175px;
+	top: 195px;
 	left: 610px;
 	font-family: Arial, Helvetica, sans-serif;
 	color: black;
@@ -688,7 +688,7 @@ ul.secondary a.active {
 }
 
 #banner {
-	height: 200px;
+	height: 220px;
 	width: 700px;
 	background-repeat: no-repeat;
 	background-position: center top;
