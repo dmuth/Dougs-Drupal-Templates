@@ -281,7 +281,8 @@ var directory = "/<?php print $directory; ?>";
 </td>
 <td width="800">
 <?php //print $footer_message ?>
-&copy; 1996-<?php print date("Y"); ?>, Anthrocon, Inc. / 428 Jennifer Ln / Norristown, PA  19403
+&copy; 1996-<?php print date("Y"); ?>, Anthrocon, Inc. / 
+150 Wrenn Dr. Box 759 / Cary, NC 27512
 	- "Fur, Fun, And So Much More!"
 	- Use of this website <a href="/legal">covered by our AUP</a>.
 <p>
