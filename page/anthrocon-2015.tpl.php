@@ -92,6 +92,15 @@ var directory = "/<?php print $directory; ?>";
 //]]>
 </script>
 <meta http-equiv="X-UA-Compatible" content="IE=8" />
+<?php 
+/**
+* Thanks, Open Directory Project.
+*
+* https://support.google.com/webmasters/answer/35624?hl=en#2 
+*
+*/
+?>
+<meta name="robots" content="NOODP">
 </head>
 
 <body >
