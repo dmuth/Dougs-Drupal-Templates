@@ -101,6 +101,12 @@ var directory = "/<?php print $directory; ?>";
 */
 ?>
 <meta name="robots" content="NOODP">
+<?php
+/**
+* For verification with Pintrest.
+*/
+?>
+<meta name="p:domain_verify" content="71e9566e4da77fdf73695b5a60775129"/>
 </head>
 
 <body >
