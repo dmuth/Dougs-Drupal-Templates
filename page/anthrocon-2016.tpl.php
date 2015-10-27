@@ -1,6 +1,6 @@
 <?php
 
-include("anthrocon-2015/social.tpl.php");
+include("anthrocon-2016/social.tpl.php");
 
 //
 // Load our functions conditionally.
@@ -135,7 +135,7 @@ var directory = "/<?php print $directory; ?>";
 <tr>
 <td colspan="3" 
 	id="banner"
-	background="/<?php print $directory; ?>/images/anthrocon-2015/banner.png"
+	background="/<?php print $directory; ?>/images/anthrocon-2016/banner.png"
 	width="969" height="125"
 	>
 <div id="menu">
@@ -291,7 +291,7 @@ var directory = "/<?php print $directory; ?>";
 <table border="0">
 <tr>
 <td>
-<img src="/<?php print $directory; ?>/images/anthrocon-2015/footer.png" 
+<img src="/<?php print $directory; ?>/images/anthrocon-2016/footer.png" 
 	width="200" height="168"
 	/>
 </td>
