@@ -347,6 +347,7 @@ table {
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: black;
+	background-image: url('images/anthrocon-2016/tile-node.jpg');
 
 }
 
@@ -356,6 +357,10 @@ table {
 	background-image: url('images/anthrocon-2016/tile-node-sticky.jpg');
 	padding: 5px;
 	border: none;
+	margin: .5em 0 0 0;
+	padding: .5em 0 1em 0;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
 }
 
 .sticky a {
@@ -526,8 +531,8 @@ blockquote {
 	border: 1px solid black;
 	height: 20px;
 	position: absolute;
-	top: 195px;
-	left: 610px;
+	top: 150px;
+	left: 410px;
 	font-family: Arial, Helvetica, sans-serif;
 	color: black;
 	background-image: url('images/anthrocon-2016/tile-block-title.jpg');
@@ -688,7 +693,7 @@ ul.secondary a.active {
 }
 
 #banner {
-	height: 220px;
+	height: 180px;
 	width: 700px;
 	background-repeat: no-repeat;
 	background-position: center top;
