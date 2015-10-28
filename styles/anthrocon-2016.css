@@ -270,7 +270,7 @@ table {
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	padding: 1em;
-	color: black;
+	color: white;
 }
 
 #footer a {
@@ -278,7 +278,7 @@ table {
 }
 
 #footer a:hover, #footer a:visited {
-	color: black;
+	color: white;
 }
 
 
