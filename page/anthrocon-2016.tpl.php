@@ -290,17 +290,19 @@ var directory = "/<?php print $directory; ?>";
 <div id="footer">
 <table border="0">
 <tr>
-<td>
+<td width="200" >
+<!--
 <img src="/<?php print $directory; ?>/images/anthrocon-2016/footer.png" 
 	width="200" height="168"
 	/>
+-->
 </td>
 <td width="800">
 <?php //print $footer_message ?>
 &copy; 1996-<?php print date("Y"); ?>, Anthrocon, Inc. / 
 150 Wrenn Dr. Box 759 / Cary, NC 27512
 	- "Fur, Fun, And So Much More!"
-	- Use of this website <a href="/legal">covered by our AUP</a>.
+	- Use of this website <a href="/legal">is covered by our AUP</a>.
 <p>
 
 Anthrocon and the Anthrocon logo are registered servicemarks of Anthrocon, Inc., a Pennsylvania-incorporated 501(c)7 nonprofit organization
