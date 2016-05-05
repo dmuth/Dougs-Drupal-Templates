@@ -120,8 +120,8 @@ check_pending_friend_requests();
 			!strstr($url, "/edit")
 			&& !strstr($url, "/admin")
 			) {
-			print $fb_html;
-			print $plus_one_html;
+			//print $fb_html;
+			//print $plus_one_html;
 		}
 
 		?>
@@ -229,5 +229,7 @@ All other content is licensed under the Gnu Free Documentation License.<br/>
 
 </div>
 <?php print $closure ?>
+<?php // Widget code for AddThis ?>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-572ab4887648a861"></script>
 </body>
 </html>
