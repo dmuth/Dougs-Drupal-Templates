@@ -122,9 +122,15 @@ check_pending_friend_requests();
 			) {
 			//print $fb_html;
 			//print $plus_one_html;
+			?>
+			<div style="float: right; padding-top: 10px; height: 24px; ">
+			<div class="addthis_native_toolbox"></div>
+			</div>
+			<?php
 		}
 
 		?>
+
 	</h1>
 <?php
 //
