@@ -168,8 +168,11 @@ var directory = "/<?php print $directory; ?>";
 		//
 		// Print up our Facebook and Google Plus widgets.
 		//
-		print $fb_html;
-		print $plus_one_html;
+		//print $fb_html;
+		//print $plus_one_html;
+		print '<div style="float: right; padding-top: 10px; padding-right: 10px; height: 24px; ">';
+		print '<div class="addthis_native_toolbox"></div>';
+		print "</div>\n";
 
 		?>
 	</h1>
@@ -358,5 +361,6 @@ if (window.location.protocol == "https:") {
 	//COT("https://www.anthrocon.org/sites/all/themes/anthrocon/trust_logo.gif", "SC2", "none");
 }
 </script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-574239d5b06dd932"></script>
 </body>
 </html>
