@@ -1,0 +1,6 @@
+
+name = Anthrocon 2017
+description = Anthrocon 2017 theme
+core = 6.x
+engine = phptemplate
+
