@@ -9,7 +9,7 @@ body {
 	/* This is the text color for MOST of the site */
 	color: black;
 	background-color: #282727;
-	background-image: url('images/anthrocon-2016/tile-background.jpg');
+	background-image: url('images/anthrocon-2017/tile-grass-dark.png');
 	background-repeat: repeat-x repeat-y;
 
 }
@@ -38,15 +38,15 @@ a {
 }
 
 a:link {
-	color: #243250;
+	color: #0f2f00;
 }
 
 a:visited {
-	color: #690c0c;
+	color: black;
 }
 
 a:hover {
-	color: #1d660b;
+	color: #e12400;
 	text-decoration: none;
 }
 
@@ -204,7 +204,9 @@ table {
   padding: 10px;
 */
 	padding-left: 10px;
+/*
 	padding-right: 10px;
+*/
 }
 #mission, .node .content, .comment .content {
   line-height: 1.4;
@@ -241,19 +243,27 @@ table {
 	width: 240px;
 	border: 1px solid black;
 	background-color: #ddd7d1;
-	background-image: url('images/anthrocon-2016/tile-block-background.jpg');
+	background-image: url('images/anthrocon-2017/tile-grass-light.png');
 }
 
 /* Anthrocon */
-#sidebar-left a, #sidebar-left a:visited, #sidebar-right a, #sidebar-right a:visited {
-	color: #690c0c;
+#sidebar-left a, #sidebar-right a, 
+{
+	color: #0f2f00;
 	font-weight: normal;
 }
 
 /* Anthrocon */
 #sidebar-left a:hover, #sidebar-right a:hover {
-	color: #1d660b;
+	color: #e12400;
 }
+
+/* Anthrocon */
+#sidebar-left a:visited, #sidebar-right a:visited {
+	color: #0f2f00;
+	font-weight: normal;
+}
+
 
 /* Anthrocon */
 #sidebar-left a.active, #sidebar-right a.active {
@@ -270,15 +280,16 @@ table {
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	padding: 1em;
-	color: white;
+	color: #0f2f00;
+	background-image: url('images/anthrocon-2017/tile-grass-light.png');
 }
 
-#footer a {
-	color: white;
+#footer a, #footer a:visited {
+	color: 0f2f00;
 }
 
-#footer a:hover, #footer a:visited {
-	color: white;
+#footer a:hover {
+	color: #e12400;
 }
 
 
@@ -311,7 +322,7 @@ table {
 
 /* Anthrocon */
 .block leaf a:link {
-	color: #FFFFFF;
+	color: #0f2f00;
 }
 
 .block {
@@ -330,9 +341,9 @@ table {
 	padding-top: 3px;
 	padding-bottom: 3px;
 	font-weight: normal;
-	background-color: #690c0c;
-	background-image: url('images/anthrocon-2016/tile-block-title.jpg');
-	color: white;
+	background-color: #E6BD17;
+	/* background-image: url('images/anthrocon-2017/tile-grass-light.png'); */
+	color: #0F2F00;
 
   font: 120% Trebuchet, Verdana, Arial, Helvetica, sans-serif;
 }
@@ -351,14 +362,14 @@ table {
 	border-bottom-style: solid;
 	border-bottom-color: black;
 	background-color: #ddd7d1;
-	background-image: url('images/anthrocon-2016/tile-node.jpg');
+	background-image: url('images/anthrocon-2017/tile-grass-light.png');
 
 }
 
 .sticky {
 	color: #252525;
 	background-color: #ddd7d1;
-	background-image: url('images/anthrocon-2016/tile-node-sticky.jpg');
+	background-image: url('images/anthrocon-2017/tile-grass-light.png');
 	padding: 5px;
 	border: none;
 	margin: .5em 0 0 0;
@@ -539,8 +550,7 @@ blockquote {
 	left: 410px;
 	font-family: Arial, Helvetica, sans-serif;
 	color: black;
-	background-color: #690c0c;
-	background-image: url('images/anthrocon-2016/tile-block-title.jpg');
+	background-color: #E6BD17;
 }
 
 #primary a {
@@ -550,12 +560,12 @@ blockquote {
 	padding: 4px 5px 6px 5px;
 	margin: 4px 0px 0px 0px;
 	height: 20px;
-	color: #fbf1ee;
+	color: #0f2f00;
 	font-weight: normal;
 }
 
 #primary a:hover {
-	color: white;
+	color: #e12400;
 	background: black;
 }
 
@@ -655,7 +665,7 @@ code, tt {
 	min-width: 700px;
 	padding: 5px;
 	width: 950px;
-	background-image: url('images/anthrocon-2016/tile-ac-outer.jpg');
+	background-image: url('images/anthrocon-2017/tile-grass-light.png');
 }
 
 tbody th { 

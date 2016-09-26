@@ -1,141 +1,141 @@
-<?php
+	<?php
 
-include("anthrocon-2016/social.tpl.php");
-
-//
-// Load our functions conditionally.
-// The reason for this function_exists() silliness is because touching the
-// lib/display.inc.php file causes the first reload afterward to somwhoe
-// load the file twice.
-//
-if (!function_exists("check_private_messages")) {
-
-	$slash = DIRECTORY_SEPARATOR;
-       	$file = $slash . ".." . $slash . "lib" . $slash . "display.inc.php";
-	$path = dirname(__FILE__) . $file;
+	include("anthrocon-2017/social.tpl.php");
 
 	//
-	// If the file was not found, then maybe we didn't create symlinks,
-	// so try removing ".." instead.
+	// Load our functions conditionally.
+	// The reason for this function_exists() silliness is because touching the
+	// lib/display.inc.php file causes the first reload afterward to somwhoe
+	// load the file twice.
 	//
-	if (!is_file($path)) {
-       		$file = $slash . "lib" . $slash . "display.inc.php";
+	if (!function_exists("check_private_messages")) {
+
+		$slash = DIRECTORY_SEPARATOR;
+		$file = $slash . ".." . $slash . "lib" . $slash . "display.inc.php";
 		$path = dirname(__FILE__) . $file;
+
+		//
+		// If the file was not found, then maybe we didn't create symlinks,
+		// so try removing ".." instead.
+		//
+		if (!is_file($path)) {
+			$file = $slash . "lib" . $slash . "display.inc.php";
+			$path = dirname(__FILE__) . $file;
+		}
+
+		include($path);
+
 	}
 
-	include($path);
+	//print "<pre>"; print_r($GLOBALS); print "</pre>"; // Debugging
 
-}
+	//
+	// Are we in the dev theme?
+	//
+	check_dev_theme($directory);
 
-//print "<pre>"; print_r($GLOBALS); print "</pre>"; // Debugging
+	//
+	// If we have unread private messages, let the user know.
+	//
+	check_private_messages();
 
-//
-// Are we in the dev theme?
-//
-check_dev_theme($directory);
+	//
+	// Do we have any outstandng buddy requests?
+	//
+	check_pending_friend_requests();
+	//print "Timer: " . get_time_offset() . "<br/>\n"; // Debugging
 
-//
-// If we have unread private messages, let the user know.
-//
-check_private_messages();
+	?>
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" lang="<?php print $language->language ?>" xml:lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
 
-//
-// Do we have any outstandng buddy requests?
-//
-check_pending_friend_requests();
-//print "Timer: " . get_time_offset() . "<br/>\n"; // Debugging
+	<head>
+	  <title><?php print $head_title ?></title>
+	  <?php print $head ?>
+	  <?php print $styles ?>
+	  <?php print $scripts ?>
+	<?php
+	//
+	// Base directory for stuff under this template
+	//
+	?>
+	<script type="text/javascript" >
+	var directory = "/<?php print $directory; ?>"; 
+	</script>
+	<?php
+	//
+	// jQuery cookie plugin.  The jquery_cookie module breaks.
+	// See: http://drupal.org/node/203435 for details
+	//
+	?>
+	<script type="text/javascript" src="/<?php print $directory; ?>/lib/cookie.js"></script>
+	<script type="text/javascript" src="/<?php print $directory; ?>/lib/drupalBlockToggle.js"></script>
+	  <script type="text/javascript"><?php /* Needed to avoid Flash of Unstyle Content in IE */ ?> </script>
+	<?php
+	//
+	// Code for our SSL "corner of trust" graphic.
+	//
+	?>
+	<script language="javascript" type="text/javascript">
+	//<![CDATA[
+	//
+	// Only display when connecting via HTTPS.
+	//
+	// Commented out due to secure.comodo.net being DOWN
+	// 30 Apr 2009, DTM
+	//
+	//if (window.location.protocol == "https:") {
+	//	var cot_loc0=(window.location.protocol == "https:")? "https://secure.comodo.net/trustlogo/javascript/cot.js" :
+	//	"http://www.trustlogo.com/trustlogo/javascript/cot.js";
+	//	document.writeln('<scr' + 'ipt language="JavaScript" src="'+cot_loc0+'" type="text\/javascript">' + '<\/scr' + 'ipt>');
+	//}
+	//]]>
+	</script>
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+	<?php 
+	/**
+	* Thanks, Open Directory Project.
+	*
+	* https://support.google.com/webmasters/answer/35624?hl=en#2 
+	*
+	*/
+	?>
+	<meta name="robots" content="NOODP">
+	<?php
+	/**
+	* For verification with Pintrest.
+	*/
+	?>
+	<meta name="p:domain_verify" content="71e9566e4da77fdf73695b5a60775129"/>
+	</head>
 
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" lang="<?php print $language->language ?>" xml:lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
-
-<head>
-  <title><?php print $head_title ?></title>
-  <?php print $head ?>
-  <?php print $styles ?>
-  <?php print $scripts ?>
-<?php
-//
-// Base directory for stuff under this template
-//
-?>
-<script type="text/javascript" >
-var directory = "/<?php print $directory; ?>"; 
-</script>
-<?php
-//
-// jQuery cookie plugin.  The jquery_cookie module breaks.
-// See: http://drupal.org/node/203435 for details
-//
-?>
-<script type="text/javascript" src="/<?php print $directory; ?>/lib/cookie.js"></script>
-<script type="text/javascript" src="/<?php print $directory; ?>/lib/drupalBlockToggle.js"></script>
-  <script type="text/javascript"><?php /* Needed to avoid Flash of Unstyle Content in IE */ ?> </script>
-<?php
-//
-// Code for our SSL "corner of trust" graphic.
-//
-?>
-<script language="javascript" type="text/javascript">
-//<![CDATA[
-//
-// Only display when connecting via HTTPS.
-//
-// Commented out due to secure.comodo.net being DOWN
-// 30 Apr 2009, DTM
-//
-//if (window.location.protocol == "https:") {
-//	var cot_loc0=(window.location.protocol == "https:")? "https://secure.comodo.net/trustlogo/javascript/cot.js" :
-//	"http://www.trustlogo.com/trustlogo/javascript/cot.js";
-//	document.writeln('<scr' + 'ipt language="JavaScript" src="'+cot_loc0+'" type="text\/javascript">' + '<\/scr' + 'ipt>');
-//}
-//]]>
-</script>
-<meta http-equiv="X-UA-Compatible" content="IE=8" />
-<?php 
-/**
-* Thanks, Open Directory Project.
-*
-* https://support.google.com/webmasters/answer/35624?hl=en#2 
-*
-*/
-?>
-<meta name="robots" content="NOODP">
-<?php
-/**
-* For verification with Pintrest.
-*/
-?>
-<meta name="p:domain_verify" content="71e9566e4da77fdf73695b5a60775129"/>
-</head>
-
-<body >
-<?php // Load the Javascript SDK for Facebook like buttons ?>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=182819581918515";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+	<body >
+	<?php // Load the Javascript SDK for Facebook like buttons ?>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=182819581918515";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 
 
-<?php
-//
-// Main graphic and a link back to the main page.
-// Full list of variables is at: http://drupal.org/node/11812
-//
-// Note that we can't just have the banner outside of table, because strict HTML causes a few
-// pixels to be added underneath of the banner.
-//
-?>
+	<?php
+	//
+	// Main graphic and a link back to the main page.
+	// Full list of variables is at: http://drupal.org/node/11812
+	//
+	// Note that we can't just have the banner outside of table, because strict HTML causes a few
+	// pixels to be added underneath of the banner.
+	//
+	?>
 
 <table border="0" cellpadding="0" cellspacing="0" id="content">
 <tr>
 <td colspan="3" 
 	id="banner"
-	background="/<?php print $directory; ?>/images/anthrocon-2016/banner.png"
+	background="/<?php print $directory; ?>/images/anthrocon-2017/banner.png"
 	width="969" height="125"
 	>
 <div id="menu">
@@ -287,17 +287,25 @@ var directory = "/<?php print $directory; ?>";
       <?php print $right ?>
     </td><?php } ?>
   </tr>
- 
-</table>
+
+<tr><td>&nbsp;</td></tr>
+
+<tr>
+
+<td width="10"></td>
+
+<td colspan="2">
 
 <div id="footer">
 <table border="0">
 <tr>
+
 <td width="350" >
-<img src="/<?php print $directory; ?>/images/anthrocon-2016/footer.png" 
-	width="323" height="150"
+<img src="/<?php print $directory; ?>/images/anthrocon-2017/footer.png" 
+	width="245" height="112"
 	/>
 </td>
+
 <td width="800">
 <?php //print $footer_message ?>
 &copy; 1996-<?php print date("Y"); ?>, Anthrocon, Inc. / 
@@ -329,6 +337,10 @@ Site design by <a href="http://www.cuprohastes.com/">Cuprohastes</a>.<br/>
 <a href="http://www.youtube.com/user/anthrocon">YouTube</a>
 |
 <a href="/contact">Contact Us</a>
+
+</td>
+</tr>
+</table>
 
 </td>
 </tr>
