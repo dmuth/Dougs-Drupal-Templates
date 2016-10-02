@@ -345,6 +345,9 @@ table {
 	/* background-image: url('images/anthrocon-2017/tile-grass-light.png'); */
 	color: #0F2F00;
 
+	/* Rounded corners */
+	border-radius: 10px;  
+
   font: 120% Trebuchet, Verdana, Arial, Helvetica, sans-serif;
 }
 
@@ -551,6 +554,10 @@ blockquote {
 	font-family: Arial, Helvetica, sans-serif;
 	color: black;
 	background-color: #E6BD17;
+
+	/* Rounded corners */
+	border-radius: 10px;  
+
 }
 
 #primary a {
