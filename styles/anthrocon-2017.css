@@ -243,7 +243,7 @@ table {
 	width: 240px;
 	border: 1px solid black;
 	background-color: #ddd7d1;
-	background-image: url('images/anthrocon-2017/tile-grass-light.png');
+	background: rgba(187,235,159,0.8); // Using RGBA we can set transparent green
 }
 
 /* Anthrocon */
@@ -281,7 +281,7 @@ table {
 	font-family: Arial, Helvetica, sans-serif;
 	padding: 1em;
 	color: #0f2f00;
-	background-image: url('images/anthrocon-2017/tile-grass-light.png');
+	background: rgba(187,235,159,0.8); // Using RGBA we can set transparent green
 }
 
 #footer a, #footer a:visited {
@@ -342,7 +342,6 @@ table {
 	padding-bottom: 3px;
 	font-weight: normal;
 	background-color: #E6BD17;
-	/* background-image: url('images/anthrocon-2017/tile-grass-light.png'); */
 	color: #0F2F00;
 
 	/* Rounded corners */
@@ -364,15 +363,10 @@ table {
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: black;
-	background-color: #ddd7d1;
-	background-image: url('images/anthrocon-2017/tile-grass-light.png');
-
 }
 
 .sticky {
 	color: #252525;
-	background-color: #ddd7d1;
-	background-image: url('images/anthrocon-2017/tile-grass-light.png');
 	padding: 5px;
 	border: none;
 	margin: .5em 0 0 0;
@@ -672,7 +666,7 @@ code, tt {
 	min-width: 700px;
 	padding: 5px;
 	width: 950px;
-	background-image: url('images/anthrocon-2017/tile-grass-light.png');
+	background: rgba(187,235,159,0.8); // Using RGBA we can set transparent green
 }
 
 tbody th { 
